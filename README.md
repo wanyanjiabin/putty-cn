@@ -1,5 +1,6 @@
 # 汉化Putty
 
+由于需要更独立的项目管理,所以单独新开仓库来保存汉化putty项目
 *原始项目参考 [bbbboom](https://github.com/bbbboom/TranslateToChinese)*
 
 ## putty0.77 - 最新版本
