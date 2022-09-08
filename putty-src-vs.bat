@@ -46,7 +46,7 @@ cls
 color 2e
 echo ================== 开始汉化源码 ==================
 
-sh %~dp0putty-src-new.sh
+sh %~dp0putty-src-vs.sh
 
 
 
