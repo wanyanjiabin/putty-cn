@@ -2,7 +2,7 @@
 
 #******************************************
 # 0.77
-# 最后编辑 2022/9/8 14:45
+# 最后编辑 2022/09/08 20:09:13
 # 最后编辑 wanyanjiabin
 #******************************************
 
@@ -358,7 +358,6 @@ perl -i -pe 's#\Q"Character classes:"#"字符类别(E)："#g' $file_name
 perl -i -pe 's#\Q"Set to class"#"设置到类别(T)"#g' $file_name
 perl -i -pe 's#\Q"Set"#"设置(S)"#g' $file_name
 perl -i -pe 's#\Q"Options controlling copying from terminal to clipboard"#"控制从终端复制到剪贴板的选项"#g' $file_name
-perl -i -pe 's#\Q"Classes of character that group together"#"Classes of character that group together"#g' $file_name
 perl -i -pe 's#\Q"Options controlling use of colours"#"颜色使用设置"#g' $file_name
 perl -i -pe 's#\Q"General options for colour usage"#"颜色使用常规设置"#g' $file_name
 perl -i -pe 's#\Q"Allow terminal to specify ANSI colours"#"允许终端指定 ANSI 颜色"#g' $file_name
@@ -2241,9 +2240,9 @@ perl -i -pe 's#\Q"Pageant failed to "#"Pageant未能回应"#g' $file_name
 perl -i -pe 's#\Q"respond to signing request\r\n"#"签名请求\\r\\n"#g' $file_name
 perl -i -pe 's#\Q"Offered public key"#"提供的公钥"#g' $file_name
 perl -i -pe 's#\Q"Offer of public key accepted"#"接受公开密钥的提议"#g' $file_name
-perl -i -pe 's#\Q"Authenticating with public key \"%s\"\r\n"#"使用公钥 \\"%s\\" 进行身份验证\\r\\n"#g' $file_name
+# perl -i -pe 's#\Q"Authenticating with public key \"%s\"\r\n"#"使用公钥 \\"%s\\" 进行身份验证\\r\\n"#g' $file_name
 perl -i -pe 's#\Q"SSH key passphrase"#"SSH 密钥密码"#g' $file_name
-perl -i -pe 's#\Q"Passphrase for key \"%s\": "#"密钥 \\"%s\\" 的密码："#g' $file_name
+# perl -i -pe 's#\Q"Passphrase for key \"%s\": "#"密钥 \\"%s\\" 的密码："#g' $file_name
 perl -i -pe 's#\Q"Unable to authenticate"#"无法进行身份验证"#g' $file_name
 perl -i -pe 's#\Q"User aborted at "#"用户中止于"#g' $file_name
 perl -i -pe 's#\Q"passphrase prompt"#"密码提示"#g' $file_name
@@ -2297,7 +2296,7 @@ perl -i -pe 's#\Q"Pageant key \#"#"Pageant 密钥 \#"#g' $file_name
 perl -i -pe 's#\Q" matches "#" 匹配 "#g' $file_name
 perl -i -pe 's#\Q"configured key file"#"配置的密钥文件"#g' $file_name
 perl -i -pe 's#\Q"SSH login name"#"SSH 登录名"#g' $file_name
-perl -i -pe 's#\Q"login as: "#"登录为: "#g' $file_name
+# perl -i -pe 's#\Q"login as: "#"登录为: "#g' $file_name
 perl -i -pe 's#\Q"username prompt"#"用户名提示"#g' $file_name
 perl -i -pe 's#\Q"Trying gssapi-keyex..."#"尝试 gssapi-keyex..."#g' $file_name
 perl -i -pe 's#\Q"Trying Pageant key \#"#"尝试 Pageant 密钥 \#"#g' $file_name
