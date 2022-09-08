@@ -3436,6 +3436,7 @@ mv -f temptext.txt $file_name
 
 echo [99%]开始优化
 #替换默认字体
-perl -i -pe 's#\Q("Courier New", false, 10, ANSI_CHARSET)#("新宋体", false, 12, GB2312_CHARSET)#g' windows/utils/defaults.c
-iconv -f UTF-8 -t GB2312 windows/utils/defaults.c > temptext.txt
-mv -f temptext.txt windows/utils/defaults.c
+file_name="windows/utils/defaults.c"
+perl -i -pe 's#\Q("Courier New", false, 10, ANSI_CHARSET)#("新宋体", false, 12, GB2312_CHARSET)#g' $file_name
+iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
+mv -f temptext.txt $file_name
