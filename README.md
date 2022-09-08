@@ -66,7 +66,7 @@
 
    将portable_putty_077_0.19.0_all_in_one中的 **pageant.c** 和 **storage.c** 两个文件替换到 **putty-src/windows** 下
 
-7. 下载 **putty-src-vs.bat**  脚本和 **putty-src-new.sh ** 翻译文件，并将 **putty-src** 文件夹拖至 **putty-src-vs.bat**  脚本上启动翻译
+7. 下载 **putty-src-vs.bat**  脚本和 **putty-src-vs.sh ** 翻译文件，并将 **putty-src** 文件夹拖至 **putty-src-vs.bat**  脚本上启动翻译
 
 8. 翻译完成之后，右键 **putty-src** 文件夹使用 **vs2022** 打开，等待cmake自动配置完成之后，点击 **生成** => **全部生成** 来启动编译。
 
@@ -82,6 +82,17 @@
 2. 下载 **putty-src-linux.sh** 脚本到任意目录
 3. 执行linux命令  `sudo sh putty-src-linux.sh ` *注意命令所在目录*
 4. 如果没有报错，1-3分钟后就会生成文件到 **output** 目录
+
+
+
+**差异点及补充**
+
+1. windows目录下的.rc和.rc2文件编码有问题,导致脚本差异化
+2. 使用VisualStudio编译的时候,将.rc和.rc2文件转换为UTF-16LE编码可以正常编译 **(目前唯一可以全功能汉化方式.)**
+3. 在使用windows组合编译和linux下编译都无法正常识别UTF-16LE编码,所以只能将.rc和.rc2文件转为GB2312编码,同时取消.rc和.rc2文件的汉化.基本界面都汉化,仅有个别按钮和提示框没有汉化.
+4. 如果你知道如何解决.rc文件的编码问题,请告知一下,万分感谢.
+
+
 
 
 
@@ -106,6 +117,6 @@
 6. 解压portable_putty_076_0.18.0_all_in_one.zip  
 将portable_putty_076_0.18.0_all_in_one中的**winpgnt.c**和**winstore.c**两个文件替换到**putty-src/windows**下
 
-7. 将**putty-src**文件夹拖至**putty-src.bat**  
+7. 下载 **putty-src-old.txt** 和 **putty-src-old.bat** ，并将**putty-src**文件夹拖至**putty-src-old.bat**  
 
 8. 稍等片刻就可以在**putty-build**文件夹中使用编译好的exe了
