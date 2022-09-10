@@ -471,9 +471,9 @@ perl -i -pe 's#\Q"Allow agent forwarding"#"允许代理映射(F)"#g' $file_name
 perl -i -pe 's#\Q"Allow attempted changes of username in SSH-2"#"允许尝试在 SSH-2 中修改用户名"#g' $file_name
 perl -i -pe 's#\Q"Private key file for authentication:"#"认证私钥文件(K)："#g' $file_name
 perl -i -pe 's#\Q"Select private key file"#"选择私钥文件"#g' $file_name
-perl -i -pe 's#\Q"Options controlling GSSAPI authentication"#"控制 GSSAPI 认证选项"#g' $file_name
-perl -i -pe 's#\Q"Attempt GSSAPI authentication (SSH-2 only)"#"尝试使用 GSSAPI 认证 (仅限SSH-2)"#g' $file_name
-perl -i -pe 's#\Q"Attempt GSSAPI key exchange (SSH-2 only)"#"尝试使用 GSSAPI 密钥验证 (仅限SSH-2)"#g' $file_name
+perl -i -pe 's#\Q"Options controlling GSSAPI authentication"#"GSSAPI 认证选项"#g' $file_name
+perl -i -pe 's#\Q"Attempt GSSAPI authentication (SSH-2 only)"#"尝试使用 GSSAPI 认证 (仅限SSH-2)(T)"#g' $file_name
+perl -i -pe 's#\Q"Attempt GSSAPI key exchange (SSH-2 only)"#"尝试使用 GSSAPI 密钥验证 (仅限SSH-2)(K)"#g' $file_name
 perl -i -pe 's#\Q"Allow GSSAPI credential delegation"#"允许 GSSAPI 凭据委托(L)"#g' $file_name
 perl -i -pe 's#\Q"Preference order for GSSAPI libraries:"#"GSSAPI 库优先级："#g' $file_name
 perl -i -pe 's#\Q"User-supplied GSSAPI library path:"#"用户支持的 GSSAPI 库路径："#g' $file_name
@@ -482,7 +482,7 @@ perl -i -pe 's#\Q"Remote terminal settings"#"远程终端设置"#g' $file_name
 perl -i -pe 's#\Q"Don'\''t allocate a pseudo-terminal"#"不分配假终端(P)"#g' $file_name
 perl -i -pe 's#\Q"Terminal modes"#"终端模式"#g' $file_name
 perl -i -pe 's#\Q"Terminal modes to send:"#"终端模式用于发送："#g' $file_name
-perl -i -pe 's#\Q"For selected mode, send:"#"选择的模式，发送："#g' $file_name
+perl -i -pe 's#\Q"For selected mode, send:"#"按选择的模式发送："#g' $file_name
 perl -i -pe 's#\Q"Nothing"#"无"#g' $file_name
 perl -i -pe 's#\Q"This:"#"指定："#g' $file_name
 perl -i -pe 's#\Q"Options controlling SSH X11 forwarding"#"SSH X11 映射设置"#g' $file_name
@@ -540,7 +540,7 @@ perl -i -pe 's#\Q"Nothing on this panel may be reconfigured in mid-"#"此面板�
 perl -i -pe 's#\Q"session; it is only here so that sub-panels of it can "#"它只是在这里，以便它的子面板可以存在而不会看起来很奇怪。"#g' $file_name
 perl -i -pe 's#\Q"exist without looking strange."#""#g' $file_name
 perl -i -pe 's#\Q"Default Settings"#"默认设置"#g' $file_name
-perl -i -pe 's#\Q"Shift/Ctrl/Alt with the arrow keys"#"Shift/Ctrl/Alt 与箭头键"#g' $file_name
+perl -i -pe 's#\Q"Shift/Ctrl/Alt with the arrow keys"#"Shift/Ctrl/Alt 与方向键"#g' $file_name
 perl -i -pe 's#\Q"Ctrl toggles app mode"#"Ctrl 切换应用模式"#g' $file_name
 perl -i -pe 's#\Q"Manually enabled workarounds"#"手动启用解决方法"#g' $file_name
 perl -i -pe 's#\Q"Discards data sent before its greeting"#"丢弃在其问候之前发送的数据"#g' $file_name
