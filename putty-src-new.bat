@@ -19,7 +19,7 @@ echo  ^|   5、确定putty-src-new.bat和putty-src-new.sh在同目录  ^|
 echo  ^|   6、请将源码文件夹拖放至本脚本文件来打开本脚本       ^|
 echo  ^|   7、编译文件输出目录 build，程序输出目录 output      ^|
 echo  ^|                                                       ^|
-echo  ^|   最后修改: 2022/09/11 01:36:53                          ^|
+echo  ^|   最后修改: 2022/09/11 01:36:53                       ^|
 echo  ^|   修改人员: wanyanjiabin                              ^|
 echo   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 rem ****************** 判断编译目录 ******************
@@ -71,21 +71,13 @@ if exist %buildFolder% (
 if exist %outputFolder% (
 	rd  /s /q %outputFolder%
 )
-mkdir build & ^
-mkdir output & ^
-cmake -G "MinGW Makefiles" -B "build" . & ^
-cd ./build & ^
-cmake --build . & ^
-cd ../ & ^
-move /y "build\*.exe" output\ & ^
-del /f /s /q %outputFolder%\bidi_gettype.exe & ^
-del /f /s /q %outputFolder%\bidi_test.exe & ^
-del /f /s /q %outputFolder%\test_decode_utf8.exe & ^
-del /f /s /q %outputFolder%\test_host_strfoo.exe & ^
-del /f /s /q %outputFolder%\test_split_into_argv.exe & ^
-del /f /s /q %outputFolder%\test_tree234.exe & ^
-del /f /s /q %outputFolder%\test_wildcard.exe & ^
-del /f /s /q %outputFolder%\testcrypt.exe
+mkdir %buildFolder% & ^
+mkdir %outputFolder% & ^
+cmake -G "MinGW Makefiles" -B "build" -D CMAKE_C_FLAGS=-fexec-charset=GBK . & ^
+cmake --build %buildFolder% & ^
+move /y "%buildFolder%\*.exe" %outputFolder%\ & ^
+del /f /s /q %outputFolder%\bidi*.exe & ^
+del /f /s /q %outputFolder%\test*.exe
 
 
 

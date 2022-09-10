@@ -28,8 +28,8 @@ perl -i -pe 's#\Q"preloaded prompt unavailable in cgtest"#"预加载提示在 cg
 perl -i -pe 's#\Q"cgtest: unrecognised key type '\''%.*s'\''\n"#"cgtest: 无法识别的密钥类型 '\''%.*s'\''\\n"#g' $file_name
 perl -i -pe 's#\Q"cgtest: unrecognised option '\''%.*s'\''\n"#"cgtest: 无法识别的选项 '\''%.*s'\''\\n"#g' $file_name
 perl -i -pe 's#\Q"OpenSSH %s fp check: %s\n"#"OpenSSH %s fp 检查: %s\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # cmdgen.c
 file_name="cmdgen.c"
@@ -156,8 +156,8 @@ perl -i -pe 's#\Q"puttygen: cannot extract key components "#"puttygen: 无法从
 perl -i -pe 's#\Q"from public key of unknown type '\''%.*s'\''\n"#""#g' $file_name
 perl -i -pe 's#\Q"generation mode `%s'\''\n"#""#g' $file_name
 perl -i -pe 's#\Q"puttygen: unrecognised prime-"#"puttygen：无法识别的素数生成模式 `%s'\''"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # cmdline.c
 file_name="cmdline.c"
@@ -180,8 +180,8 @@ perl -i -pe 's#\Q"Unrecognised suboption \"-sercfg %s\""#"无法识别的子选�
 perl -i -pe 's#\Q"Configured password was not accepted"#"不接受配置的密码"#g' $file_name
 perl -i -pe 's#\Q"unable to read a password from file '\''%s'\''"#"无法从文件中读取密码 '\''%s'\''"#g' $file_name
 perl -i -pe 's#\Q"unable to open password file '\''%s'\''"#"无法打开密码文件'\''%s'\''"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # config.c
 file_name="config.c"
@@ -574,8 +574,8 @@ perl -i -pe 's#\Q"Connection/SSH/More bugs"#"连接/SSH/更多查错"#g' $file_n
 perl -i -pe 's#\Q"Connection/SUPDUP"#"连接/SUPDUP"#g' $file_name
 perl -i -pe 's#\Q"Connection/Serial"#"连接/串口"#g' $file_name
 
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 
 # console.c
@@ -625,8 +625,8 @@ perl -i -pe 's#\Q"The host key does not match the one PuTTY has cached\n"#"主�
 perl -i -pe 's#\Q"for this server:\n"#""#g' $file_name
 perl -i -pe 's#\Q"This means that either the server administrator has\n"#"这意味着要么服务器管理员更改了主机密钥，要么您已经连接\\n"#g' $file_name
 perl -i -pe 's#\Q"changed the host key, or you have actually connected\n"#""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # import.c
 file_name="import.c"
@@ -684,16 +684,16 @@ perl -i -pe 's#\Q"key data did not contain five integers"#"密钥数据不包含
 perl -i -pe 's#\Q"unable to create key data structure"#"无法创建密钥数据结构"#g' $file_name
 perl -i -pe 's#\Q"file does not begin with OpenSSH new-style key header"#"文件不以 OpenSSH 新式密钥头开头"#g' $file_name
 perl -i -pe 's#\Q"expected empty options string for '\''none'\'' kdf"#"'\''none'\'' kdf 的预期空选项字符串"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ldisc.c
 file_name="ldisc.c"
 echo [06%]开始汉化 ldisc.c
 perl -i -pe 's#\Q"SessionSpecialCode encoding collides with FF FF escape"#"SessionSpecialCode 编码与 FF FF 转义冲突"#g' $file_name
 perl -i -pe 's#\Q"You'\''re not supposed to call this unless there is buffered input!"#"除非有缓冲输入，否则您不应该调用它！"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # logging.c
 file_name="logging.c"
@@ -707,15 +707,15 @@ perl -i -pe 's#\Q"Error writing"#"写入错误"#g' $file_name
 perl -i -pe 's#\Q"Appending"#"追加"#g' $file_name
 perl -i -pe 's#\Q"Writing new"#"新建"#g' $file_name
 perl -i -pe 's#\Q"Event Log: %s\r\n"#"事件日志: %s\\r\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # network.h
 file_name="network.h"
 echo [08%]开始汉化 network.h
 perl -i -pe 's#\Q"User aborted connection setup"#"用户中止连接设置"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # pageant.c
 file_name="pageant.c"
@@ -789,8 +789,8 @@ perl -i -pe 's#\Q"Agent failed to create signature"#"代理未能创建签名"#g
 perl -i -pe 's#\Q"requested key: %s"#"请求的密钥：%s"#g' $file_name
 perl -i -pe 's#\Q"signature flags = 0x%08"#"签名标志 = 0x%08"#g' $file_name
 perl -i -pe 's#\Q"no signature flags"#"没有签名标志"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # pscp.c
 file_name="pscp.c"
@@ -907,8 +907,8 @@ perl -i -pe 's#\Q"            control what happens when a log file already exist
 perl -i -pe 's#\Q"\n      try typing just \"pscp\" for help\n"#"\\n     尝试输入 \\"pscp\\" 寻求帮助\\n"#g' $file_name
 perl -i -pe 's#\Q"option \"%s\" requires an argument"#"选项 \\"%s\\" 需要一个参数"#g' $file_name
 perl -i -pe 's#\Q"unknown option \"%s\""#"未知选项 \\"%s\\""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # psftp.c
 file_name="psftp.c"
@@ -1134,8 +1134,8 @@ perl -i -pe 's#\Q"  Wildcards may be used to specify multiple directories.\n"#" 
 perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile 文件   使用从指定文件读取的密码登录\\n"#g' $file_name
 perl -i -pe 's#\Q"Connected to %s\n"#"连接到 %s\\n"#g' $file_name
 perl -i -pe 's#\Q"unknown option \"%s\""#"未知选项“%s”"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # psocks.c
 file_name="psocks.c"
@@ -1177,8 +1177,8 @@ perl -i -pe 's#\Q"       port-number  listen on this port"#"       port-number  
 perl -i -pe 's#\Q" (default 1080)\n"#" (默认 1080)\\n"#g' $file_name
 perl -i -pe 's#\Q"also: psocks --help      display this help text\n"#"also: psocks --help      显示此帮助文本\\n"#g' $file_name
 perl -i -pe 's#\Q"psocks: unrecognised option '\''%s'\''\n"#"psocks: 无法识别的选项 '\''%s'\''\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # putty.h
 file_name="putty.h"
@@ -1206,16 +1206,16 @@ perl -i -pe 's#\Q"ANSI Cyan"#"ANSI 青"#g' $file_name
 perl -i -pe 's#\Q"ANSI Cyan Bold"#"ANSI 青(粗)"#g' $file_name
 perl -i -pe 's#\Q"ANSI White"#"ANSI 白"#g' $file_name
 perl -i -pe 's#\Q"ANSI White Bold"#"ANSI 白(粗)"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # settings.c
 file_name="settings.c"
 echo [14%]开始汉化 settings.c
 perl -i -pe 's#\Q"Default Settings"#"默认设置"#g' $file_name
 perl -i -pe 's#\QPingInterval", 0#PingInterval", 1#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # sshpubk.c
 file_name="sshpubk.c"
@@ -1252,8 +1252,8 @@ perl -i -pe 's#\Q"invalid length for base64 data in OpenSSH public key file"#"Op
 perl -i -pe 's#\Q"key algorithms do not match in OpenSSH public key file"#"OpenSSH 公钥文件中的密钥算法不匹配"#g' $file_name
 perl -i -pe 's#\Q"Bad key type in ssh2_write_pubkey"#"ssh2_write_pubkey 中的错误密钥类型"#g' $file_name
 perl -i -pe 's#\Q"PuTTY key format too new"#"PuTTY 密钥格式太新"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # x11disp.c
 file_name="x11disp.c"
@@ -1262,8 +1262,8 @@ perl -i -pe 's#\Q"display name '\''%s'\'' has no '\'':number'\''"#"显示名称�
 perl -i -pe 's#\Q" suffix"#""#g' $file_name
 perl -i -pe 's#\Q"unable to resolve host name '\''%s'\'' in "#"无法解析显示名称中的主机名“%s”"#g' $file_name
 perl -i -pe 's#\Q"display name"#""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # charset/utf8.c
 file_name="charset/utf8.c"
@@ -1275,8 +1275,8 @@ perl -i -pe 's#\Q"read tests completed\n"#"读取测试完成\\n"#g' $file_name
 perl -i -pe 's#\Q"write tests beginning\n"#"开始写测试\\n"#g' $file_name
 perl -i -pe 's#\Q"write tests completed\n"#"写测试完成\\n"#g' $file_name
 perl -i -pe 's#\Q"total: %d errors\n"#"总计：%d 个错误\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # contrib/cygtermd/main.c
 file_name="contrib/cygtermd/main.c"
@@ -1286,15 +1286,15 @@ perl -i -pe 's#\Q"standard input: write: %s\n"#"标准输入：写入: %s\\n"#g'
 perl -i -pe 's#\Q"pty: read: %s\n"#"pty: 读: %s\\n"#g' $file_name
 perl -i -pe 's#\Q"pty: write: %s\n"#"pty: 写: %s\\n"#g' $file_name
 perl -i -pe 's#\Q"signal pipe: read: %s\n"#"信号管道：读取: %s\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # contrib/cygtermd/malloc.c
 file_name="contrib/cygtermd/malloc.c"
 echo [19%]开始汉化 contrib/cygtermd/malloc.c
 perl -i -pe 's#\Q"out of memory"#"内存溢出"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/http.c
 file_name="proxy/http.c"
@@ -1327,8 +1327,8 @@ perl -i -pe 's#\Q"which we do not have"#""#g' $file_name
 perl -i -pe 's#\Q"HTTP proxy authentication"#"HTTP 代理认证"#g' $file_name
 perl -i -pe 's#\Q"Proxy username: "#"代理用户名："#g' $file_name
 perl -i -pe 's#\Q"Proxy password: "#"代理密码："#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/local.c
 file_name="proxy/local.c"
@@ -1337,16 +1337,16 @@ perl -i -pe 's#\Q"Local proxy authentication"#"本地代理认证"#g' $file_name
 perl -i -pe 's#\Q"Proxy username: "#"代理用户名: "#g' $file_name
 perl -i -pe 's#\Q"Proxy password: "#"代理密码: "#g' $file_name
 perl -i -pe 's#\Q"Starting local proxy command: "#"启动本地代理命令: "#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/nocproxy.c
 file_name="proxy/nocproxy.c"
 echo [22%]开始汉化 proxy/nocproxy.c
 perl -i -pe 's#\Q"CHAP is not built into this binary"#"CHAP 未内置到此二进制文件中"#g' $file_name
 perl -i -pe 's#\Q"HTTP DIGEST is not built into this binary"#"HTTP DIGEST 未内置到此二进制文件中"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/proxy.c
 file_name="proxy/proxy.c"
@@ -1362,8 +1362,8 @@ perl -i -pe 's#\Q"Will use %s proxy at %s:%d to connect"#"将使用 %sd 的 %a �
 perl -i -pe 's#\Q" to %s:%d"#""#g' $file_name
 perl -i -pe 's#\Q"Proxy error: Unable to resolve proxy host name"#"代理错误：无法解析代理主机名"#g' $file_name
 perl -i -pe 's#\Q"Connecting to %s proxy at %s port %d"#"在 %s 端口 %d 连接到 %s 代理"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/socks4.c
 file_name="proxy/socks4.c"
@@ -1376,8 +1376,8 @@ perl -i -pe 's#\Q"SOCKS server wanted IDENTD on client"#"SOCKS 服务器在客�
 perl -i -pe 's#\Q"Username and IDENTD on client don'\''t agree"#"客户端上的用户名和 IDENTD 不一致"#g' $file_name
 perl -i -pe 's#\Q"SOCKS server sent unrecognised error "#"SOCKS 服务器发送了无法识别的错误代码 %d"#g' $file_name
 perl -i -pe 's#\Q"code %d"#""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/socks5.c
 file_name="proxy/socks5.c"
@@ -1422,8 +1422,8 @@ perl -i -pe 's#\Q"reply version %d (expected %d)"#""#g' $file_name
 perl -i -pe 's#\Q"SOCKS proxy failed to connect, error %d "#"SOCKS 代理连接失败，错误 %d"#g' $file_name
 perl -i -pe 's#\Q"SOCKS proxy response included unknown "#"SOCKS 代理响应包括未知地址类型 %d"#g' $file_name
 perl -i -pe 's#\Q"address type %d"#""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/sshproxy.c
 file_name="proxy/sshproxy.c"
@@ -1448,8 +1448,8 @@ perl -i -pe 's#\Q"saved session '\''%s'\'' is not launchable"#"保存的会话�
 perl -i -pe 's#\Q"saved session '\''%s'\'' is not an SSH session"#"保存的会话“%s”不是 SSH 会话"#g' $file_name
 perl -i -pe 's#\Q"Backend provides NC_HOST without SESSION_START!"#"后端提供没有 SESSION_START 的 NC_HOST！"#g' $file_name
 perl -i -pe 's#\Q"unable to open SSH proxy connection: %s"#"无法打开 SSH 代理连接: %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # proxy/telnet.c
 file_name="proxy/telnet.c"
@@ -1458,15 +1458,15 @@ perl -i -pe 's#\Q"Telnet proxy authentication"#"Telnet 代理认证"#g' $file_na
 perl -i -pe 's#\Q"Proxy username: "#"代理用户名: "#g' $file_name
 perl -i -pe 's#\Q"Proxy password: "#"代理密码: "#g' $file_name
 perl -i -pe 's#\Q"Sending Telnet proxy command: "#"发送 Telnet 代理命令: "#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/agentf.c
 file_name="ssh/agentf.c"
 echo [28%]开始汉化 ssh/agentf.c
 perl -i -pe 's#\Q"Agent-forwarding connection closed"#"代理转发连接关闭"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/bpp1.c
 file_name="ssh/bpp1.c"
@@ -1480,8 +1480,8 @@ perl -i -pe 's#\Q"Incorrect CRC received on packet"#"在数据包上收到不正
 perl -i -pe 's#\Q"Zlib decompression encountered invalid data"#"zlib解压遇到无效数据"#g' $file_name
 perl -i -pe 's#\Q"Remote side unexpectedly closed network connection"#"远程端意外关闭网络连接"#g' $file_name
 perl -i -pe 's#\Q"Remote side closed network connection"#"远端封闭网络连接"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/bpp2.c
 file_name="ssh/bpp2.c"
@@ -1511,8 +1511,8 @@ perl -i -pe 's#\Q"Remote side sent SSH2_MSG_EXT_INFO "#"远程端在 USERAUTH_SU
 perl -i -pe 's#\Q"after USERAUTH_SUCCESS"#""#g' $file_name
 perl -i -pe 's#\Q"Remote side unexpectedly closed network connection"#"远程端意外关闭网络连接"#g' $file_name
 perl -i -pe 's#\Q"Remote side closed network connection"#"远端封闭网络连接"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/bpp-bare.c
 file_name="ssh/bpp-bare.c"
@@ -1522,8 +1522,8 @@ perl -i -pe 's#\Q"Remote side sent SSH2_MSG_EXT_INFO "#"远端以裸连接协议
 perl -i -pe 's#\Q"in bare connection protocol"#""#g' $file_name
 perl -i -pe 's#\Q"Remote side unexpectedly closed network connection"#"远程端意外关闭网络连接"#g' $file_name
 perl -i -pe 's#\Q"Remote side closed network connection"#"远端封闭网络连接"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/common.c
 file_name="ssh/common.c"
@@ -1533,8 +1533,8 @@ perl -i -pe 's#\Q"Host key not in manually configured list"#"主机密钥不在�
 perl -i -pe 's#\Q"Remote side sent disconnect message:\n\"%.*s\""#"远端发送断开消息：\\n\\"%.*s\\""#g' $file_name
 perl -i -pe 's#\Q"Remote debug message: %.*s"#"远程调试消息：%.*s"#g' $file_name
 perl -i -pe 's#\Q"User aborted at %s"#"用户在 %s 中止"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/connection1.c
 file_name="ssh/connection1.c"
@@ -1549,8 +1549,8 @@ perl -i -pe 's#\Q"Session finished"#"会话结束"#g' $file_name
 perl -i -pe 's#\Q"due to local error: %s"#"由于本地错误：%s"#g' $file_name
 perl -i -pe 's#\Q"Opening connection to %s:%d for %s"#"为 %s 打开与 %s:%d 的连接"#g' $file_name
 perl -i -pe 's#\Q"Authentication successful"#"认证成功"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/connection1-client.c
 file_name="ssh/connection1-client.c"
@@ -1566,8 +1566,8 @@ perl -i -pe 's#\Q"Remote port forwarding from %s enabled"#"已启用来自 %s �
 perl -i -pe 's#\Q"Remote port forwarding from %s refused"#"来自 %s 的远程端口转发被拒绝"#g' $file_name
 perl -i -pe 's#\Q"Should never be called in the client"#"永远不应该在客户端调用"#g' $file_name
 perl -i -pe 's#\Q"Received remote port open request for %s:%d"#"收到 %s 的远程端口打开请求:%d"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/connection1-server.c
 file_name="ssh/connection1-server.c"
@@ -1588,8 +1588,8 @@ perl -i -pe 's#\Q"setup phase, type %d (%s)"#""#g' $file_name
 perl -i -pe 's#\Q"Should never be called in the server"#"永远不应该在服务器中调用"#g' $file_name
 perl -i -pe 's#\Q"Forwarding X11 connection to client"#"将 X11 连接转发给客户端"#g' $file_name
 perl -i -pe 's#\Q"Forwarding agent connection to client"#"将代理连接转发到客户端"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/connection2.c
 file_name="ssh/connection2.c"
@@ -1611,8 +1611,8 @@ perl -i -pe 's#\Q"Authentication successful"#"认证成功"#g' $file_name
 perl -i -pe 's#\Q"Access granted. Press Return to begin session. "#"授予访问权限。按 Return 开始会话。"#g' $file_name
 perl -i -pe 's#\Q"All channels closed"#"所有频道关闭"#g' $file_name
 perl -i -pe 's#\Q"due to local error: %s"#"由于本地错误：%s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/connection2-client.c
 file_name="ssh/connection2-client.c"
@@ -1633,8 +1633,8 @@ perl -i -pe 's#\Q"Remote port forwarding from %s enabled"#"已启用来自 %s �
 perl -i -pe 's#\Q"Remote port forwarding from %s refused"#"来自 %s 的远程端口转发被拒绝"#g' $file_name
 perl -i -pe 's#\Q"Opening main session channel"#"打开主会话通道"#g' $file_name
 perl -i -pe 's#\Q"Should never be called in the client"#"永远不应该在客户端调用"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/connection2-server.c
 file_name="ssh/connection2-server.c"
@@ -1650,8 +1650,8 @@ perl -i -pe 's#\Q"Forwarding connection to listening port %s:%d"#"将连接转�
 perl -i -pe 's#\Q"Should never be called in the server"#"永远不应该在服务器中调用"#g' $file_name
 perl -i -pe 's#\Q"Forwarding X11 channel to client"#"将 X11 频道转发给客户端"#g' $file_name
 perl -i -pe 's#\Q"Forwarding SSH agent to client"#"将 SSH 代理转发到客户端"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/kex2-client.c
 file_name="ssh/kex2-client.c"
@@ -1722,8 +1722,8 @@ perl -i -pe 's#\Q"Host key was different in repeat key exchange"#"重复密钥�
 perl -i -pe 's#\Q"GSSAPI key exchange failed to initialise "#"GSSAPI 密钥交换未能初始化上下文：%s"#g' $file_name
 perl -i -pe 's#\Q"context: %s"#""#g' $file_name
 perl -i -pe 's#\Q"host key verification"#"主机密钥验证"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/kex2-server.c
 file_name="ssh/kex2-server.c"
@@ -1751,8 +1751,8 @@ perl -i -pe 's#\Q"Configured %d-bit RSA key is too short (min %d)"#"配置的 %d
 perl -i -pe 's#\Q"Generating a %d-bit RSA key"#"生成 %d 位 RSA 密钥"#g' $file_name
 perl -i -pe 's#\Q"expecting RSA kex secret, type %d (%s)"#"期待 RSA kex 密码，键入 %d (%s)"#g' $file_name
 perl -i -pe 's#\Q"Unable to decrypt RSA kex secret"#"无法解密 RSA kex 密钥"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/login1.c
 file_name="ssh/login1.c"
@@ -1880,8 +1880,8 @@ perl -i -pe 's#\Q"Received CryptoCard challenge"#"收到 CryptoCard 质询"#g' $
 perl -i -pe 's#\Q"CryptoCard authentication response: "#"CryptoCard 身份验证响应："#g' $file_name
 perl -i -pe 's#\Q"SSH password"#"SSH 密码"#g' $file_name
 perl -i -pe 's#\Q"password prompt"#"密码提示"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/login1-server.c
 file_name="ssh/login1-server.c"
@@ -1904,8 +1904,8 @@ perl -i -pe 's#\Q"Received unexpected packet in "#"收到意外数据包以响�
 perl -i -pe 's#\Q"response to %s challenge, type %d (%s)"#""#g' $file_name
 perl -i -pe 's#\Q"Multiple authentications required but SSH-1"#"需要多个身份验证，但 SSH-1 无法执行它们"#g' $file_name
 perl -i -pe 's#\Q" cannot perform them"#""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/mainchan.c
 file_name="ssh/mainchan.c"
@@ -1940,8 +1940,8 @@ perl -i -pe 's#\Q"Sent signal SIG%s"#"发送信号 SIG%s"#g' $file_name
 perl -i -pe 's#\Q"main channel"#"主频道"#g' $file_name
 perl -i -pe 's#\Q"Opened main channel"#"打开的主频道"#g' $file_name
 perl -i -pe 's#\Q"Session exited on %s%s%s%.*s%s"#"会话退出时间 %s%s%s%.*s%s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/portfwd.c
 file_name="ssh/portfwd.c"
@@ -1966,8 +1966,8 @@ perl -i -pe 's#\Q"%s on port %s:%d to forward to client%s%s"#"%s 在端口 %s:%d
 perl -i -pe 's#\Q"Failed to listen"#"无法监听"#g' $file_name
 perl -i -pe 's#\Q"Listening"#"监听"#g' $file_name
 perl -i -pe 's#\Q"Closing listening port %s:%d"#"正在关闭侦听端口 %s:%d"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/scpserver.c
 file_name="ssh/scpserver.c"
@@ -1991,8 +1991,8 @@ perl -i -pe 's#\Q"'\''%.*s'\'': unable to write to file: %s"#"“%.*s”: 无法
 perl -i -pe 's#\Q"received E command without matching D"#"收到没有匹配 D 的 E 命令"#g' $file_name
 perl -i -pe 's#\Q"unrecognised scp command '\''%.*s'\''"#"无法识别的 scp 命令 '\''%.*s'\''"#g' $file_name
 perl -i -pe 's#\Q"Unable to parse scp command: '\''%.*s'\''"#"无法解析 scp 命令：'\''%.*s'\''"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/server.c
 file_name="ssh/server.c"
@@ -2000,8 +2000,8 @@ echo [46%]开始汉化 ssh/server.c
 perl -i -pe 's#\Q"freeing server instance"#"释放服务器实例"#g' $file_name
 perl -i -pe 's#\Q"Protocol error: %s"#"协议错误：%s"#g' $file_name
 perl -i -pe 's#\Q"opened unconditional agent socket at %s\n"#"在 %s 打开无条件代理套接字\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/sesschan.c
 file_name="ssh/sesschan.c"
@@ -2011,8 +2011,8 @@ perl -i -pe 's#\Q"Starting built-in SCP server"#"启动内置 SCP 服务器"#g' 
 perl -i -pe 's#\Q"Starting built-in SFTP subsystem"#"启动内置 SFTP 子系统"#g' $file_name
 perl -i -pe 's#\Q"Session channel (SFTP) closed"#"会话通道 (SFTP) 已关闭"#g' $file_name
 perl -i -pe 's#\Q"Session channel (SCP) closed"#"会话通道 (SCP) 已关闭"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/sftp.c
 file_name="ssh/sftp.c"
@@ -2057,8 +2057,8 @@ perl -i -pe 's#\Q"skipping failed read request %p\n"#"跳过失败的读取请�
 perl -i -pe 's#\Q"queueing write request %p at %"#"排队写请求 %p 在 %"#g' $file_name
 perl -i -pe 's#\Q"request ID is not part of the current upload"#"请求 ID 不是当前上传的一部分"#g' $file_name
 perl -i -pe 's#\Q"write request %p has returned [%d]\n"#"写请求 %p 已返回 [%d]\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/sftpserver.c
 file_name="ssh/sftpserver.c"
@@ -2068,8 +2068,8 @@ perl -i -pe 's#\Q"open with TRUNC but not CREAT"#"用 TRUNC 打开但不是 CREA
 perl -i -pe 's#\Q"open with EXCL but not CREAT"#"用 EXCL 打开但不是 CREATE"#g' $file_name
 perl -i -pe 's#\Q"Unrecognised request type"#"无法识别的请求类型"#g' $file_name
 perl -i -pe 's#\Q"Unable to decode request"#"无法解码请求"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/sharing.c
 file_name="ssh/sharing.c"
@@ -2110,8 +2110,8 @@ perl -i -pe 's#\Q" as downstream: %s"#" 作为下游：%s"#g' $file_name
 perl -i -pe 's#\Q" as upstream: %s"#" 作为上游: %s"#g' $file_name
 perl -i -pe 's#\Q"Using existing shared connection at %s"#"使用 %s 的现有共享连接"#g' $file_name
 perl -i -pe 's#\Q"Sharing this connection at %s"#"在 %s 共享此连接"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/ssh.c
 file_name="ssh/ssh.c"
@@ -2122,8 +2122,8 @@ perl -i -pe 's#\Q"Cache new host key type"#"缓存新的主机密钥类型"#g' $
 perl -i -pe 's#\Q"This will also close %d downstream connection%s."#"这也将关闭 %d 个下游连接%s."#g' $file_name
 perl -i -pe 's#\Q"Reusing a shared connection to this server.\r\n"#"重复使用到此服务器的共享连接.\\r\\n"#g' $file_name
 perl -i -pe 's#\Q"SSH connection"#"SSH 连接"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/transport2.c
 file_name="ssh/transport2.c"
@@ -2189,8 +2189,8 @@ perl -i -pe 's#\Q"cipher settings changed"#"密码设置已更改"#g' $file_name
 perl -i -pe 's#\Q"host key warning"#"主机密钥警告"#g' $file_name
 perl -i -pe 's#\Q"cipher warning"#"密码警告"#g' $file_name
 perl -i -pe 's#\Q"kex warning"#"kex 警告"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/userauth2-client.c
 file_name="ssh/userauth2-client.c"
@@ -2310,8 +2310,8 @@ perl -i -pe 's#\Q"Enter new password: "#"输入新密码: "#g' $file_name
 perl -i -pe 's#\Q"Confirm new password: "#"确认新密码: "#g' $file_name
 perl -i -pe 's#\Q"password-change prompt"#"密码更改提示"#g' $file_name
 perl -i -pe 's#\Q"%s@%s'\''s password: "#"%s@%s的密码: "#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/userauth2-server.c
 file_name="ssh/userauth2-server.c"
@@ -2322,8 +2322,8 @@ perl -i -pe 's#\Q"Please change your password"#"请更改您的密码"#g' $file_
 perl -i -pe 's#\Q"expecting USERAUTH_INFO_RESPONSE, type %d (%s)"#"期待 USERAUTH_INFO_RESPONSE，键入 %d (%s)"#g' $file_name
 perl -i -pe 's#\Q"Received %u keyboard-interactive "#"收到 %u 键盘交互"#g' $file_name
 perl -i -pe 's#\Q"responses after sending %u prompts"#"发送 %u 提示后的响应"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/verstring.c
 file_name="ssh/verstring.c"
@@ -2356,8 +2356,8 @@ perl -i -pe 's#\Q"We believe remote version has SSH-2 ignore bug"#"我们认为�
 perl -i -pe 's#\Q"We believe remote version has outdated SSH-2 GEX"#"我们认为远程版本已经过时 SSH-2 GEX"#g' $file_name
 perl -i -pe 's#\Q"We believe remote version has winadj bug"#"我们认为远程版本有 winadj 错误"#g' $file_name
 perl -i -pe 's#\Q"channel request bug"#"频道请求错误"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # ssh/x11fwd.c
 file_name="ssh/x11fwd.c"
@@ -2375,15 +2375,15 @@ perl -i -pe 's#\Q"%s X11 proxy: %s\n"#"%s X11 代理: %s\\n"#g' $file_name
 perl -i -pe 's#\Q"unable to connect to"#"无法连接到转发的 X 服务器: %s"#g' $file_name
 perl -i -pe 's#\Q" forwarded X server: %s"#""#g' $file_name
 perl -i -pe 's#\Q"Forwarded X11 connection terminated"#"转发的 X11 连接终止"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # utils/bufchain.c
 file_name="utils/bufchain.c"
 echo [57%]开始汉化 utils/bufchain.c
 perl -i -pe 's#\Q"bufchain callback used while uninitialised"#"未初始化时使用的 bufchain 回调"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # utils/backend_socket_log.c
 file_name="utils/backend_socket_log.c"
@@ -2393,8 +2393,8 @@ perl -i -pe 's#\Q"Connecting to %s"#"连接到 %s"#g' $file_name
 perl -i -pe 's#\Q"Failed to connect to %s: %s"#"连接失败 %s: %s"#g' $file_name
 perl -i -pe 's#\Q"Connected to %s"#"连接到 %s"#g' $file_name
 perl -i -pe 's#\Q"remote host"#"远程主机"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # utils/buildinfo.c
 file_name="utils/buildinfo.c"
@@ -2416,24 +2416,24 @@ perl -i -pe 's#\Q"%sSource commit: %s"#"%s源代码提交: %s"#g' $file_name
 perl -i -pe 's#\Q"%sBuild option: MINEFIELD"#"%s构建选项: MINEFIELD"#g' $file_name
 perl -i -pe 's#\Q"%sEmbedded HTML Help file: %s"#"%s嵌入式 HTML 帮助文件: %s"#g' $file_name
 perl -i -pe 's#\Q"%sCompiled against GTK version %s"#"%s针对 GTK 编译版本 %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # utils/host_strchr_internal.c
 file_name="utils/host_strchr_internal.c"
 echo [60%]开始汉化 utils/host_strchr_internal.c
 perl -i -pe 's#\Q"passed %d failed %d total %d\n"#"通过 %d 失败 %d 共 %d\\n"#g' $file_name
 perl -i -pe 's#\Q"fail: %s(%s,%s)%s = %u, expected %u\n"#"失败：%s(%s,%s)%s = %u，预期 %u\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # utils/default_description.c
 file_name="utils/default_description.c"
 echo [61%]开始汉化 utils/default_description.c
 perl -i -pe 's#\Q"%s connection to %s"#"%s 连接到 %s"#g' $file_name
 perl -i -pe 's#\Q"%s connection to %s port %d"#"%s 连接到 %s 端口 %d"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # utils/sshutils.c
 file_name="utils/sshutils.c"
@@ -2441,8 +2441,8 @@ echo [62%]开始汉化 utils/sshutils.c
 perl -i -pe 's#\Q"this channel type should never receive OPEN_CONFIRMATION"#"此频道类型不应收到 OPEN_CONFIRMATION"#g' $file_name
 perl -i -pe 's#\Q"this channel type should never receive OPEN_FAILURE"#"此频道类型不应收到 OPEN_FAILURE"#g' $file_name
 perl -i -pe 's#\Q"this channel type should never send a want-reply request"#"此频道类型不应该发送想要回复的请求"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/config.c
 file_name="windows/config.c"
@@ -2521,8 +2521,8 @@ perl -i -pe 's#\Q"Window/Colours"#"窗口/颜色"#g' $file_name
 perl -i -pe 's#\Q"Window/Behaviour"#"窗口/行为"#g' $file_name
 perl -i -pe 's#\Q"Connection/Proxy"#"连接/代理"#g' $file_name
 perl -i -pe 's#\Q"Connection/SSH/X11"#"连接/SSH/X11"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/conpty.c
 file_name="windows/conpty.c"
@@ -2538,8 +2538,8 @@ perl -i -pe 's#\Q"CreatePseudoConsole failed: HRESULT=0x%08x"#"创建伪控制�
 perl -i -pe 's#\Q"InitializeProcThreadAttributeList: %s"#"初始化proc线程属性列表: %s"#g' $file_name
 perl -i -pe 's#\Q"UpdateProcThreadAttribute: %s"#"更新 proc 线程属性: %s"#g' $file_name
 perl -i -pe 's#\Q"CreateProcess: %s"#"创建进程: %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/console.c
 file_name="windows/console.c"
@@ -2577,8 +2577,8 @@ perl -i -pe 's#\Q"Cannot answer interactive prompts "#"无法回答交互式提�
 perl -i -pe 's#\Q"Cannot get standard input handle\n"#"无法获得标准输入句柄\\n"#g' $file_name
 perl -i -pe 's#\Q"Cannot get standard output handle\n"#"无法获得标准输出句柄\\n"#g' $file_name
 perl -i -pe 's#\Q"Error reading from console"#"从控制台读取错误"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/dialog.c
 file_name="windows/dialog.c"
@@ -2645,8 +2645,8 @@ perl -i -pe 's#\Q"You can perform this conversion by loading the key\n"#"请使�
 perl -i -pe 's#\Q"into PuTTYgen and then saving it again."#"然后保存。"#g' $file_name
 perl -i -pe 's#\Q"Demo screenshot failure"#"演示截图失败"#g' $file_name
 perl -i -pe 's#\Q"%s (port %d)"#"%s (端口 %d)"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 
 # windows/gss.c
@@ -2677,16 +2677,16 @@ perl -i -pe 's#\Q" security package. Passing a token to"#""#g' $file_name
 perl -i -pe 's#\Q" the wrong package can happen if client and server did not"#"如果客户端和服务器没有协商正确的安全包，"#g' $file_name
 perl -i -pe 's#\Q" negotiate the proper security package."#"则可能会发生将令牌传递给错误包的情况。"#g' $file_name
 perl -i -pe 's#\Q"Internal SSPI error"#"内部 SSPI 错误"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/local-proxy.c
 file_name="windows/local-proxy.c"
 echo [68%]开始汉化 windows/local-proxy.c
 perl -i -pe 's#\Q"Starting local proxy command: %s"#"启动本地代理命令：%s"#g' $file_name
 perl -i -pe 's#\Q"Unable to create pipes for proxy command: %s"#"无法为代理命令创建管道: %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/named-pipe-client.c
 file_name="windows/named-pipe-client.c"
@@ -2696,16 +2696,16 @@ perl -i -pe 's#\Q"Error waiting for named pipe '\''%s'\'': %s"#"等待命名管�
 perl -i -pe 's#\Q"Unable to get user SID: %s"#"无法获取用户 SID: %s"#g' $file_name
 perl -i -pe 's#\Q"Unable to get named pipe security information: %s"#"无法获取命名管道安全信息：%s"#g' $file_name
 perl -i -pe 's#\Q"Owner of named pipe '\''%s'\'' is not us"#"命名管道“%s”的所有者不是我们"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/named-pipe-server.c
 file_name="windows/named-pipe-server.c"
 echo [70%]开始汉化 windows/named-pipe-server.c
 perl -i -pe 's#\Q"Error while listening to named pipe: %s"#"侦听命名管道时出错：%s"#g' $file_name
 perl -i -pe 's#\Q"unable to create named pipe '\''%s'\'': %s"#"无法创建命名管道“%s”: %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/network.c
 file_name="windows/network.c"
@@ -2755,8 +2755,8 @@ perl -i -pe 's#\Q"gethostbyname: unknown error"#"gethostbyname：未知错误"#g
 perl -i -pe 's#\Q"<unknown>"#"<未知>"#g' $file_name
 perl -i -pe 's#\Q"bad address family in sk_addrcopy"#"sk_addrcopy 中的错误地址系列"#g' $file_name
 perl -i -pe 's#\Q"unix sockets not supported on this platform"#"此平台不支持 unix 套字节"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/pageant.c
 file_name="windows/pageant.c"
@@ -2822,8 +2822,8 @@ perl -i -pe 's#\Q"Pageant command line error"#"Pageant 命令行错误"#g' $file
 perl -i -pe 's#\Q"unrecognised option '\''%s'\''\n"#"无法识别的选项 '\''%s'\''\\n"#g' $file_name
 perl -i -pe 's#\Q"Unable to write OpenSSH config "#"无法将 OpenSSH 配置文件写入 %s"#g' $file_name
 perl -i -pe 's#\Q"file to %s"#""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/pageant.rc
 file_name="windows/pageant.rc"
@@ -2855,8 +2855,8 @@ perl -i -pe 's#\Q"A client of Pageant wants to use the following encrypted key:"
 perl -i -pe 's#\Q"If you intended this, click in this box to make sure it has"#"如果您打算这样做，请单击此框以确保它具有输入焦点，"#g' $file_name
 perl -i -pe 's#\Q"input focus, then enter the passphrase to decrypt the key."#"然后输入密码来解密密钥。"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 
 # windows/platform.h
@@ -2869,8 +2869,8 @@ perl -i -pe 's#\Q"Dynamic Library Files (*.dll)\0*.dll\0"#"动态链接库文件
 perl -i -pe 's#\Q"system clipboard"#"系统剪贴板"#g' $file_name
 perl -i -pe 's#\Q"System clipboard"#"系统剪贴板"#g' $file_name
 perl -i -pe 's#\Q"Last selected text"#"上次选择的文本"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/plink.c
 file_name="windows/plink.c"
@@ -2945,32 +2945,32 @@ perl -i -pe 's#\Q"Remote process exit code unavailable\n"#"远程进程退出代
 perl -i -pe 's#\Q"            force use of the bare ssh-connection protocol\n"#"            强制使用裸 ssh 连接协议\\n"#g' $file_name
 perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\\n"#g' $file_name
 perl -i -pe 's#\Q"  -1 -2     force use of particular SSH protocol version\n"#"  -1 -2     强制使用特定的 SSH 协议版本\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/plink.rc
 file_name="windows/plink.rc"
 echo [76%]开始汉化 windows/plink.rc
 perl -i -pe 's#\Q"Command-line SSH, Telnet, and Rlogin client"#"命令行 SSH、Telnet 和 Rlogin 客户端"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/pscp.rc
 file_name="windows/pscp.rc"
 echo [77%]开始汉化 windows/pscp.rc
 perl -i -pe 's#\Q"Command-line SCP/SFTP client"#"命令行 SCP/SFTP 客户端"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/psftp.rc
 file_name="windows/psftp.rc"
 echo [78%]开始汉化 windows/psftp.rc
 perl -i -pe 's#\Q"Command-line interactive SFTP client"#"命令行交互 SFTP 客户端"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/pterm.c
 file_name="windows/pterm.c"
@@ -2978,16 +2978,16 @@ echo [79%]开始汉化 windows/pterm.c
 perl -i -pe 's#\Q"option \"%s\" requires an argument"#"选项 \\"%s\\" 需要一个参数"#g' $file_name
 perl -i -pe 's#\Q"unrecognised option \\"%s\\""#"无法识别的选项“%s”"#g' $file_name
 perl -i -pe 's#\Q"unexpected non-option argument \"%s\""#"意外的非选项参数 \\"%s\\""#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/pterm.rc
 file_name="windows/pterm.rc"
 echo [80%]开始汉化 windows/pterm.rc
 perl -i -pe 's#\Q"PuTTY-style wrapper for Windows command prompts"#"Windows 命令提示符的 PuTTY 样式包装器"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/putty.c
 file_name="windows/putty.c"
@@ -3007,8 +3007,8 @@ perl -i -pe 's#\Q"unexpected argument \"%s\""#"意外参数“%s”"#g' $file_na
 perl -i -pe 's#\Q"unknown option \"%s\""#"未知选项“%s”"#g' $file_name
 perl -i -pe 's#\Q"Unsupported protocol number found"#"发现不支持的协议号"#g' $file_name
 perl -i -pe 's#\Q"%s Internal Error"#"%s 内部错误"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/putty.rc
 file_name="windows/putty.rc"
@@ -3016,8 +3016,8 @@ echo [82%]开始汉化 windows/putty.rc
 perl -i -pe 's#\Q"SSH, Telnet and Rlogin client"#"SSH、Telnet 和 Rlogin 客户端"#g' $file_name
 perl -i -pe 's#\Q"SSH, Telnet, Rlogin, and SUPDUP client"#"SSH、Telnet、Rlogin 和 SUPDUP 客户端"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/putty-common.rc2
 file_name="windows/putty-common.rc2"
@@ -3068,8 +3068,8 @@ perl -i -pe 's#\Q"host key, or you have actually connected to another computer"#
 perl -i -pe 's#\Q"pretending to be the server."#"冒充的。"#g' $file_name
 perl -i -pe 's#\Q"PuTTY: information about the server'\''s host key"#"PuTTY: 关于服务器主机密钥的信息"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/puttygen.c
 file_name="windows/puttygen.c"
@@ -3194,8 +3194,8 @@ perl -i -pe 's#\Q"unrecognised PPK parameter '\''%s'\''\n"#"无法识别的 PPK 
 perl -i -pe 's#\Q"unrecognised option '\''%s'\''\n"#"无法识别的选项“%s”\\n"#g' $file_name
 perl -i -pe 's#\Q"unsupported ECDSA bit length %d"#"不支持的 ECDSA 位长度 %d"#g' $file_name
 perl -i -pe 's#\Q"unsupported EDDSA bit length %d"#"不支持的 EDDSA 位长度 %d"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/puttygen.rc
 file_name="windows/puttygen.rc"
@@ -3222,16 +3222,16 @@ perl -i -pe 's#\Q"ms"#"毫秒"#g' $file_name
 perl -i -pe 's#\Q"passes"#"遍"#g' $file_name
 perl -i -pe 's#\Q"Parallelism for passphrase hash:"#"密码哈希的并行性:"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/puttytel.rc
 file_name="windows/puttytel.rc"
 echo [86%]开始汉化 windows/puttytel.rc
 perl -i -pe 's#\Q"Telnet and Rlogin client"#"Telnet 和 Rlogin 客户端"#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/serial.c
 file_name="windows/serial.c"
@@ -3252,23 +3252,23 @@ perl -i -pe 's#\Q"Opening serial device %s"#"打开串行设备 %s"#g' $file_nam
 perl -i -pe 's#\Q"Opening '\''%s'\'': %s"#"正在打开“%s”: %s"#g' $file_name
 perl -i -pe 's#\Q"Finished serial break"#"完成连续中断"#g' $file_name
 perl -i -pe 's#\Q"Starting serial break at user request"#"应用户请求启动连续中断"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/sftp.c
 file_name="windows/sftp.c"
 echo [88%]开始汉化 windows/sftp.c
 perl -i -pe 's#\Q"Unable to create command input thread\n"#"无法创建命令输入线程\\n"#g' $file_name
 perl -i -pe 's#\Q"Running with restricted process ACL"#"使用受限进程 ACL 运行"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/sharing.c
 file_name="windows/sharing.c"
 echo [89%]开始汉化 windows/sharing.c
 perl -i -pe 's#\Q"Unable to call CryptProtectMemory: %s"#"无法调用 CryptProtectMemory: %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/storage.c
 file_name="windows/storage.c"
@@ -3302,8 +3302,8 @@ perl -i -pe 's#\Q"Unable to create jumplist file"#"无法创建跳转列表文�
 perl -i -pe 's#\Q"Unable to load jumplist file"#"无法加载跳转列表文件"#g' $file_name
 perl -i -pe 's#\Q"Unable to open file for writing"#"无法打开文件进行写入"#g' $file_name
 perl -i -pe 's#\Q"Unable to save jumplist"#"无法保存跳转列表"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/version.rc2
 file_name="windows/version.rc2"
@@ -3314,8 +3314,8 @@ perl -i -pe 's#\Q"Copyright \251 "#"版权所有(C) "#g' $file_name
 perl -i -pe 's#\Q0x809, 1200#0x804, 0x4B0#g' $file_name
 perl -i -pe 's#\Q(UK English, Unicode)#(CN 中文, 中华人民共和国)#g' $file_name
 sed -i '1 i #pragma code_page(65001)' $file_name
-# iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-# mv -f temptext.txt $file_name
+
+
 
 # windows/window.c
 file_name="windows/window.c"
@@ -3358,8 +3358,8 @@ perl -i -pe 's#\Q"Unable to play sound file\n%s\nUsing default sound instead"#"�
 perl -i -pe 's#\Q"%s Sound Error"#"%s 声音错误"#g' $file_name
 perl -i -pe 's#\Q"Primary font H=%d, AW=%d, MW=%d\n"#"主要字体 H=%d, AW=%d, MW=%d\\n"#g' $file_name
 perl -i -pe 's#\Q"Unable to create terminal window: %s"#"无法创建终端窗口: %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/utils/security.c
 file_name="windows/utils/security.c"
@@ -3377,8 +3377,8 @@ perl -i -pe 's#\Q"unable to construct ACL: %s"#"无法构造 ACL：%s"#g' $file_
 perl -i -pe 's#\Q"Unable to set process ACL: %s"#"无法设置进程 ACL： %s"#g' $file_name
 perl -i -pe 's#\Q"ACL restrictions not compiled into this binary"#"ACL 限制未编译到此二进制文件中"#g' $file_name
 perl -i -pe 's#\Q"Could not restrict process ACL: %s"#"无法限制进程 ACL:%s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/utils/split_into_argv.c
 file_name="windows/utils/split_into_argv.c"
@@ -3396,16 +3396,16 @@ perl -i -pe 's#\Q"test %d (|%s|) arg %d: |%s| == |%s|\n"#"测试 %d (|%s|) 参�
 perl -i -pe 's#\Q"failed test %d (|%s|): %d args returned, should be %d\n"#"测试 %d (|%s|) 失败：返回 %d 个参数，应该是 %d\\n"#g' $file_name
 perl -i -pe 's#\Q"failed test %d (|%s|): %d args returned, should be more\n"#"测试 %d (|%s|) 失败：返回 %d 个参数，应该更多\\n"#g' $file_name
 perl -i -pe 's#\Q"passed %d failed %d (%s mode)\n"#"通过 %d 失败 %d (%s 模式)\\n"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/utils/win_strerror.c
 file_name="windows/utils/win_strerror.c"
 echo [95%]开始汉化 windows/utils/win_strerror.c
 perl -i -pe 's#\Q"(unable to format: FormatMessage returned %u)"#"（无法格式化：FormatMessage 返回 %u）"#g' $file_name
 perl -i -pe 's#\Q"Error %d: %s"#"错误 %d: %s"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/utils/pgp_fingerprints_msgbox.c
 file_name="windows/utils/pgp_fingerprints_msgbox.c"
@@ -3417,8 +3417,8 @@ perl -i -pe 's#\Q"(Note: these fingerprints have nothing to do with SSH!)\n"#"�
 perl -i -pe 's#\Q"PuTTY Master Key as of "#"PuTTY 万能钥匙 "#g' $file_name
 perl -i -pe 's#\Q"Previous Master Key ("#"以前的万能钥匙 ("#g' $file_name
 perl -i -pe 's#\Q"PGP fingerprints"#"PGP指纹"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 # windows/controls.c
 file_name="windows/controls.c"
@@ -3437,13 +3437,13 @@ perl -i -pe 's#\Q"point"#"点"#g' $file_name
 perl -i -pe 's#\Q"bad control type in winctrl_layout"#"winctrl_layout 中的控件类型错误"#g' $file_name
 perl -i -pe 's#\Q"no radio button was checked"#"没有选中单选按钮"#g' $file_name
 perl -i -pe 's#\Q"bad control type in label_change"#"label_change 中的控制类型错误"#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
 
 
 echo [99%]开始优化
 #替换默认字体
 file_name="windows/utils/defaults.c"
 perl -i -pe 's#\Q("Courier New", false, 10, ANSI_CHARSET)#("新宋体", false, 12, GB2312_CHARSET)#g' $file_name
-iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
-mv -f temptext.txt $file_name
+
+
