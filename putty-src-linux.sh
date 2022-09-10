@@ -7,9 +7,8 @@ echo "\e[33m |   1、本脚本仅支持 Ubantu/Debian 环境                  |\
 echo "\e[33m |   2、编译文件输出目录 build，程序输出目录 output      |\e[0m"
 echo "\e[33m |   3、使用sudo运行避免多次输入密码                     |\e[0m"
 echo "\e[33m |   4、本脚本使用交叉编译不一定稳定                     |\e[0m"
-echo "\e[33m |   5、确定putty-src-linux.sh和putty-src-new.sh在同目录 |\e[0m"
 echo "\e[33m |                                                       |\e[0m"
-echo "\e[33m |   最后修改: 2022/09/08 20:09:02                       |\e[0m"
+echo "\e[33m |   最后修改: 2022/09/11 01:37:19                       |\e[0m"
 echo "\e[33m |   修改人员: wanyanjiabin                              |\e[0m"
 echo "\e[33m  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[0m"
 echo "\n"
@@ -61,11 +60,10 @@ echo "\e[33m ======================= 开始汉化 ======================= \e[0m"
 echo "\n"
 sleep 1
 
-#!/bin/bash
 
 #******************************************
 # 0.77
-# 最后编辑 2022/9/8 04:22
+# 最后编辑 2022/09/11 00:38:37
 # 最后编辑 wanyanjiabin
 #******************************************
 
@@ -607,8 +605,6 @@ perl -i -pe 's#\Q"Shift/Ctrl/Alt with the arrow keys"#"Shift/Ctrl/Alt 与箭头�
 perl -i -pe 's#\Q"Ctrl toggles app mode"#"Ctrl 切换应用模式"#g' $file_name
 perl -i -pe 's#\Q"Manually enabled workarounds"#"手动启用解决方法"#g' $file_name
 perl -i -pe 's#\Q"Discards data sent before its greeting"#"丢弃在其问候之前发送的数据"#g' $file_name
-
-
 perl -i -pe 's#\Q"Terminal"#"终端"#g' $file_name
 perl -i -pe 's#\Q"Terminal/Keyboard"#"终端/键盘"#g' $file_name
 perl -i -pe 's#\Q"Terminal/Bell"#"终端/响铃"#g' $file_name
@@ -2465,9 +2461,9 @@ mv -f temptext.txt $file_name
 file_name="utils/buildinfo.c"
 echo [59%]开始汉化 utils/buildinfo.c
 perl -i -pe 's#\Q"Build platform: %d-bit %s"#"构建平台: %d 位 %s"#g' $file_name
-perl -i -pe 's#\Q"%sCompiler: clang %s"#"%s编译器: clang %s 汉化: wanyanjiabin、bbbboom"#g' $file_name
-perl -i -pe 's#\Q"%sCompiler: gcc %s"#"%s编译器: gcc %s 汉化: wanyanjiabin、bbbboom"#g' $file_name
-perl -i -pe 's#\Q"%sCompiler: "#"%s汉化: wanyanjiabin、bbbboom 编译器:"#g' $file_name
+perl -i -pe 's#\Q"%sCompiler: clang %s"#"%s编译器: clang %s 汉化: bbbboom、wanyanjiabin"#g' $file_name
+perl -i -pe 's#\Q"%sCompiler: gcc %s"#"%s编译器: gcc %s 汉化: bbbboom、wanyanjiabin"#g' $file_name
+perl -i -pe 's#\Q"%sCompiler: "#"%s汉化: bbbboom、wanyanjiabin 编译器:"#g' $file_name
 perl -i -pe 's#\Q", unrecognised version"#", 未知版本"#g' $file_name
 perl -i -pe 's#\Q"%sBuild option: NO_SECURITY"#"%s构建选项: NO_SECURITY"#g' $file_name
 perl -i -pe 's#\Q"%sBuild option: NO_SECUREZEROMEMORY"#"%s构建选项: NO_SECUREZEROMEMORY"#g' $file_name
@@ -2890,35 +2886,36 @@ perl -i -pe 's#\Q"file to %s"#""#g' $file_name
 iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 mv -f temptext.txt $file_name
 
-# # windows/pageant.rc
-# file_name="windows/pageant.rc"
-# echo [73%]开始汉化 windows/pageant.rc
-# perl -i -pe 's#\Q"PuTTY SSH authentication agent"#"PuTTY SSH 认证代理"#g' $file_name
-# perl -i -pe 's#\Q"Pageant: Enter Passphrase"#"Pageant: 输入密码"#g' $file_name
-# perl -i -pe 's#\Q"Enter passphrase for key"#"请输入密钥的密码"#g' $file_name
-# perl -i -pe 's#\Q"O&K"#"确定(&K)"#g' $file_name
-# perl -i -pe 's#\Q"&Cancel"#"取消(&C)"#g' $file_name
-# perl -i -pe 's#\Q"Pageant Key List"#"Pageant 密钥列表"#g' $file_name
-# perl -i -pe 's#\Q"&Add Key"#"增加密钥(&A)"#g' $file_name
-# perl -i -pe 's#\Q"&Remove Key"#"移除密钥(&R)"#g' $file_name
-# perl -i -pe 's#\Q"&Help"#"帮助(&H)"#g' $file_name
-# perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
-# perl -i -pe 's#\Q"About Pageant"#"关于 Pageant"#g' $file_name
-# perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
-# perl -i -pe 's#\Q"View &Licence"#"查看许可证(&L)"#g' $file_name
-# perl -i -pe 's#\Q"Visit &Web Site"#"查看网站 (&W)"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY Licence"#"PuTTY 许可证"#g' $file_name
-# perl -i -pe 's#\Q"OK"#"确定"#g' $file_name
-# perl -i -pe 's#\Q"Add Key (&encrypted)"#"增加密钥(&加密)"#g' $file_name
-# perl -i -pe 's#\Q"Re-e&ncrypt"#"重新加密"#g' $file_name
-# perl -i -pe 's#\Q"&Remove"#"删除"#g' $file_name
-# perl -i -pe 's#\Q"&Fingerprint type:"#"指纹类型"#g' $file_name
-# perl -i -pe 's#\Q"Pageant: Loading Encrypted Key"#"Pageant：加载加密密钥"#g' $file_name
-# perl -i -pe 's#\Q"Enter passphrase to load key"#"输入密码以加载密钥"#g' $file_name
-# perl -i -pe 's#\Q"Pageant: Decrypting Stored Key"#"Pageant：解密存储的密钥"#g' $file_name
-# perl -i -pe 's#\Q"A client of Pageant wants to use the following encrypted key:"#"Pageant的一个连接想要使用以下加密密钥："#g' $file_name
-# perl -i -pe 's#\Q"If you intended this, click in this box to make sure it has"#"如果您打算这样做，请单击此框以确保它具有输入焦点，"#g' $file_name
-# perl -i -pe 's#\Q"input focus, then enter the passphrase to decrypt the key."#"然后输入密码来解密密钥。"#g' $file_name
+# windows/pageant.rc
+file_name="windows/pageant.rc"
+echo [73%]开始汉化 windows/pageant.rc
+perl -i -pe 's#\Q"PuTTY SSH authentication agent"#"PuTTY SSH 认证代理"#g' $file_name
+perl -i -pe 's#\Q"Pageant: Enter Passphrase"#"Pageant: 输入密码"#g' $file_name
+perl -i -pe 's#\Q"Enter passphrase for key"#"请输入密钥的密码"#g' $file_name
+perl -i -pe 's#\Q"O&K"#"确定(&K)"#g' $file_name
+perl -i -pe 's#\Q"&Cancel"#"取消(&C)"#g' $file_name
+perl -i -pe 's#\Q"Pageant Key List"#"Pageant 密钥列表"#g' $file_name
+perl -i -pe 's#\Q"&Add Key"#"增加密钥(&A)"#g' $file_name
+perl -i -pe 's#\Q"&Remove Key"#"移除密钥(&R)"#g' $file_name
+perl -i -pe 's#\Q"&Help"#"帮助(&H)"#g' $file_name
+perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
+perl -i -pe 's#\Q"About Pageant"#"关于 Pageant"#g' $file_name
+perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
+perl -i -pe 's#\Q"View &Licence"#"查看许可证(&L)"#g' $file_name
+perl -i -pe 's#\Q"Visit &Web Site"#"查看网站 (&W)"#g' $file_name
+perl -i -pe 's#\Q"PuTTY Licence"#"PuTTY 许可证"#g' $file_name
+perl -i -pe 's#\Q"OK"#"确定"#g' $file_name
+perl -i -pe 's#\Q"Add Key (&encrypted)"#"增加密钥(&加密)"#g' $file_name
+perl -i -pe 's#\Q"Re-e&ncrypt"#"重新加密"#g' $file_name
+perl -i -pe 's#\Q"&Remove"#"删除"#g' $file_name
+perl -i -pe 's#\Q"&Fingerprint type:"#"指纹类型"#g' $file_name
+perl -i -pe 's#\Q"Pageant: Loading Encrypted Key"#"Pageant：加载加密密钥"#g' $file_name
+perl -i -pe 's#\Q"Enter passphrase to load key"#"输入密码以加载密钥"#g' $file_name
+perl -i -pe 's#\Q"Pageant: Decrypting Stored Key"#"Pageant：解密存储的密钥"#g' $file_name
+perl -i -pe 's#\Q"A client of Pageant wants to use the following encrypted key:"#"Pageant的一个连接想要使用以下加密密钥："#g' $file_name
+perl -i -pe 's#\Q"If you intended this, click in this box to make sure it has"#"如果您打算这样做，请单击此框以确保它具有输入焦点，"#g' $file_name
+perl -i -pe 's#\Q"input focus, then enter the passphrase to decrypt the key."#"然后输入密码来解密密钥。"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
@@ -3012,24 +3009,27 @@ perl -i -pe 's#\Q"  -1 -2     force use of particular SSH protocol version\n"#" 
 iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 mv -f temptext.txt $file_name
 
-# # windows/plink.rc
-# file_name="windows/plink.rc"
-# echo [76%]开始汉化 windows/plink.rc
-# perl -i -pe 's#\Q"Command-line SSH, Telnet, and Rlogin client"#"命令行 SSH、Telnet 和 Rlogin 客户端"#g' $file_name
+# windows/plink.rc
+file_name="windows/plink.rc"
+echo [76%]开始汉化 windows/plink.rc
+perl -i -pe 's#\Q"Command-line SSH, Telnet, and Rlogin client"#"命令行 SSH、Telnet 和 Rlogin 客户端"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
-# # windows/pscp.rc
-# file_name="windows/pscp.rc"
-# echo [77%]开始汉化 windows/pscp.rc
-# perl -i -pe 's#\Q"Command-line SCP/SFTP client"#"命令行 SCP/SFTP 客户端"#g' $file_name
+# windows/pscp.rc
+file_name="windows/pscp.rc"
+echo [77%]开始汉化 windows/pscp.rc
+perl -i -pe 's#\Q"Command-line SCP/SFTP client"#"命令行 SCP/SFTP 客户端"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
-# # windows/psftp.rc
-# file_name="windows/psftp.rc"
-# echo [78%]开始汉化 windows/psftp.rc
-# perl -i -pe 's#\Q"Command-line interactive SFTP client"#"命令行交互 SFTP 客户端"#g' $file_name
+# windows/psftp.rc
+file_name="windows/psftp.rc"
+echo [78%]开始汉化 windows/psftp.rc
+perl -i -pe 's#\Q"Command-line interactive SFTP client"#"命令行交互 SFTP 客户端"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
@@ -3042,10 +3042,11 @@ perl -i -pe 's#\Q"unexpected non-option argument \"%s\""#"意外的非选项参�
 iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 mv -f temptext.txt $file_name
 
-# # windows/pterm.rc
-# file_name="windows/pterm.rc"
-# echo [80%]开始汉化 windows/pterm.rc
-# perl -i -pe 's#\Q"PuTTY-style wrapper for Windows command prompts"#"Windows 命令提示符的 PuTTY 样式包装器"#g' $file_name
+# windows/pterm.rc
+file_name="windows/pterm.rc"
+echo [80%]开始汉化 windows/pterm.rc
+perl -i -pe 's#\Q"PuTTY-style wrapper for Windows command prompts"#"Windows 命令提示符的 PuTTY 样式包装器"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
@@ -3070,62 +3071,64 @@ perl -i -pe 's#\Q"%s Internal Error"#"%s 内部错误"#g' $file_name
 iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 mv -f temptext.txt $file_name
 
-# # windows/putty.rc
-# file_name="windows/putty.rc"
-# echo [82%]开始汉化 windows/putty.rc
-# perl -i -pe 's#\Q"SSH, Telnet and Rlogin client"#"SSH、Telnet 和 Rlogin 客户端"#g' $file_name
-# perl -i -pe 's#\Q"SSH, Telnet, Rlogin, and SUPDUP client"#"SSH、Telnet、Rlogin 和 SUPDUP 客户端"#g' $file_name
+# windows/putty.rc
+file_name="windows/putty.rc"
+echo [82%]开始汉化 windows/putty.rc
+perl -i -pe 's#\Q"SSH, Telnet and Rlogin client"#"SSH、Telnet 和 Rlogin 客户端"#g' $file_name
+perl -i -pe 's#\Q"SSH, Telnet, Rlogin, and SUPDUP client"#"SSH、Telnet、Rlogin 和 SUPDUP 客户端"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
-# # windows/putty-common.rc2
-# file_name="windows/putty-common.rc2"
-# echo [83%]开始汉化 windows/putty-common.rc2
-# perl -i -pe 's#\Q"About PuTTY"#"关于 PuTTY"#g' $file_name
-# perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
-# perl -i -pe 's#\Q"View &Licence"#"查看许可证(&L)"#g' $file_name
-# perl -i -pe 's#\Q"Visit &Web Site"#"查看网站 (&W)"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY Configuration"#"PuTTY 配置"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY Event Log"#"PuTTY 事件日志"#g' $file_name
-# perl -i -pe 's#\Q"C&opy"#"复制(&O)"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY Licence"#"PuTTY 许可证"#g' $file_name
-# perl -i -pe 's#\Q"OK"#"确定"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY Security Alert"#"PuTTY 安全警报"#g' $file_name
-# perl -i -pe 's#\Q"The server'\''s host key is not cached in the registry. You have no"#"服务器的主机密钥未缓存在注册表中。你无法保证服务器是您认可的机器。"#g' $file_name
-# perl -i -pe 's#\Q"guarantee that the server is the computer you think it is."#""#g' $file_name
-# perl -i -pe 's#\Q"The server'\''s {KEYTYPE} key fingerprint is:"#"服务器的密钥指纹是 {KEYTYPE} "#g' $file_name
-# perl -i -pe 's#\Q"If you trust this host, press "#"如果您信任此主机，请按 "#g' $file_name
-# perl -i -pe 's#\Q" to add the key to {APPNAME}'\''s"#" 将密钥添加到 {APPNAME} 缓存"#g' $file_name
-# perl -i -pe 's#\Q"cache and carry on connecting."#""#g' $file_name
-# perl -i -pe 's#\Q"If you want to carry on connecting just once, without adding the key"#"如果您只想进行一次连接，无需添加密钥到缓存，连接一次”。"#g' $file_name
-# perl -i -pe 's#\Q"to the cache, press "#"请按 "#g' $file_name
-# perl -i -pe 's#\Q"If you do not trust this host, press "#"如果您不信任此主机，请按 "#g' $file_name
-# perl -i -pe 's#\Q" to abandon the connection."#"来放弃连接"#g' $file_name
-# perl -i -pe 's#\Q"Cancel"#"取消"#g' $file_name
-# perl -i -pe 's#\Q"Accept"#"接受"#g' $file_name
-# perl -i -pe 's#\Q"Connect Once"#"连接一次"#g' $file_name
-# perl -i -pe 's#\Q"More info..."#"更多信息..."#g' $file_name
-# perl -i -pe 's#\Q"Help"#"帮助"#g' $file_name
-# perl -i -pe 's#\Q"WARNING - POTENTIAL SECURITY BREACH!"#"警告 -潜在的安全漏洞！"#g' $file_name
-# perl -i -pe 's#\Q"The server'\''s host key does not match the one {APPNAME} has cached in"#"服务器的主机密钥与 {APPNAME} 缓存的不匹配。"#g' $file_name
-# perl -i -pe 's#\Q"the registry. This means that either the server administrator has"#"这意味着服务器管理员可能更改了主机密钥，或者您实际上已连接到另一个计算机伪装的服务器。"#g' $file_name
-# perl -i -pe 's#\Q"changed the host key, or you have actually connected to another"#""#g' $file_name
-# perl -i -pe 's#\Q"computer pretending to be the server."#""#g' $file_name
-# perl -i -pe 's#\Q"The new {KEYTYPE} key fingerprint is:"#"新的密钥指纹为：{KEYTYPE} "#g' $file_name
-# perl -i -pe 's#\Q"If you were expecting this change and trust the new key, press"#"如果您期待此更改并信任新密钥，请按 "#g' $file_name
-# perl -i -pe 's#\Q" to update {APPNAME}'\''s cache and continue connecting."#" 以更新 {APPNAME} 的缓存并继续连接。"#g' $file_name
-# perl -i -pe 's#\Q"If you want to carry on connecting but without updating the cache,"#"如果您想继续连接但不更新缓存，"#g' $file_name
-# perl -i -pe 's#\Q"press "#"按 "#g' $file_name
-# perl -i -pe 's#\Q"If you want to abandon the connection completely, press "#"如果您想完全放弃连接，请按 "#g' $file_name
-# perl -i -pe 's#\Q"Pressing "#"按 "#g' $file_name
-# perl -i -pe 's#\Q" is the ONLY guaranteed safe choice."#" 是唯一有保证的安全选择。"#g' $file_name
-# perl -i -pe 's#\Q"The host key is not cached for this server:"#"未为此服务器缓存主机密钥:"#g' $file_name
-# perl -i -pe 's#\Q"You have no guarantee that the server is the computer you think it is."#"您无法保证服务器就是您认为的计算机。"#g' $file_name
-# perl -i -pe 's#\Q"The host key does not match the one {APPNAME} has cached for this server:"#"主机密钥与 {APPNAME} 已为此服务器缓存的密钥不匹配："#g' $file_name
-# perl -i -pe 's#\Q"This means that either the server administrator has changed the"#"这意味着服务器管理员已更改"#g' $file_name
-# perl -i -pe 's#\Q"host key, or you have actually connected to another computer"#"主机密钥，或者您实际上已连接到另一台计算机"#g' $file_name
-# perl -i -pe 's#\Q"pretending to be the server."#"冒充的。"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY: information about the server'\''s host key"#"PuTTY: 关于服务器主机密钥的信息"#g' $file_name
+# windows/putty-common.rc2
+file_name="windows/putty-common.rc2"
+echo [83%]开始汉化 windows/putty-common.rc2
+perl -i -pe 's#\Q"About PuTTY"#"关于 PuTTY"#g' $file_name
+perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
+perl -i -pe 's#\Q"View &Licence"#"查看许可证(&L)"#g' $file_name
+perl -i -pe 's#\Q"Visit &Web Site"#"查看网站 (&W)"#g' $file_name
+perl -i -pe 's#\Q"PuTTY Configuration"#"PuTTY 配置"#g' $file_name
+perl -i -pe 's#\Q"PuTTY Event Log"#"PuTTY 事件日志"#g' $file_name
+perl -i -pe 's#\Q"C&opy"#"复制(&O)"#g' $file_name
+perl -i -pe 's#\Q"PuTTY Licence"#"PuTTY 许可证"#g' $file_name
+perl -i -pe 's#\Q"OK"#"确定"#g' $file_name
+perl -i -pe 's#\Q"PuTTY Security Alert"#"PuTTY 安全警报"#g' $file_name
+perl -i -pe 's#\Q"The server'\''s host key is not cached in the registry. You have no"#"服务器的主机密钥未缓存在注册表中。你无法保证服务器是您认可的机器。"#g' $file_name
+perl -i -pe 's#\Q"guarantee that the server is the computer you think it is."#""#g' $file_name
+perl -i -pe 's#\Q"The server'\''s {KEYTYPE} key fingerprint is:"#"服务器的密钥指纹是 {KEYTYPE} "#g' $file_name
+perl -i -pe 's#\Q"If you trust this host, press "#"如果您信任此主机，请按 "#g' $file_name
+perl -i -pe 's#\Q" to add the key to {APPNAME}'\''s"#" 将密钥添加到 {APPNAME} 缓存"#g' $file_name
+perl -i -pe 's#\Q"cache and carry on connecting."#""#g' $file_name
+perl -i -pe 's#\Q"If you want to carry on connecting just once, without adding the key"#"如果您只想进行一次连接，无需添加密钥到缓存，连接一次”。"#g' $file_name
+perl -i -pe 's#\Q"to the cache, press "#"请按 "#g' $file_name
+perl -i -pe 's#\Q"If you do not trust this host, press "#"如果您不信任此主机，请按 "#g' $file_name
+perl -i -pe 's#\Q" to abandon the connection."#"来放弃连接"#g' $file_name
+perl -i -pe 's#\Q"Cancel"#"取消"#g' $file_name
+perl -i -pe 's#\Q"Accept"#"接受"#g' $file_name
+perl -i -pe 's#\Q"Connect Once"#"连接一次"#g' $file_name
+perl -i -pe 's#\Q"More info..."#"更多信息..."#g' $file_name
+perl -i -pe 's#\Q"Help"#"帮助"#g' $file_name
+perl -i -pe 's#\Q"WARNING - POTENTIAL SECURITY BREACH!"#"警告 -潜在的安全漏洞！"#g' $file_name
+perl -i -pe 's#\Q"The server'\''s host key does not match the one {APPNAME} has cached in"#"服务器的主机密钥与 {APPNAME} 缓存的不匹配。"#g' $file_name
+perl -i -pe 's#\Q"the registry. This means that either the server administrator has"#"这意味着服务器管理员可能更改了主机密钥，或者您实际上已连接到另一个计算机伪装的服务器。"#g' $file_name
+perl -i -pe 's#\Q"changed the host key, or you have actually connected to another"#""#g' $file_name
+perl -i -pe 's#\Q"computer pretending to be the server."#""#g' $file_name
+perl -i -pe 's#\Q"The new {KEYTYPE} key fingerprint is:"#"新的密钥指纹为：{KEYTYPE} "#g' $file_name
+perl -i -pe 's#\Q"If you were expecting this change and trust the new key, press"#"如果您期待此更改并信任新密钥，请按 "#g' $file_name
+perl -i -pe 's#\Q" to update {APPNAME}'\''s cache and continue connecting."#" 以更新 {APPNAME} 的缓存并继续连接。"#g' $file_name
+perl -i -pe 's#\Q"If you want to carry on connecting but without updating the cache,"#"如果您想继续连接但不更新缓存，"#g' $file_name
+perl -i -pe 's#\Q"press "#"按 "#g' $file_name
+perl -i -pe 's#\Q"If you want to abandon the connection completely, press "#"如果您想完全放弃连接，请按 "#g' $file_name
+perl -i -pe 's#\Q"Pressing "#"按 "#g' $file_name
+perl -i -pe 's#\Q" is the ONLY guaranteed safe choice."#" 是唯一有保证的安全选择。"#g' $file_name
+perl -i -pe 's#\Q"The host key is not cached for this server:"#"未为此服务器缓存主机密钥:"#g' $file_name
+perl -i -pe 's#\Q"You have no guarantee that the server is the computer you think it is."#"您无法保证服务器就是您认为的计算机。"#g' $file_name
+perl -i -pe 's#\Q"The host key does not match the one {APPNAME} has cached for this server:"#"主机密钥与 {APPNAME} 已为此服务器缓存的密钥不匹配："#g' $file_name
+perl -i -pe 's#\Q"This means that either the server administrator has changed the"#"这意味着服务器管理员已更改"#g' $file_name
+perl -i -pe 's#\Q"host key, or you have actually connected to another computer"#"主机密钥，或者您实际上已连接到另一台计算机"#g' $file_name
+perl -i -pe 's#\Q"pretending to be the server."#"冒充的。"#g' $file_name
+perl -i -pe 's#\Q"PuTTY: information about the server'\''s host key"#"PuTTY: 关于服务器主机密钥的信息"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
@@ -3255,37 +3258,39 @@ perl -i -pe 's#\Q"unsupported EDDSA bit length %d"#"不支持的 EDDSA 位长度
 iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 mv -f temptext.txt $file_name
 
-# # windows/puttygen.rc
-# file_name="windows/puttygen.rc"
-# echo [85%]开始汉化 windows/puttygen.rc
-# perl -i -pe 's#\Q"PuTTY SSH key generation utility"#"PuTTY SSH 密钥生成工具"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY Key Generator"#"PuTTY 密钥生成器"#g' $file_name
-# perl -i -pe 's#\Q"PuTTYgen: Enter Passphrase"#"PuTTYgen: 输入密码"#g' $file_name
-# perl -i -pe 's#\Q"Enter passphrase for key"#"请输入密钥的密码"#g' $file_name
-# perl -i -pe 's#\Q"O&K"#"确定(&K)"#g' $file_name
-# perl -i -pe 's#\Q"&Cancel"#"取消(&C)"#g' $file_name
-# perl -i -pe 's#\Q"About PuTTYgen"#"关于 PuTTYgen"#g' $file_name
-# perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
-# perl -i -pe 's#\Q"View &Licence"#"查看许可证(&L)"#g' $file_name
-# perl -i -pe 's#\Q"Visit &Web Site"#"访问网站 (&W)"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY Licence"#"PuTTY 许可证"#g' $file_name
-# perl -i -pe 's#\Q"OK"#"确定"#g' $file_name
-# perl -i -pe 's#\Q"PuTTYgen: Private Key File Parameters"#"PuTTYgen: 私钥文件参数"#g' $file_name
-# perl -i -pe 's#\Q"PPK file version:"#"PPK 文件版本:"#g' $file_name
-# perl -i -pe 's#\Q"Key derivation function:"#"密钥导出函数:"#g' $file_name
-# perl -i -pe 's#\Q"Memory to use for passphrase hash:"#"用于密码哈希的内存:"#g' $file_name
-# perl -i -pe 's#\Q"Kbyte"#"KB"#g' $file_name
-# perl -i -pe 's#\Q"Time to use for passphrase hash:"#"用于密码哈希的时间:"#g' $file_name
-# perl -i -pe 's#\Q"ms"#"毫秒"#g' $file_name
-# perl -i -pe 's#\Q"passes"#"遍"#g' $file_name
-# perl -i -pe 's#\Q"Parallelism for passphrase hash:"#"密码哈希的并行性:"#g' $file_name
+# windows/puttygen.rc
+file_name="windows/puttygen.rc"
+echo [85%]开始汉化 windows/puttygen.rc
+perl -i -pe 's#\Q"PuTTY SSH key generation utility"#"PuTTY SSH 密钥生成工具"#g' $file_name
+perl -i -pe 's#\Q"PuTTY Key Generator"#"PuTTY 密钥生成器"#g' $file_name
+perl -i -pe 's#\Q"PuTTYgen: Enter Passphrase"#"PuTTYgen: 输入密码"#g' $file_name
+perl -i -pe 's#\Q"Enter passphrase for key"#"请输入密钥的密码"#g' $file_name
+perl -i -pe 's#\Q"O&K"#"确定(&K)"#g' $file_name
+perl -i -pe 's#\Q"&Cancel"#"取消(&C)"#g' $file_name
+perl -i -pe 's#\Q"About PuTTYgen"#"关于 PuTTYgen"#g' $file_name
+perl -i -pe 's#\Q"&Close"#"关闭(&C)"#g' $file_name
+perl -i -pe 's#\Q"View &Licence"#"查看许可证(&L)"#g' $file_name
+perl -i -pe 's#\Q"Visit &Web Site"#"访问网站 (&W)"#g' $file_name
+perl -i -pe 's#\Q"PuTTY Licence"#"PuTTY 许可证"#g' $file_name
+perl -i -pe 's#\Q"OK"#"确定"#g' $file_name
+perl -i -pe 's#\Q"PuTTYgen: Private Key File Parameters"#"PuTTYgen: 私钥文件参数"#g' $file_name
+perl -i -pe 's#\Q"PPK file version:"#"PPK 文件版本:"#g' $file_name
+perl -i -pe 's#\Q"Key derivation function:"#"密钥导出函数:"#g' $file_name
+perl -i -pe 's#\Q"Memory to use for passphrase hash:"#"用于密码哈希的内存:"#g' $file_name
+perl -i -pe 's#\Q"Kbyte"#"KB"#g' $file_name
+perl -i -pe 's#\Q"Time to use for passphrase hash:"#"用于密码哈希的时间:"#g' $file_name
+perl -i -pe 's#\Q"ms"#"毫秒"#g' $file_name
+perl -i -pe 's#\Q"passes"#"遍"#g' $file_name
+perl -i -pe 's#\Q"Parallelism for passphrase hash:"#"密码哈希的并行性:"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
-# # windows/puttytel.rc
-# file_name="windows/puttytel.rc"
-# echo [86%]开始汉化 windows/puttytel.rc
-# perl -i -pe 's#\Q"Telnet and Rlogin client"#"Telnet 和 Rlogin 客户端"#g' $file_name
+# windows/puttytel.rc
+file_name="windows/puttytel.rc"
+echo [86%]开始汉化 windows/puttytel.rc
+perl -i -pe 's#\Q"Telnet and Rlogin client"#"Telnet 和 Rlogin 客户端"#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
@@ -3361,14 +3366,15 @@ perl -i -pe 's#\Q"Unable to save jumplist"#"无法保存跳转列表"#g' $file_n
 iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 mv -f temptext.txt $file_name
 
-# # windows/version.rc2
-# file_name="windows/version.rc2"
-# echo [91%]开始汉化 windows/version.rc2
-# perl -i -pe 's#\Q"080904B0"#"080404B0"#g' $file_name
-# perl -i -pe 's#\Q"PuTTY suite"#"PuTTY 套件"#g' $file_name
-# perl -i -pe 's#\Q"Copyright \251 "#"版权所有(C) "#g' $file_name
-# perl -i -pe 's#\Q0x809, 1200#0x804, 0x4B0#g' $file_name
-# perl -i -pe 's#\Q(UK English, Unicode)#(CN 中文, 中华人民共和国)#g' $file_name
+# windows/version.rc2
+file_name="windows/version.rc2"
+echo [91%]开始汉化 windows/version.rc2
+perl -i -pe 's#\Q"080904B0"#"080404B0"#g' $file_name
+perl -i -pe 's#\Q"PuTTY suite"#"PuTTY 套件"#g' $file_name
+perl -i -pe 's#\Q"Copyright \251 "#"版权所有(C) "#g' $file_name
+perl -i -pe 's#\Q0x809, 1200#0x804, 0x4B0#g' $file_name
+perl -i -pe 's#\Q(UK English, Unicode)#(CN 中文, 中华人民共和国)#g' $file_name
+sed -i '1 i #pragma code_page(65001)' $file_name
 # iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 # mv -f temptext.txt $file_name
 
@@ -3502,6 +3508,7 @@ file_name="windows/utils/defaults.c"
 perl -i -pe 's#\Q("Courier New", false, 10, ANSI_CHARSET)#("新宋体", false, 12, GB2312_CHARSET)#g' $file_name
 iconv -f UTF-8 -t GB2312 $file_name > temptext.txt
 mv -f temptext.txt $file_name
+
 
 
 clear

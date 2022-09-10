@@ -8,11 +8,11 @@
 
 ***从 putty0.77 版本开始官方改用 CMake 构建***，新版本构建请使用 **putty-src-new.bat**  脚本编译。
 
-**Windows环境编译（最复杂）：**
+**Windows环境编译（相对复杂，适合没有VS和Linux环境时使用）：**
 
 1. 下载[CMake](https://cmake.org/download/) (脚本环境) 和 [Mingw-w64](https://sourceforge.net/projects/mingw-w64/files/) (GCC编译环境) 和 [git客户端](https://git-scm.com/download/win) (perl命令环境):
 
-   [cmake-3.24.1-windows-x86_64.msi](https://objects.githubusercontent.com/github-production-release-asset-2e65be/537699/11ce65d7-ce03-46cf-a7a7-102d03a58dc1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220831%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220831T072801Z&X-Amz-Expires=300&X-Amz-Signature=2f5e1994cf639a96c3e3add364214eb9da33494b9f13e4dea137971ef82907aa&X-Amz-SignedHeaders=host&actor_id=23536382&key_id=0&repo_id=537699&response-content-disposition=attachment%3B%20filename%3Dcmake-3.24.1-windows-x86_64.msi&response-content-type=application%2Foctet-stream)
+   [cmake-3.24.1-windows-x86_64.msi](https://cmake.org/download/)
 
    [适用于 Windows 便携版的 64 位 Git](https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/PortableGit-2.37.3-64-bit.7z.exe) (推荐便携版本，用完抛弃。*解压之后，将 **usr\bin** 目录加入windows环境变量 **PATH*** )
 
@@ -42,7 +42,7 @@
 
 
 
-**VisualStudio环境编译（推荐）：**
+**VisualStudio环境编译（简单，适合有VS环境时使用）：**
 
 1. 下载 [VisualStudio社区版](https://visualstudio.microsoft.com/zh-hans/) 和 [git客户端](https://git-scm.com/download/win) (perl命令环境):
 
@@ -66,7 +66,7 @@
 
    将portable_putty_077_0.19.0_all_in_one中的 **pageant.c** 和 **storage.c** 两个文件替换到 **putty-src/windows** 下
 
-7. 下载 **putty-src-vs.bat**  脚本和 **putty-src-vs.sh ** 翻译文件，并将 **putty-src** 文件夹拖至 **putty-src-vs.bat**  脚本上启动翻译
+7. 下载 **putty-src-vs.bat**  脚本和 **putty-src-new.sh ** 翻译文件，并将 **putty-src** 文件夹拖至 **putty-src-vs.bat**  脚本上启动翻译
 
 8. 翻译完成之后，右键 **putty-src** 文件夹使用 **vs2022** 打开，等待cmake自动配置完成之后，点击 **生成** => **全部生成** 来启动编译。
 
@@ -74,23 +74,12 @@
 
 
 
-**Linux环境编译（一般）：**
-
-*Linux可能有编码问题*
+**Linux环境编译（傻瓜式，适合有linux环境时使用）：**
 
 1. 安装 **Debian** 或 **Ubantu** linux环境（虚拟机即可）
 2. 下载 **putty-src-linux.sh** 脚本到任意目录
 3. 执行linux命令  `sudo sh putty-src-linux.sh ` *注意命令所在目录*
 4. 如果没有报错，1-3分钟后就会生成文件到 **output** 目录
-
-
-
-**差异点及补充**
-
-1. windows目录下的.rc和.rc2文件编码有问题,导致脚本差异化
-2. 使用VisualStudio编译的时候,将.rc和.rc2文件转换为UTF-16LE编码可以正常编译 **(目前唯一可以全功能汉化方式.)**
-3. 在使用windows组合编译和linux下编译都无法正常识别UTF-16LE编码,所以只能将.rc和.rc2文件转为GB2312编码,同时取消.rc和.rc2文件的汉化.基本界面都汉化,仅有个别按钮和提示框没有汉化.
-4. 如果你知道如何解决.rc文件的编码问题,请告知一下,万分感谢.
 
 
 
