@@ -1,7 +1,5 @@
 # 汉化Putty
 
-由于需要更独立的项目管理,所以单独新开仓库来保存汉化putty项目
-
 *原始项目参考 [bbbboom](https://github.com/bbbboom/TranslateToChinese)*
 
 ## putty0.77 - 最新版本
@@ -42,6 +40,8 @@
 
 
 
+
+
 **VisualStudio环境编译（简单，适合有VS环境时使用）：**
 
 1. 下载 [VisualStudio社区版](https://visualstudio.microsoft.com/zh-hans/) 和 [git客户端](https://git-scm.com/download/win) (perl命令环境):
@@ -71,6 +71,8 @@
 8. 翻译完成之后，右键 **putty-src** 文件夹使用 **vs2022** 打开，等待cmake自动配置完成之后，点击 **生成** => **全部生成** 来启动编译。
 
 9. 最终输出目录在 **out** 目录下
+
+
 
 
 
