@@ -2461,9 +2461,9 @@ mv -f temptext.txt $file_name
 file_name="utils/buildinfo.c"
 echo [59%]开始汉化 utils/buildinfo.c
 perl -i -pe 's#\Q"Build platform: %d-bit %s"#"构建平台: %d 位 %s"#g' $file_name
-perl -i -pe 's#\Q"%sCompiler: clang %s"#"%s编译器: clang %s 汉化: bbbboom、wanyanjiabin"#g' $file_name
-perl -i -pe 's#\Q"%sCompiler: gcc %s"#"%s编译器: gcc %s 汉化: bbbboom、wanyanjiabin"#g' $file_name
-perl -i -pe 's#\Q"%sCompiler: "#"%s汉化: bbbboom、wanyanjiabin 编译器:"#g' $file_name
+perl -i -pe 's#\Q"%sCompiler: clang %s"#"%s编译器: clang %s 汉化: wanyanjiabin、bbbboom、larryli"#g' $file_name
+perl -i -pe 's#\Q"%sCompiler: gcc %s"#"%s编译器: gcc %s 汉化: wanyanjiabin、bbbboom、larryli"#g' $file_name
+perl -i -pe 's#\Q"%sCompiler: "#"%s汉化: wanyanjiabin、bbbboom、larryli 编译器:"#g' $file_name
 perl -i -pe 's#\Q", unrecognised version"#", 未知版本"#g' $file_name
 perl -i -pe 's#\Q"%sBuild option: NO_SECURITY"#"%s构建选项: NO_SECURITY"#g' $file_name
 perl -i -pe 's#\Q"%sBuild option: NO_SECUREZEROMEMORY"#"%s构建选项: NO_SECUREZEROMEMORY"#g' $file_name
