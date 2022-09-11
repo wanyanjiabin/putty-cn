@@ -8,7 +8,7 @@ echo "\e[33m |   2、编译文件输出目录 build，程序输出目录 output 
 echo "\e[33m |   3、使用sudo运行避免多次输入密码                     |\e[0m"
 echo "\e[33m |   4、本脚本使用交叉编译不一定稳定                     |\e[0m"
 echo "\e[33m |                                                       |\e[0m"
-echo "\e[33m |   最后修改: 2022/09/11 01:37:19                       |\e[0m"
+echo "\e[33m |   最后修改: 2022/09/11 17:07:51                       |\e[0m"
 echo "\e[33m |   修改人员: wanyanjiabin                              |\e[0m"
 echo "\e[33m  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[0m"
 echo "\n"
@@ -2915,7 +2915,7 @@ perl -i -pe 's#\Q"Pageant: Decrypting Stored Key"#"Pageant：解密存储的密�
 perl -i -pe 's#\Q"A client of Pageant wants to use the following encrypted key:"#"Pageant的一个连接想要使用以下加密密钥："#g' $file_name
 perl -i -pe 's#\Q"If you intended this, click in this box to make sure it has"#"如果您打算这样做，请单击此框以确保它具有输入焦点，"#g' $file_name
 perl -i -pe 's#\Q"input focus, then enter the passphrase to decrypt the key."#"然后输入密码来解密密钥。"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3013,7 +3013,7 @@ perl -i -pe 's#\Q"  -1 -2     force use of particular SSH protocol version\n"#" 
 file_name="windows/plink.rc"
 echo [76%]开始汉化 windows/plink.rc
 perl -i -pe 's#\Q"Command-line SSH, Telnet, and Rlogin client"#"命令行 SSH、Telnet 和 Rlogin 客户端"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3021,7 +3021,7 @@ sed -i '1 i #pragma code_page(65001)' $file_name
 file_name="windows/pscp.rc"
 echo [77%]开始汉化 windows/pscp.rc
 perl -i -pe 's#\Q"Command-line SCP/SFTP client"#"命令行 SCP/SFTP 客户端"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3029,7 +3029,7 @@ sed -i '1 i #pragma code_page(65001)' $file_name
 file_name="windows/psftp.rc"
 echo [78%]开始汉化 windows/psftp.rc
 perl -i -pe 's#\Q"Command-line interactive SFTP client"#"命令行交互 SFTP 客户端"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3046,7 +3046,7 @@ perl -i -pe 's#\Q"unexpected non-option argument \"%s\""#"意外的非选项参�
 file_name="windows/pterm.rc"
 echo [80%]开始汉化 windows/pterm.rc
 perl -i -pe 's#\Q"PuTTY-style wrapper for Windows command prompts"#"Windows 命令提示符的 PuTTY 样式包装器"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3076,7 +3076,7 @@ file_name="windows/putty.rc"
 echo [82%]开始汉化 windows/putty.rc
 perl -i -pe 's#\Q"SSH, Telnet and Rlogin client"#"SSH、Telnet 和 Rlogin 客户端"#g' $file_name
 perl -i -pe 's#\Q"SSH, Telnet, Rlogin, and SUPDUP client"#"SSH、Telnet、Rlogin 和 SUPDUP 客户端"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3128,7 +3128,7 @@ perl -i -pe 's#\Q"This means that either the server administrator has changed th
 perl -i -pe 's#\Q"host key, or you have actually connected to another computer"#"主机密钥，或者您实际上已连接到另一台计算机"#g' $file_name
 perl -i -pe 's#\Q"pretending to be the server."#"冒充的。"#g' $file_name
 perl -i -pe 's#\Q"PuTTY: information about the server'\''s host key"#"PuTTY: 关于服务器主机密钥的信息"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3282,7 +3282,7 @@ perl -i -pe 's#\Q"Time to use for passphrase hash:"#"用于密码哈希的时间
 perl -i -pe 's#\Q"ms"#"毫秒"#g' $file_name
 perl -i -pe 's#\Q"passes"#"遍"#g' $file_name
 perl -i -pe 's#\Q"Parallelism for passphrase hash:"#"密码哈希的并行性:"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3290,7 +3290,7 @@ sed -i '1 i #pragma code_page(65001)' $file_name
 file_name="windows/puttytel.rc"
 echo [86%]开始汉化 windows/puttytel.rc
 perl -i -pe 's#\Q"Telnet and Rlogin client"#"Telnet 和 Rlogin 客户端"#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3374,7 +3374,7 @@ perl -i -pe 's#\Q"PuTTY suite"#"PuTTY 套件"#g' $file_name
 perl -i -pe 's#\Q"Copyright \251 "#"版权所有(C) "#g' $file_name
 perl -i -pe 's#\Q0x809, 1200#0x804, 0x4B0#g' $file_name
 perl -i -pe 's#\Q(UK English, Unicode)#(CN 中文, 中华人民共和国)#g' $file_name
-sed -i '1 i #pragma code_page(65001)' $file_name
+
 
 
 
@@ -3506,7 +3506,9 @@ echo [99%]开始优化
 #替换默认字体
 file_name="windows/utils/defaults.c"
 perl -i -pe 's#\Q("Courier New", false, 10, ANSI_CHARSET)#("新宋体", false, 12, GB2312_CHARSET)#g' $file_name
-
+#指定rc文件编码
+sed -i '1 i #pragma code_page(65001)' windows/*.rc
+sed -i '1 i #pragma code_page(65001)' windows/*.rc2
 
 
 
@@ -3523,6 +3525,8 @@ rm -rf ./build && rm -rf ./output && mkdir build && mkdir output
 cmake -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw.cmake -B "build" -D CMAKE_C_FLAGS=-fexec-charset=GBK . && cd ./build && cmake --build .
 #转移文件
 mv *.exe ../output
+rm ../output/bidi*.exe
+rm ../output/test*.exe
 cd ../
 
 :: clear
