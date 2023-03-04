@@ -15,9 +15,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BUILD_VERSION: "0.77"
-      BUILD_VERSION_S: "077"
-      BUILD_NO: "19"
+      BUILD_VERSION: "0.78"
+      BUILD_VERSION_S: "078"
+      BUILD_NO: "20"
 
     steps:
       - name: Show system
