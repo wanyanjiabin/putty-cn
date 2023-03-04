@@ -47,10 +47,9 @@ jobs:
           unzip ./portable_putty_077_0.19.0_all_in_one.zip -d portable_putty
           cp -rf ./portable_putty/0.77/pageant.c ./putty-src/putty-0.77/windows/
           cp -rf ./portable_putty/0.77/storage.c ./putty-src/putty-0.77/windows/
-          cd ./putty-src/putty-0.77/
 
       - name: Translate documents
-        working-directory: ./putty-src
+        working-directory: ./putty-src/putty-0.77
         run: |
           # cgtest.c
           file_name="cgtest.c"
@@ -3496,7 +3495,7 @@ jobs:
           sed -i '1 i #pragma code_page(65001)' windows/*.rc2
 
       - name: Building Application
-        working-directory: ./putty-src
+        working-directory: ./putty-src/putty-0.77
         run: |
           #清理残留
           rm -rf ./build && rm -rf ./output && mkdir build && mkdir output
@@ -3512,7 +3511,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: Allfiles
-          path: output/
+          path: putty-src/output/
 
 
 
