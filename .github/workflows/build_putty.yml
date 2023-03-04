@@ -32,6 +32,9 @@ jobs:
           sudo -E apt -y full-upgrade
           sudo -E apt-get -y install wget cmake mingw-w64 git unzip
 
+      - name: Checkout
+        uses: actions/checkout@master
+
       - name: Download Files
         run: |
           wget "https://the.earth.li/~sgtatham/putty/0.77/putty-0.77.tar.gz"
