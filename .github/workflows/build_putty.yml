@@ -13,6 +13,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BUILD_VERSION: 0.77
+      BUILD_VERSION2: 077
+      BUILD_NO: 19
 
     steps:
       - name: Show system
@@ -20,11 +24,15 @@ jobs:
           echo -e "Total CPU cores\t: $(nproc)"
           cat /proc/cpuinfo | grep 'model name'
           ulimit -a
+      - name: Show Bulid Version
+        run: |
+          echo "即将编译的Putty版本为: $BUILD_VERSION"
 
       - name: Space cleanup and Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
+          echo '处理编译环境'
           set +e
           sudo -E apt-get -y install wget cmake mingw-w64 git unzip
 
@@ -33,19 +41,21 @@ jobs:
 
       - name: Download Files
         run: |
-          wget "https://the.earth.li/~sgtatham/putty/0.77/putty-0.77.tar.gz"
-          wget "http://jakub.kotrla.net/putty/portable_putty_077_0.19.0_all_in_one.zip"
+          echo '开始下载文件'
+          wget "https://the.earth.li/~sgtatham/putty/$BUILD_VERSION/putty-$BUILD_VERSION.tar.gz"
+          wget "http://jakub.kotrla.net/putty/portable_putty_$BUILD_VERSION2_0.$BUILD_NO.0_all_in_one.zip"
 
       - name: Unzip Files
         run: |
+          echo '开始解压文件'
           mkdir putty-src
-          tar -zxvf ./putty-0.77.tar.gz -C putty-src/
-          unzip ./portable_putty_077_0.19.0_all_in_one.zip -d portable_putty
-          cp -rf ./portable_putty/0.77/pageant.c ./putty-src/putty-0.77/windows/
-          cp -rf ./portable_putty/0.77/storage.c ./putty-src/putty-0.77/windows/
+          tar -zxvf ./putty-$BUILD_VERSION.tar.gz -C putty-src/
+          unzip ./portable_putty_$BUILD_VERSION2_0.$BUILD_NO.0_all_in_one.zip -d portable_putty
+          cp -rf ./portable_putty/$BUILD_VERSION/pageant.c ./putty-src/putty-$BUILD_VERSION/windows/
+          cp -rf ./portable_putty/$BUILD_VERSION/storage.c ./putty-src/putty-$BUILD_VERSION/windows/
 
       - name: Translate documents
-        working-directory: ./putty-src/putty-0.77
+        working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
         run: |
           # cgtest.c
           file_name="cgtest.c"
@@ -3491,13 +3501,15 @@ jobs:
           sed -i '1 i #pragma code_page(65001)' windows/*.rc2
 
       - name: Building Application
-        working-directory: ./putty-src/putty-0.77
+        working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
         run: |
+          echo '开始编译'
           cmake -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw.cmake -B "build" -D CMAKE_C_FLAGS=-fexec-charset=GBK . && cd ./build && cmake --build .
 
       - name: Collating Files
-        working-directory: ./putty-src/putty-0.77
+        working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
         run: |
+          echo '开始整理文件'
           cd ./build
           mv *.exe ../output
           rm ../output/bidi*.exe
