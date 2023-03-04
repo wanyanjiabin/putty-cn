@@ -3526,12 +3526,11 @@ jobs:
           rm ../output/bidi*.exe
           rm ../output/test*.exe
 
-
       - name: Upload Allfiles
         uses: actions/upload-artifact@master
         with:
           name: Allfiles
-          path: ./putty-src/output/
+          path: ./putty-src/putty-${{env.BUILD_VERSION}}/output/
 
 
 
