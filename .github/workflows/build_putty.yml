@@ -61,7 +61,8 @@ jobs:
           SHELL_FILE: 'putty-src-new.sh'
         run: |
           [ -e $SHELL_FILE ] && mv $SHELL_FILE ./putty-src/putty-${{env.BUILD_VERSION}}
-          chmod +x ./putty-src/putty-${{env.BUILD_VERSION}}/$SHELL_FILE && ./$SHELL_FILE
+          cd ./putty-src/putty-${{env.BUILD_VERSION}}
+          chmod +x ./$SHELL_FILE && ./$SHELL_FILE
 
 
         # working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
