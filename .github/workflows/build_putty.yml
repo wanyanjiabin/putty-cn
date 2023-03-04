@@ -50,6 +50,7 @@ jobs:
           cd ./putty-src/putty-0.77/
 
       - name: Translate documents
+        working-directory: ./putty-src
         run: |
           # cgtest.c
           file_name="cgtest.c"
@@ -3495,6 +3496,7 @@ jobs:
           sed -i '1 i #pragma code_page(65001)' windows/*.rc2
 
       - name: Building Application
+        working-directory: ./putty-src
         run: |
           #清理残留
           rm -rf ./build && rm -rf ./output && mkdir build && mkdir output
