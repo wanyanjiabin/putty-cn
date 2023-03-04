@@ -56,12 +56,6 @@ jobs:
           cp -rf ./portable_putty/$BUILD_VERSION/storage.c ./putty-src/putty-$BUILD_VERSION/windows/
 
       - name: Translate documents
-        # env:
-        #   SHELL_FILE: 'putty-src-new.sh'
-        # run: |
-        #   [ -e $SHELL_FILE ] && mv $SHELL_FILE ./putty-src/putty-${{env.BUILD_VERSION}}
-        #   cd ./putty-src/putty-${{env.BUILD_VERSION}}
-        #   chmod +x ./$SHELL_FILE && sed -i '1d' ./$SHELL_FILE && ./$SHELL_FILE
         working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
         run: |
           echo '开始翻译文件'
