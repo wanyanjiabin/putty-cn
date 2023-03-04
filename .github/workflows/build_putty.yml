@@ -20,16 +20,12 @@ jobs:
           echo -e "Total CPU cores\t: $(nproc)"
           cat /proc/cpuinfo | grep 'model name'
           ulimit -a
+
       - name: Space cleanup and Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           set +e
-          # docker rmi `docker images -q`
-          # sudo -E rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d /usr/local/lib/android
-          # sudo -E apt update
-          # sudo -E apt -y purge azure-cli* docker* ghc* zulu* llvm* firefox google* dotnet* powershell* openjdk* mysql* php* mongodb* dotnet* moby* snap*
-          # sudo -E apt -y full-upgrade
           sudo -E apt-get -y install wget cmake mingw-w64 git unzip
 
       - name: Checkout
@@ -3497,21 +3493,22 @@ jobs:
       - name: Building Application
         working-directory: ./putty-src/putty-0.77
         run: |
-          #清理残留
-          rm -rf ./build && rm -rf ./output && mkdir build && mkdir output
-          #编译
           cmake -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw.cmake -B "build" -D CMAKE_C_FLAGS=-fexec-charset=GBK . && cd ./build && cmake --build .
-          #转移文件
+
+      - name: Collating Files
+        working-directory: ./putty-src/putty-0.77
+        run: |
+          cd ./build
           mv *.exe ../output
           rm ../output/bidi*.exe
           rm ../output/test*.exe
-          cd ../
+
 
       - name: Upload Allfiles
         uses: actions/upload-artifact@master
         with:
           name: Allfiles
-          path: putty-src/output/
+          path: ./putty-src/output/
 
 
 
