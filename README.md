@@ -2,7 +2,17 @@
 
 *原始项目参考 [bbbboom](https://github.com/bbbboom/TranslateToChinese)*
 
-## putty0.77 - 最新版本
+## putty0.78-最新版本
+
+**（尚未完工，成品校对翻译未完成，成品会有一次报错 20230305）**
+
+
+
+***从0.78版本开始增加Github actions自动编译脚本，方便直接在线编译。本地编译方式请参考0.77版本，替换版本号即可。***
+
+如需在线编译，请先fork本仓库，然后开启actions手动运行编译脚本。
+
+## putty0.77
 
 ***从 putty0.77 版本开始官方改用 CMake 构建***，新版本构建请使用 **putty-src-new.bat**  脚本编译。
 
