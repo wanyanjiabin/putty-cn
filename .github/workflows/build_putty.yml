@@ -3519,12 +3519,20 @@ jobs:
           mv *.exe ../output
           rm ../output/bidi*.exe
           rm ../output/test*.exe
+          cd ../
+          rm -rf ./build
+
+      - name: Upload Application
+        uses: actions/upload-artifact@master
+        with:
+          name: putty-${{env.BUILD_VERSION}}
+          path: ./putty-src/putty-${{env.BUILD_VERSION}}/output/
 
       - name: Upload Allfiles
         uses: actions/upload-artifact@master
         with:
-          name: Allfiles
-          path: ./putty-src/putty-${{env.BUILD_VERSION}}/output/
+          name: All_Files
+          path: ./putty-src/putty-${{env.BUILD_VERSION}}
 
 
 
