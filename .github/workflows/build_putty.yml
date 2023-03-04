@@ -1,0 +1,26 @@
+#=================================================
+# Description: Build PUTTY using GitHub Actions
+# Lisence: MIT
+# Author: wanyanjiabin
+#=================================================
+
+name: Build_Putty
+
+# Add a button to trigger the workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show system
+        run: |
+          echo -e "Total CPU cores\t: $(nproc)"
+          cat /proc/cpuinfo | grep 'model name'
+          ulimit -a
+      - name: Checkout
+        uses: actions/checkout@master
+
+      
