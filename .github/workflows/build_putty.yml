@@ -245,9 +245,10 @@ jobs:
           perl -i -pe 's#\Q"Port"#"端口(P)"#g' $file_name
           perl -i -pe 's#\Q"Serial line"#"串行口(N)"#g' $file_name
           perl -i -pe 's#\Q"Speed"#"速度(P)"#g' $file_name
-          perl -i -pe 's#\Q"ChaCha20 (SSH-2 only)"#"ChaCha20 (只限 SSH-2)"#g' $file_name
-          perl -i -pe 's#\Q"AES (SSH-2 only)"#"AES (只限 SSH-2)"#g' $file_name
-          perl -i -pe 's#\Q"Arcfour (SSH-2 only)"#"Arcfour (只限 SSH-2)"#g' $file_name
+          perl -i -pe 's#\Q"ChaCha20 (SSH-2 only)"#"ChaCha20 (仅限 SSH-2)"#g' $file_name
+          perl -i -pe 's#\Q"AES (SSH-2 only)"#"AES      (仅限 SSH-2)"#g' $file_name
+          perl -i -pe 's#\Q"AES-GCM (SSH-2 only)"#"AES-GCM  (仅限 SSH-2)"#g' $file_name
+          perl -i -pe 's#\Q"Arcfour (SSH-2 only)"#"Arcfour  (仅限 SSH-2)"#g' $file_name
           perl -i -pe 's#\Q"-- warn below here --"#"-- 下面为警告选项 --"#g' $file_name
           perl -i -pe 's#\Q"Auto"#"自动"#g' $file_name
           perl -i -pe 's#\Q"Off"#"关"#g' $file_name
@@ -526,7 +527,7 @@ jobs:
           perl -i -pe 's#\Q"Private key file for authentication:"#"认证私钥文件(K)："#g' $file_name
           perl -i -pe 's#\Q"Select private key file"#"选择私钥文件"#g' $file_name
           perl -i -pe 's#\Q"Options controlling GSSAPI authentication"#"GSSAPI 认证选项"#g' $file_name
-          perl -i -pe 's#\Q"Attempt GSSAPI authentication (SSH-2 only)"#"尝试使用 GSSAPI 认证 (仅限SSH-2)(T)"#g' $file_name
+          perl -i -pe 's#\Q"Attempt GSSAPI authentication (SSH-2 only)"#"尝试使用 GSSAPI 认证     (仅限SSH-2)(T)"#g' $file_name
           perl -i -pe 's#\Q"Attempt GSSAPI key exchange (SSH-2 only)"#"尝试使用 GSSAPI 密钥验证 (仅限SSH-2)(K)"#g' $file_name
           perl -i -pe 's#\Q"Allow GSSAPI credential delegation"#"允许 GSSAPI 凭据委托(L)"#g' $file_name
           perl -i -pe 's#\Q"Preference order for GSSAPI libraries:"#"GSSAPI 库优先级："#g' $file_name
@@ -547,7 +548,7 @@ jobs:
           perl -i -pe 's#\Q"Options controlling SSH port forwarding"#"SSH 端口映射设置"#g' $file_name
           perl -i -pe 's#\Q"Port forwarding"#"端口映射"#g' $file_name
           perl -i -pe 's#\Q"Local ports accept connections from other hosts"#"本地端口接受其他主机的连接(T)"#g' $file_name
-          perl -i -pe 's#\Q"Remote ports do the same (SSH-2 only)"#"远程端口接受连接(只限 SSH-2)(P)"#g' $file_name
+          perl -i -pe 's#\Q"Remote ports do the same (SSH-2 only)"#"远程端口接受连接(仅限 SSH-2)(P)"#g' $file_name
           perl -i -pe 's#\Q"Forwarded ports:"#"映射的端口："#g' $file_name
           perl -i -pe 's#\Q"Add new forwarded port:"#"增加新的映射端口："#g' $file_name
           perl -i -pe 's#\Q"Add"#"增加(D)"#g' $file_name
@@ -627,8 +628,30 @@ jobs:
           perl -i -pe 's#\Q"Connection/SSH/More bugs"#"连接/SSH/更多查错"#g' $file_name
           perl -i -pe 's#\Q"Connection/SUPDUP"#"连接/SUPDUP"#g' $file_name
           perl -i -pe 's#\Q"Connection/Serial"#"连接/串口"#g' $file_name
-
-
+          perl -i -pe 's#\Q"Command to send to proxy (for some types)"#"发送给代理的命令(对于某些类型)"#g' $file_name
+          perl -i -pe 's#\Q"HTTP CONNECT"#"HTTP 连接"#g' $file_name
+          perl -i -pe 's#\Q"SSH to proxy and use port forwarding"#"SSH 代理并使用端口转发"#g' $file_name
+          perl -i -pe 's#\Q"SSH to proxy and execute a command"#"SSH 代理并执行命令"#g' $file_name
+          perl -i -pe 's#\Q"SSH to proxy and invoke a subsystem"#"SSH 代理并调用子系统"#g' $file_name
+          perl -i -pe 's#\Q"Local (run a subprogram to connect)"#"本地(运行子程序连接)"#g' $file_name
+          perl -i -pe 's#\Q"'\''Telnet'\'' (send an ad-hoc command)"#"Telnet(发送临时命令)"#g' $file_name
+          perl -i -pe 's#\Q"Configure trusted certification authorities"#"配置受信任的证书颁发机构"#g' $file_name
+          perl -i -pe 's#\Q"Configure host CAs"#"配置主机 CAs"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 1 (1024-bit)"#"Diffie-Hellman group 1 (1024位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 14 (2048-bit)"#"Diffie-Hellman group 14 (2048位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 15 (3072-bit)"#"Diffie-Hellman group 15 (3072位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 16 (4096-bit)"#"Diffie-Hellman group 16 (4096位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 17 (6144-bit)"#"Diffie-Hellman group 17 (6144位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 18 (8192-bit)"#"Diffie-Hellman group 18 (8192位)"#g' $file_name
+          perl -i -pe 's#\Q"Other authentication-related options"#"其他与身份验证相关的选项"#g' $file_name
+          perl -i -pe 's#\Q"Connection/SSH/Auth/Credentials"#"连接/SSH/授权/凭据"#g' $file_name
+          perl -i -pe 's#\Q"Credentials to authenticate with"#"用于身份验证的凭据"#g' $file_name
+          perl -i -pe 's#\Q"Public-key authentication"#"公钥认证"#g' $file_name
+          perl -i -pe 's#\Q"Certificate to use with the private key:"#"与私钥一起使用的证书："#g' $file_name
+          perl -i -pe 's#\Q"Select certificate file"#"选择证书文件"#g' $file_name
+          perl -i -pe 's#\Q"Plugin to provide authentication responses"#"提供身份验证响应的插件"#g' $file_name
+          perl -i -pe 's#\Q"Plugin command to run"#"要运行的插件命令"#g' $file_name
+          perl -i -pe 's#\Q"Chokes on PuTTY'\''s full KEXINIT"#"PuTTY 的完整 KEXINIT 阻塞"#g' $file_name
 
 
 
@@ -1268,6 +1291,36 @@ jobs:
           echo [14%]开始汉化 settings.c
           perl -i -pe 's#\Q"Default Settings"#"默认设置"#g' $file_name
           perl -i -pe 's#\QPingInterval", 0#PingInterval", 1#g' $file_name
+
+
+
+          # ca-config.c
+          file_name="ca-config.c"
+          echo [14%]开始汉化 ca-config.c
+          perl -i -pe 's#\Q"Cannot decode key: %s"#"无法解码密钥: %s"#g' $file_name
+          perl -i -pe 's#\Q"Invalid key (no key type)"#"无效密钥 (无密钥类型)"#g' $file_name
+          perl -i -pe 's#\Q"Unrecognised key type '\''%.*s'\''"#"无法识别的密钥类型 '\''%.*s'\''"#g' $file_name
+          perl -i -pe 's#\Q"CA key may not be a certificate (type is '\''%.*s'\'')"#"CA密钥可能不是证书 (类型为 '\''%.*s'\'')"#g' $file_name
+          perl -i -pe 's#\Q"Invalid '\''%.*s'\'' key data"#"无效的 '\''%.*s'\'' 键数据"#g' $file_name
+          perl -i -pe 's#\Q"Unable to load host CA record '\''%s'\''"#"无法加载主机CA记录'%s'"#g' $file_name
+          perl -i -pe 's#\Q"No validity expression configured "#"没有为此密钥配置有效性表达式"#g' $file_name
+          perl -i -pe 's#\Q"for this key"#""#g' $file_name
+          perl -i -pe 's#\Q"Error in expression: %s"#"表达式错误: %s"#g' $file_name
+          perl -i -pe 's#\Q"No valid CA public key entered"#"没有输入有效的 CA 公钥"#g' $file_name
+          perl -i -pe 's#\Q"Unable to load public key from '\''%s'\'': %s"#"无法从“%s”加载公钥：%s"#g' $file_name
+          perl -i -pe 's#\Q"Load, save or delete a host CA record"#"加载、保存或删除主机 CA 记录"#g' $file_name
+          perl -i -pe 's#\Q"Name for this CA (shown in log messages)"#"此 CA 的名称（显示在日志消息中）"#g' $file_name
+          perl -i -pe 's#\Q"Load"#"加载"#g' $file_name
+          perl -i -pe 's#\Q"Save"#"保存"#g' $file_name
+          perl -i -pe 's#\Q"Delete"#"删除"#g' $file_name
+          perl -i -pe 's#\Q"Public key for this CA record"#"此 CA 记录的公钥"#g' $file_name
+          perl -i -pe 's#\Q"Public key of certification authority"#"证书颁发机构的公钥"#g' $file_name
+          perl -i -pe 's#\Q"Read from file"#"从文件中读取"#g' $file_name
+          perl -i -pe 's#\Q"Select public key file of certification authority"#"选择证书颁发机构的公钥文件"#g' $file_name
+          perl -i -pe 's#\Q"What this CA is trusted to do"#"这个 CA 被信任做什么"#g' $file_name
+          perl -i -pe 's#\Q"Valid hosts this key is trusted to certify"#"此密钥可信任以证明的有效主机"#g' $file_name
+          perl -i -pe 's#\Q"Signature types (RSA keys only):"#"签名类型（仅限 RSA 密钥）:"#g' $file_name
+
 
 
 
@@ -2575,6 +2628,7 @@ jobs:
           perl -i -pe 's#\Q"Window/Behaviour"#"窗口/行为"#g' $file_name
           perl -i -pe 's#\Q"Connection/Proxy"#"连接/代理"#g' $file_name
           perl -i -pe 's#\Q"Connection/SSH/X11"#"连接/SSH/X11"#g' $file_name
+
 
 
 
