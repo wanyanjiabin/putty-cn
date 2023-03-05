@@ -210,6 +210,30 @@ jobs:
           perl -i -pe 's#\Q"from public key of unknown type '\''%.*s'\''\n"#""#g' $file_name
           perl -i -pe 's#\Q"generation mode `%s'\''\n"#""#g' $file_name
           perl -i -pe 's#\Q"puttygen: unrecognised prime-"#"puttygen：无法识别的素数生成模式 `%s'\''"#g' $file_name
+          perl -i -pe 's#\Q"           cert-info           print certificate information\n"#"           cert-info           打印证书信息\n"#g' $file_name
+          perl -i -pe 's#\Q"  -E fptype            specify fingerprint output type:\n"#"  -E fptype            指定指纹输出类型:\n"#g' $file_name
+          perl -i -pe 's#\Q"  --certificate file   incorporate a certificate into the key\n"#"  --certificate file   将证书合并到密钥中\n"#g' $file_name
+          perl -i -pe 's#\Q"  --remove-certificate remove any certificate from the key\n"#"  --remove-certificate 从密钥中删除任何证书\n"#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificates can only be added to "#"puttygen: 证书只能添加到现有的 SSH-2 私钥文件\n"#g' $file_name
+          perl -i -pe 's#\Q"existing SSH-2 private key files\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificates can only be removed from "#"puttygen: 证书只能从现有的 SSH-2 密钥文件中删除\n"#g' $file_name
+          perl -i -pe 's#\Q"existing SSH-2 key files\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: cannot both add and remove a "#"puttygen: 不能同时添加和删除证书\n"#g' $file_name
+          perl -i -pe 's#\Q"certificate\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: unable to load certificate file `%s'\'': "#"puttygen：无法加载证书文件“%s”："#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificate file `%s'\'' has unsupported "#"puttygen: 证书文件“%s”具有不受支持的算法名称“%s”\n"#g' $file_name
+          perl -i -pe 's#\Q"algorithm name `%s'\''\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificate in `%s'\'' does not match "#"puttygen:“%s”中的证书与“%s”中的公钥不匹配\n"#g' $file_name
+          perl -i -pe 's#\Q"public key in `%s'\''\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: unable to combine certificate in `%s'\'' "#"puttygen: 无法将“%s”中的证书与私钥组合\n"#g' $file_name
+          perl -i -pe 's#\Q"with private key\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: input file `%s'\'' has unsupported "#"puttygen: 输入文件“%s”具有不受支持的算法名称“%\.\*s”\n"#g' $file_name
+          perl -i -pe 's#\Q"algorithm name `%\.\*s'\''\n"#""#g' $file_name
+          perl -i -pe 's#\Q"bad key component type"#"错误的关键组件类型"#g' $file_name
+          perl -i -pe 's#\Q"puttygen: SSH-1 keys cannot contain "#"puttygen: SSH-1 密钥不能包含证书\n"#g' $file_name
+          perl -i -pe 's#\Q"certificates\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: cannot extract certificate info "#"puttygen：无法提取证书信息"#g' $file_name
+          perl -i -pe 's#\Q"puttygen: key is not a certificate\n"#"puttygen: 密钥不是证书\n"#g' $file_name
 
 
 
@@ -866,6 +890,8 @@ jobs:
           perl -i -pe 's#\Q"requested key: %s"#"请求的密钥：%s"#g' $file_name
           perl -i -pe 's#\Q"signature flags = 0x%08"#"签名标志 = 0x%08"#g' $file_name
           perl -i -pe 's#\Q"no signature flags"#"没有签名标志"#g' $file_name
+          perl -i -pe 's#\Q"Public and private trees out of sync!"#"公有树和私有树不同步！"#g' $file_name
+
 
 
 
@@ -984,6 +1010,7 @@ jobs:
           perl -i -pe 's#\Q"\n      try typing just \"pscp\" for help\n"#"\\n     尝试输入 \\"pscp\\" 寻求帮助\\n"#g' $file_name
           perl -i -pe 's#\Q"option \"%s\" requires an argument"#"选项 \\"%s\\" 需要一个参数"#g' $file_name
           perl -i -pe 's#\Q"unknown option \"%s\""#"未知选项 \\"%s\\""#g' $file_name
+          perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\n"#g' $file_name
 
 
 
@@ -1329,6 +1356,8 @@ jobs:
           perl -i -pe 's#\Q"key algorithms do not match in OpenSSH public key file"#"OpenSSH 公钥文件中的密钥算法不匹配"#g' $file_name
           perl -i -pe 's#\Q"Bad key type in ssh2_write_pubkey"#"ssh2_write_pubkey 中的错误密钥类型"#g' $file_name
           perl -i -pe 's#\Q"PuTTY key format too new"#"PuTTY 密钥格式太新"#g' $file_name
+          perl -i -pe 's#\Q"not a public key or a PuTTY SSH-2 private key"#"不是公钥或 PuTTY SSH-2 私钥"#g' $file_name
+          perl -i -pe 's#\Q"%s (with certificate: %s)"#"%s（带有证书：%s）"#g' $file_name
 
 
 
