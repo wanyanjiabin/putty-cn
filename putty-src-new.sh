@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #******************************************
-# 0.77
-# 最后编辑 2022/09/11 17:08:01
+# 0.78
+# 最后编辑 2023/03/05 20:21:44
 # 最后编辑 wanyanjiabin
 #******************************************
 
@@ -590,7 +590,7 @@ perl -i -pe 's#\Q"Diffie-Hellman group 16 (4096-bit)"#"Diffie-Hellman group 16 (
 perl -i -pe 's#\Q"Diffie-Hellman group 17 (6144-bit)"#"Diffie-Hellman group 17 (6144位)"#g' $file_name
 perl -i -pe 's#\Q"Diffie-Hellman group 18 (8192-bit)"#"Diffie-Hellman group 18 (8192位)"#g' $file_name
 perl -i -pe 's#\Q"Other authentication-related options"#"其他与身份验证相关的选项"#g' $file_name
-perl -i -pe 's#\Q"Connection/SSH/Auth/Credentials"#"连接/SSH/授权/凭据"#g' $file_name
+perl -i -pe 's#\Q"Connection/SSH/Auth/Credentials"#"连接/SSH/认证/凭据"#g' $file_name
 perl -i -pe 's#\Q"Credentials to authenticate with"#"用于身份验证的凭据"#g' $file_name
 perl -i -pe 's#\Q"Public-key authentication"#"公钥认证"#g' $file_name
 perl -i -pe 's#\Q"Certificate to use with the private key:"#"与私钥一起使用的证书："#g' $file_name
