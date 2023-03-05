@@ -1294,36 +1294,6 @@ jobs:
 
 
 
-          # ca-config.c
-          file_name="ca-config.c"
-          echo [14%]开始汉化 ca-config.c
-          perl -i -pe 's#\Q"Cannot decode key: %s"#"无法解码密钥: %s"#g' $file_name
-          perl -i -pe 's#\Q"Invalid key (no key type)"#"无效密钥 (无密钥类型)"#g' $file_name
-          perl -i -pe 's#\Q"Unrecognised key type '\''%.*s'\''"#"无法识别的密钥类型 '\''%.*s'\''"#g' $file_name
-          perl -i -pe 's#\Q"CA key may not be a certificate (type is '\''%.*s'\'')"#"CA密钥可能不是证书 (类型为 '\''%.*s'\'')"#g' $file_name
-          perl -i -pe 's#\Q"Invalid '\''%.*s'\'' key data"#"无效的 '\''%.*s'\'' 键数据"#g' $file_name
-          perl -i -pe 's#\Q"Unable to load host CA record '\''%s'\''"#"无法加载主机CA记录'%s'"#g' $file_name
-          perl -i -pe 's#\Q"No validity expression configured "#"没有为此密钥配置有效性表达式"#g' $file_name
-          perl -i -pe 's#\Q"for this key"#""#g' $file_name
-          perl -i -pe 's#\Q"Error in expression: %s"#"表达式错误: %s"#g' $file_name
-          perl -i -pe 's#\Q"No valid CA public key entered"#"没有输入有效的 CA 公钥"#g' $file_name
-          perl -i -pe 's#\Q"Unable to load public key from '\''%s'\'': %s"#"无法从“%s”加载公钥：%s"#g' $file_name
-          perl -i -pe 's#\Q"Load, save or delete a host CA record"#"加载、保存或删除主机 CA 记录"#g' $file_name
-          perl -i -pe 's#\Q"Name for this CA (shown in log messages)"#"此 CA 的名称（显示在日志消息中）"#g' $file_name
-          perl -i -pe 's#\Q"Load"#"加载"#g' $file_name
-          perl -i -pe 's#\Q"Save"#"保存"#g' $file_name
-          perl -i -pe 's#\Q"Delete"#"删除"#g' $file_name
-          perl -i -pe 's#\Q"Public key for this CA record"#"此 CA 记录的公钥"#g' $file_name
-          perl -i -pe 's#\Q"Public key of certification authority"#"证书颁发机构的公钥"#g' $file_name
-          perl -i -pe 's#\Q"Read from file"#"从文件中读取"#g' $file_name
-          perl -i -pe 's#\Q"Select public key file of certification authority"#"选择证书颁发机构的公钥文件"#g' $file_name
-          perl -i -pe 's#\Q"What this CA is trusted to do"#"这个 CA 被信任做什么"#g' $file_name
-          perl -i -pe 's#\Q"Valid hosts this key is trusted to certify"#"此密钥可信任以证明的有效主机"#g' $file_name
-          perl -i -pe 's#\Q"Signature types (RSA keys only):"#"签名类型（仅限 RSA 密钥）:"#g' $file_name
-
-
-
-
           # sshpubk.c
           file_name="sshpubk.c"
           echo [15%]开始汉化 sshpubk.c
@@ -2482,6 +2452,34 @@ jobs:
           perl -i -pe 's#\Q"unable to connect to"#"无法连接到转发的 X 服务器: %s"#g' $file_name
           perl -i -pe 's#\Q" forwarded X server: %s"#""#g' $file_name
           perl -i -pe 's#\Q"Forwarded X11 connection terminated"#"转发的 X11 连接终止"#g' $file_name
+
+
+          # ssh/ca-config.c
+          file_name="ssh/ca-config.c"
+          echo [56%]开始汉化 ssh/ca-config.c
+          perl -i -pe 's#\Q"Cannot decode key: %s"#"无法解码密钥: %s"#g' $file_name
+          perl -i -pe 's#\Q"Invalid key (no key type)"#"无效密钥 (无密钥类型)"#g' $file_name
+          perl -i -pe 's#\Q"Unrecognised key type '\''%.*s'\''"#"无法识别的密钥类型 '\''%.*s'\''"#g' $file_name
+          perl -i -pe 's#\Q"CA key may not be a certificate (type is '\''%.*s'\'')"#"CA密钥可能不是证书 (类型为 '\''%.*s'\'')"#g' $file_name
+          perl -i -pe 's#\Q"Invalid '\''%.*s'\'' key data"#"无效的 '\''%.*s'\'' 键数据"#g' $file_name
+          perl -i -pe 's#\Q"Unable to load host CA record '\''%s'\''"#"无法加载主机CA记录'%s'"#g' $file_name
+          perl -i -pe 's#\Q"No validity expression configured "#"没有为此密钥配置有效性表达式"#g' $file_name
+          perl -i -pe 's#\Q"for this key"#""#g' $file_name
+          perl -i -pe 's#\Q"Error in expression: %s"#"表达式错误: %s"#g' $file_name
+          perl -i -pe 's#\Q"No valid CA public key entered"#"没有输入有效的 CA 公钥"#g' $file_name
+          perl -i -pe 's#\Q"Unable to load public key from '\''%s'\'': %s"#"无法从“%s”加载公钥：%s"#g' $file_name
+          perl -i -pe 's#\Q"Load, save or delete a host CA record"#"加载、保存或删除主机 CA 记录"#g' $file_name
+          perl -i -pe 's#\Q"Name for this CA (shown in log messages)"#"此 CA 的名称（显示在日志消息中）"#g' $file_name
+          perl -i -pe 's#\Q"Load"#"加载"#g' $file_name
+          perl -i -pe 's#\Q"Save"#"保存"#g' $file_name
+          perl -i -pe 's#\Q"Delete"#"删除"#g' $file_name
+          perl -i -pe 's#\Q"Public key for this CA record"#"此 CA 记录的公钥"#g' $file_name
+          perl -i -pe 's#\Q"Public key of certification authority"#"证书颁发机构的公钥"#g' $file_name
+          perl -i -pe 's#\Q"Read from file"#"从文件中读取"#g' $file_name
+          perl -i -pe 's#\Q"Select public key file of certification authority"#"选择证书颁发机构的公钥文件"#g' $file_name
+          perl -i -pe 's#\Q"What this CA is trusted to do"#"这个 CA 被信任做什么"#g' $file_name
+          perl -i -pe 's#\Q"Valid hosts this key is trusted to certify"#"此密钥可信任以证明的有效主机"#g' $file_name
+          perl -i -pe 's#\Q"Signature types (RSA keys only):"#"签名类型（仅限 RSA 密钥）:"#g' $file_name
 
 
 
