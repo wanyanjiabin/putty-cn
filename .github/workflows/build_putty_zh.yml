@@ -1433,7 +1433,7 @@ jobs:
           # crypto/rsa.c
           file_name="crypto/rsa.c"
           echo [19%]开始汉化 crypto/rsa.c
-          perl -i -pe 's#\Q"bad hash algorithm for RSA PKCS#1"#"RSA PKCS#1 的错误哈希算法"#g' $file_name
+          perl -i -pe 's#\Q"bad hash algorithm for RSA PKCS\#1"#"RSA PKCS\#1 的错误哈希算法"#g' $file_name
           perl -i -pe 's#\Q"-bit RSA key is too short to generate %s signatures"#"-bit RSA 密钥太短，无法生成 %s 签名"#g' $file_name
 
           # crypto/openssh-certs.c
