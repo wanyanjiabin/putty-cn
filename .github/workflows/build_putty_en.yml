@@ -45,16 +45,16 @@ jobs:
         run: |
           echo '开始下载文件'
           wget "https://the.earth.li/~sgtatham/putty/$BUILD_VERSION/putty-$BUILD_VERSION.tar.gz"
-          wget "http://jakub.kotrla.net/putty/portable_putty_${{env.BUILD_VERSION_S}}_0.${{env.BUILD_NO}}.0_all_in_one.zip"
+          # wget "http://jakub.kotrla.net/putty/portable_putty_${{env.BUILD_VERSION_S}}_0.${{env.BUILD_NO}}.0_all_in_one.zip"
 
       - name: Unzip Files
         run: |
           echo '开始解压文件'
           mkdir putty-src
           tar -zxvf ./putty-$BUILD_VERSION.tar.gz -C putty-src/
-          unzip ./portable_putty_${{env.BUILD_VERSION_S}}_0.${{env.BUILD_NO}}.0_all_in_one.zip -d portable_putty
-          cp -rf ./portable_putty/$BUILD_VERSION/pageant.c ./putty-src/putty-$BUILD_VERSION/windows/
-          cp -rf ./portable_putty/$BUILD_VERSION/storage.c ./putty-src/putty-$BUILD_VERSION/windows/
+          # unzip ./portable_putty_${{env.BUILD_VERSION_S}}_0.${{env.BUILD_NO}}.0_all_in_one.zip -d portable_putty
+          # cp -rf ./portable_putty/$BUILD_VERSION/pageant.c ./putty-src/putty-$BUILD_VERSION/windows/
+          # cp -rf ./portable_putty/$BUILD_VERSION/storage.c ./putty-src/putty-$BUILD_VERSION/windows/
 
       - name: Building Application
         working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
