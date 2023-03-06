@@ -955,7 +955,7 @@ perl -i -pe 's#\Q"            control what happens when a log file already exist
 perl -i -pe 's#\Q"\n      try typing just \"pscp\" for help\n"#"\\n     尝试输入 \\"pscp\\" 寻求帮助\\n"#g' $file_name
 perl -i -pe 's#\Q"option \"%s\" requires an argument"#"选项 \\"%s\\" 需要一个参数"#g' $file_name
 perl -i -pe 's#\Q"unknown option \"%s\""#"未知选项 \\"%s\\""#g' $file_name
-perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\n"#g' $file_name
+#perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\n"#g' $file_name
 
 
 
