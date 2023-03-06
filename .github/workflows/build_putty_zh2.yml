@@ -57,10 +57,10 @@ jobs:
           # cp -rf ./portable_putty/$BUILD_VERSION/storage.c ./putty-src/putty-$BUILD_VERSION/windows/
 
       - name: Translate documents
-        working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
         run: |
           echo '开始翻译文件'
-          cp -rf ../../putty-src-new.sh ./
+          cp -rf ./putty-src-new.sh ./putty-src/putty-${{env.BUILD_VERSION}}
+          cd ./putty-src/putty-${{env.BUILD_VERSION}}
           sed -i '1d' putty-src-new.sh
           echo $(dirname $0)
           sh $(dirname $0)/putty-src-new.sh
