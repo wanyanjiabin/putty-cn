@@ -16,8 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUILD_VERSION: 78
-      _build_no = $BUILD_VERSION-58
-      BUILD_NO: $_build_no
+      BUILD_NO: ${{env.BUILD_VERSION-58}}
 
     steps:
       - name: Show system
