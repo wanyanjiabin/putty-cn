@@ -823,76 +823,76 @@ jobs:
           # pageant.c
           file_name="pageant.c"
           echo [09%]开始汉化 pageant.c
-          perl -i -pe 's#\Q"Internal error: attempt to use random numbers in Pageant"#"内部错误：尝试在 Pageant 中使用随机数"#g' $file_name
-          perl -i -pe 's#\Q"key deleted from Pageant while signing "#"签名请求挂起时从 Pageant 中删除的密钥"#g' $file_name
-          perl -i -pe 's#\Q"request was pending"#""#g' $file_name
-          perl -i -pe 's#\Q"on-demand decryption could not "#"按需解密无法提示输入密码"#g' $file_name
-          perl -i -pe 's#\Q"prompt for a passphrase"#""#g' $file_name
-          perl -i -pe 's#\Q"unsupported flag bits 0x%08"#"不支持的标志位 0x%08"#g' $file_name
-          perl -i -pe 's#\Q"key invalid: %s"#"密钥无效: %s"#g' $file_name
-          perl -i -pe 's#\Q"unable to decrypt key"#"无法解密密钥"#g' $file_name
-          perl -i -pe 's#\Q"unable to continue creating "#"无法继续创建密码提示"#g' $file_name
-          perl -i -pe 's#\Q"passphrase prompts"#""#g' $file_name
-          perl -i -pe 's#\Q"user refused to supply passphrase"#"用户拒绝提供密码"#g' $file_name
-          perl -i -pe 's#\Q"message contained no type code"#"消息不包含类型代码"#g' $file_name
-          perl -i -pe 's#\Q"returned key: %s"#"返回密钥: %s"#g' $file_name
-          perl -i -pe 's#\Q"returned key: %s %s"#"返回密钥: %s %s"#g' $file_name
-          perl -i -pe 's#\Q"unable to decode request"#"无法解码请求"#g' $file_name
-          perl -i -pe 's#\Q"response type other than 1 not supported"#"不支持 1 以外的响应类型"#g' $file_name
-          perl -i -pe 's#\Q"key not found"#"未找到密钥"#g' $file_name
-          perl -i -pe 's#\Q"key is invalid"#"密钥无效"#g' $file_name
-          perl -i -pe 's#\Q"submitted key: %s"#"提交的密钥: %s"#g' $file_name
-          perl -i -pe 's#\Q"key already present"#"密钥已经存在"#g' $file_name
-          perl -i -pe 's#\Q"algorithm unknown"#"算法未知"#g' $file_name
-          perl -i -pe 's#\Q"key setup failed"#"密钥设置失败"#g' $file_name
-          perl -i -pe 's#\Q"submitted key: %s %s"#"提交的密钥: %s %s"#g' $file_name
-          perl -i -pe 's#\Q"unwanted key: %s"#"不需要的密钥: %s"#g' $file_name
-          perl -i -pe 's#\Q"found with comment: %s"#"发现有评论: %s"#g' $file_name
-          perl -i -pe 's#\Q"unrecognised extension name '\''%.*s'\''"#"无法识别的扩展名 '\''%.*s'\''"#g' $file_name
-          perl -i -pe 's#\Q"failed to extract public key blob: %s"#"无法提取公钥 blob: %s"#g' $file_name
-          perl -i -pe 's#\Q"failed to decode private key: %s"#"无法解码私钥: %s"#g' $file_name
-          perl -i -pe 's#\Q" (loaded unencrypted PPK)"#" (加载未加密的 PPK)"#g' $file_name
-          perl -i -pe 's#\Q"reply: SSH_AGENT_SUCCESS (added encrypted"#"reply: SSH_AGENT_SUCCESS (将加密的 PPK 添加到现有的密钥记录)"#g' $file_name
-          perl -i -pe 's#\Q" PPK to existing key record)"#""#g' $file_name
-          perl -i -pe 's#\Q"reply: SSH_AGENT_SUCCESS (made"#"reply: SSH_AGENT_SUCCESS (制作了新的仅加密密钥记录)"#g' $file_name
-          perl -i -pe 's#\Q" new encrypted-only key record)"#""#g' $file_name
-          perl -i -pe 's#\Q"key to re-encrypt: %s"#"重新加密的密钥： %s"#g' $file_name
-          perl -i -pe 's#\Q"this key couldn'\''t be re-encrypted"#"无法重新加密此密钥"#g' $file_name
-          perl -i -pe 's#\Q"no key could be re-encrypted"#"没有密钥可以重新加密"#g' $file_name
-          perl -i -pe 's#\Q"(%u keys re-encrypted, %u failures)"#"（%u 密钥重新加密，%u 失败）"#g' $file_name
-          perl -i -pe 's#\Q"request: unknown message type %d"#"请求：未知消息类型 %d"#g' $file_name
-          perl -i -pe 's#\Q"unrecognised message"#"无法识别的消息"#g' $file_name
-          perl -i -pe 's#\Q": error: %s"#": 错误: %s"#g' $file_name
-          perl -i -pe 's#\Q": connection closed"#": 连接关闭"#g' $file_name
-          perl -i -pe 's#\Q"(overlong message, length %u)"#"（超长消息，长度 %u）"#g' $file_name
-          perl -i -pe 's#\Q"listening socket: error: %s"#"监听套接字：错误：%s"#g' $file_name
-          perl -i -pe 's#\Q": new connection from %s"#": 来自的新连接 %s"#g' $file_name
-          perl -i -pe 's#\Q": new connection"#": 新连接"#g' $file_name
-          perl -i -pe 's#\Q"Couldn'\''t load this key (%s)"#"无法加载此密钥 (%s)"#g' $file_name
-          perl -i -pe 's#\Q"Can'\''t add SSH-1 keys in encrypted form"#"无法以加密形式添加 SSH-1 密钥"#g' $file_name
-          perl -i -pe 's#\Q"Couldn'\''t load private key (%s)"#"无法加载私钥 (%s)"#g' $file_name
-          perl -i -pe 's#\Q"Received broken key list from agent"#"从代理收到损坏的密钥列表"#g' $file_name
-          perl -i -pe 's#\Q"Agent doesn'\''t support adding "#"代理不支持添加加密密钥"#g' $file_name
-          perl -i -pe 's#\Q"encrypted keys"#""#g' $file_name
-          perl -i -pe 's#\Q"The already running agent "#"已经运行的代理拒绝添加密钥。"#g' $file_name
-          perl -i -pe 's#\Q"refused to add the key."#""#g' $file_name
-          perl -i -pe 's#\Q"Received broken SSH-1 key list from agent"#"从代理收到损坏的 SSH-1 密钥列表"#g' $file_name
-          perl -i -pe 's#\Q"Received broken SSH-2 key list from agent"#"从代理收到损坏的 SSH-2 密钥列表"#g' $file_name
-          perl -i -pe 's#\Q"Received an invalid SSH-1 key from agent"#"从代理收到无效的 SSH-1 密钥"#g' $file_name
-          perl -i -pe 's#\Q"Agent failed to delete key"#"代理未能删除密钥"#g' $file_name
-          perl -i -pe 's#\Q"Agent failed to delete SSH-2 keys"#"代理无法删除 SSH-2 密钥"#g' $file_name
-          perl -i -pe 's#\Q"Agent failed to delete SSH-1 keys"#"代理无法删除 SSH-1 密钥"#g' $file_name
-          perl -i -pe 's#\Q"Can'\''t re-encrypt an SSH-1 key"#"无法重新加密 SSH-1 密钥"#g' $file_name
-          perl -i -pe 's#\Q"Agent doesn'\''t support encrypted keys"#"代理不支持加密密钥"#g' $file_name
-          perl -i -pe 's#\Q"Agent failed to re-encrypt key"#"代理无法重新加密密钥"#g' $file_name
-          perl -i -pe 's#\Q"Agent failed to re-encrypt any keys"#"代理未能重新加密任何密钥"#g' $file_name
-          perl -i -pe 's#\Q"1 key remains unencrypted"#"1 个密钥未加密"#g' $file_name
-          perl -i -pe 's#\Q" keys remain unencrypted"#"密钥保持未加密"#g' $file_name
-          perl -i -pe 's#\Q"Agent failed to create signature"#"代理未能创建签名"#g' $file_name
-          perl -i -pe 's#\Q"requested key: %s"#"请求的密钥：%s"#g' $file_name
-          perl -i -pe 's#\Q"signature flags = 0x%08"#"签名标志 = 0x%08"#g' $file_name
-          perl -i -pe 's#\Q"no signature flags"#"没有签名标志"#g' $file_name
-          perl -i -pe 's#\Q"Public and private trees out of sync!"#"公有树和私有树不同步！"#g' $file_name
+          # perl -i -pe 's#\Q"Internal error: attempt to use random numbers in Pageant"#"内部错误：尝试在 Pageant 中使用随机数"#g' $file_name
+          # perl -i -pe 's#\Q"key deleted from Pageant while signing "#"签名请求挂起时从 Pageant 中删除的密钥"#g' $file_name
+          # perl -i -pe 's#\Q"request was pending"#""#g' $file_name
+          # perl -i -pe 's#\Q"on-demand decryption could not "#"按需解密无法提示输入密码"#g' $file_name
+          # perl -i -pe 's#\Q"prompt for a passphrase"#""#g' $file_name
+          # perl -i -pe 's#\Q"unsupported flag bits 0x%08"#"不支持的标志位 0x%08"#g' $file_name
+          # perl -i -pe 's#\Q"key invalid: %s"#"密钥无效: %s"#g' $file_name
+          # perl -i -pe 's#\Q"unable to decrypt key"#"无法解密密钥"#g' $file_name
+          # perl -i -pe 's#\Q"unable to continue creating "#"无法继续创建密码提示"#g' $file_name
+          # perl -i -pe 's#\Q"passphrase prompts"#""#g' $file_name
+          # perl -i -pe 's#\Q"user refused to supply passphrase"#"用户拒绝提供密码"#g' $file_name
+          # perl -i -pe 's#\Q"message contained no type code"#"消息不包含类型代码"#g' $file_name
+          # perl -i -pe 's#\Q"returned key: %s"#"返回密钥: %s"#g' $file_name
+          # perl -i -pe 's#\Q"returned key: %s %s"#"返回密钥: %s %s"#g' $file_name
+          # perl -i -pe 's#\Q"unable to decode request"#"无法解码请求"#g' $file_name
+          # perl -i -pe 's#\Q"response type other than 1 not supported"#"不支持 1 以外的响应类型"#g' $file_name
+          # perl -i -pe 's#\Q"key not found"#"未找到密钥"#g' $file_name
+          # perl -i -pe 's#\Q"key is invalid"#"密钥无效"#g' $file_name
+          # perl -i -pe 's#\Q"submitted key: %s"#"提交的密钥: %s"#g' $file_name
+          # perl -i -pe 's#\Q"key already present"#"密钥已经存在"#g' $file_name
+          # perl -i -pe 's#\Q"algorithm unknown"#"算法未知"#g' $file_name
+          # perl -i -pe 's#\Q"key setup failed"#"密钥设置失败"#g' $file_name
+          # perl -i -pe 's#\Q"submitted key: %s %s"#"提交的密钥: %s %s"#g' $file_name
+          # perl -i -pe 's#\Q"unwanted key: %s"#"不需要的密钥: %s"#g' $file_name
+          # perl -i -pe 's#\Q"found with comment: %s"#"发现有评论: %s"#g' $file_name
+          # perl -i -pe 's#\Q"unrecognised extension name '\''%.*s'\''"#"无法识别的扩展名 '\''%.*s'\''"#g' $file_name
+          # perl -i -pe 's#\Q"failed to extract public key blob: %s"#"无法提取公钥 blob: %s"#g' $file_name
+          # perl -i -pe 's#\Q"failed to decode private key: %s"#"无法解码私钥: %s"#g' $file_name
+          # perl -i -pe 's#\Q" (loaded unencrypted PPK)"#" (加载未加密的 PPK)"#g' $file_name
+          # perl -i -pe 's#\Q"reply: SSH_AGENT_SUCCESS (added encrypted"#"reply: SSH_AGENT_SUCCESS (将加密的 PPK 添加到现有的密钥记录)"#g' $file_name
+          # perl -i -pe 's#\Q" PPK to existing key record)"#""#g' $file_name
+          # perl -i -pe 's#\Q"reply: SSH_AGENT_SUCCESS (made"#"reply: SSH_AGENT_SUCCESS (制作了新的仅加密密钥记录)"#g' $file_name
+          # perl -i -pe 's#\Q" new encrypted-only key record)"#""#g' $file_name
+          # perl -i -pe 's#\Q"key to re-encrypt: %s"#"重新加密的密钥： %s"#g' $file_name
+          # perl -i -pe 's#\Q"this key couldn'\''t be re-encrypted"#"无法重新加密此密钥"#g' $file_name
+          # perl -i -pe 's#\Q"no key could be re-encrypted"#"没有密钥可以重新加密"#g' $file_name
+          # perl -i -pe 's#\Q"(%u keys re-encrypted, %u failures)"#"（%u 密钥重新加密，%u 失败）"#g' $file_name
+          # perl -i -pe 's#\Q"request: unknown message type %d"#"请求：未知消息类型 %d"#g' $file_name
+          # perl -i -pe 's#\Q"unrecognised message"#"无法识别的消息"#g' $file_name
+          # perl -i -pe 's#\Q": error: %s"#": 错误: %s"#g' $file_name
+          # perl -i -pe 's#\Q": connection closed"#": 连接关闭"#g' $file_name
+          # perl -i -pe 's#\Q"(overlong message, length %u)"#"（超长消息，长度 %u）"#g' $file_name
+          # perl -i -pe 's#\Q"listening socket: error: %s"#"监听套接字：错误：%s"#g' $file_name
+          # perl -i -pe 's#\Q": new connection from %s"#": 来自的新连接 %s"#g' $file_name
+          # perl -i -pe 's#\Q": new connection"#": 新连接"#g' $file_name
+          # perl -i -pe 's#\Q"Couldn'\''t load this key (%s)"#"无法加载此密钥 (%s)"#g' $file_name
+          # perl -i -pe 's#\Q"Can'\''t add SSH-1 keys in encrypted form"#"无法以加密形式添加 SSH-1 密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Couldn'\''t load private key (%s)"#"无法加载私钥 (%s)"#g' $file_name
+          # perl -i -pe 's#\Q"Received broken key list from agent"#"从代理收到损坏的密钥列表"#g' $file_name
+          # perl -i -pe 's#\Q"Agent doesn'\''t support adding "#"代理不支持添加加密密钥"#g' $file_name
+          # perl -i -pe 's#\Q"encrypted keys"#""#g' $file_name
+          # perl -i -pe 's#\Q"The already running agent "#"已经运行的代理拒绝添加密钥。"#g' $file_name
+          # perl -i -pe 's#\Q"refused to add the key."#""#g' $file_name
+          # perl -i -pe 's#\Q"Received broken SSH-1 key list from agent"#"从代理收到损坏的 SSH-1 密钥列表"#g' $file_name
+          # perl -i -pe 's#\Q"Received broken SSH-2 key list from agent"#"从代理收到损坏的 SSH-2 密钥列表"#g' $file_name
+          # perl -i -pe 's#\Q"Received an invalid SSH-1 key from agent"#"从代理收到无效的 SSH-1 密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Agent failed to delete key"#"代理未能删除密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Agent failed to delete SSH-2 keys"#"代理无法删除 SSH-2 密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Agent failed to delete SSH-1 keys"#"代理无法删除 SSH-1 密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Can'\''t re-encrypt an SSH-1 key"#"无法重新加密 SSH-1 密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Agent doesn'\''t support encrypted keys"#"代理不支持加密密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Agent failed to re-encrypt key"#"代理无法重新加密密钥"#g' $file_name
+          # perl -i -pe 's#\Q"Agent failed to re-encrypt any keys"#"代理未能重新加密任何密钥"#g' $file_name
+          # perl -i -pe 's#\Q"1 key remains unencrypted"#"1 个密钥未加密"#g' $file_name
+          # perl -i -pe 's#\Q" keys remain unencrypted"#"密钥保持未加密"#g' $file_name
+          # perl -i -pe 's#\Q"Agent failed to create signature"#"代理未能创建签名"#g' $file_name
+          # perl -i -pe 's#\Q"requested key: %s"#"请求的密钥：%s"#g' $file_name
+          # perl -i -pe 's#\Q"signature flags = 0x%08"#"签名标志 = 0x%08"#g' $file_name
+          # perl -i -pe 's#\Q"no signature flags"#"没有签名标志"#g' $file_name
+          # perl -i -pe 's#\Q"Public and private trees out of sync!"#"公有树和私有树不同步！"#g' $file_name
 
 
 
@@ -3822,37 +3822,37 @@ jobs:
           # windows/storage.c
           file_name="windows/storage.c"
           echo [90%]开始汉化 windows/storage.c
-          perl -i -pe 's#\Q"Recent sessions"#"最近会话"#g' $file_name
-          perl -i -pe 's#\Q"Default Settings"#"默认设置"#g' $file_name
-          perl -i -pe 's#\Q"Error: "#"错误："#g' $file_name
-          perl -i -pe 's#\Q"Error code: "#"错误代码："#g' $file_name
-          perl -i -pe 's#\Q"Error"#"错误"#g' $file_name
-          perl -i -pe 's#\Q"Unable to ExpandEnvironmentStrings for session path"#"无法展开会话路径的环境字符串"#g' $file_name
-          perl -i -pe 's#\Q"Unable to read configuration file, falling back to defaults"#"无法读取配置文件，回退到默认值"#g' $file_name
-          perl -i -pe 's#\Q"Unable to create directory for storing sessions"#"无法创建用于存储会话的目录"#g' $file_name
-          perl -i -pe 's#\Q"Unable to open file for writing"#"无法打开文件进行写入"#g' $file_name
-          perl -i -pe 's#\Q"Unable to save settings"#"无法保存设置"#g' $file_name
-          perl -i -pe 's#\Q"Unable to load file for reading"#"无法加载文件进行读取"#g' $file_name
-          perl -i -pe 's#\Q"Unable to read session from file"#"无法从文件中读取会话"#g' $file_name
-          perl -i -pe 's#\Q"Unable to delete settings."#"无法删除设置。"#g' $file_name
-          perl -i -pe 's#\Q"Host key is cached but in registry. "#"主机密钥被缓存但在注册表中。"#g' $file_name
-          perl -i -pe 's#\Q"Do you want to move it to file? \n\n"#"要将其移动到文件中吗？ \\n\\n"#g' $file_name
-          perl -i -pe 's#\Q"Yes \t-> Move (delete key in registry)\n"#"是 \\t-> 移动（删除注册表中的键）\\n"#g' $file_name
-          perl -i -pe 's#\Q"No \t-> Copy (keep key in registry)\n"#"否 \\t-> 复制（在注册表中保留密钥）\\n"#g' $file_name
-          perl -i -pe 's#\Q"Cancel \t-> nothing will be done\n"#"取消 \\t-> 什么都不会做\\n"#g' $file_name
-          perl -i -pe 's#\Q"Security risk"#"安全风险"#g' $file_name
-          perl -i -pe 's#\Q"Unable to create file (key won'\''t be deleted from registry)"#"无法创建文件（密钥不会从注册表中删除）"#g' $file_name
-          perl -i -pe 's#\Q"Unable to save key to file (key won'\''t be deleted from registry)"#"无法将密钥保存到文件（密钥不会从注册表中删除）"#g' $file_name
-          perl -i -pe 's#\Q"Unable to delete registry value"#"无法删除注册表值"#g' $file_name
-          perl -i -pe 's#\Q"Unable to create file"#"无法创建文件"#g' $file_name
-          perl -i -pe 's#\Q"Unable to save key to file"#"无法将密钥保存到文件"#g' $file_name
-          perl -i -pe 's#\Q"Unable to delete '\''%s'\'': %s"#"无法删除“%s”: %s"#g' $file_name
-          perl -i -pe 's#\Q"Unable to create jumplist file"#"无法创建跳转列表文件"#g' $file_name
-          perl -i -pe 's#\Q"Unable to load jumplist file"#"无法加载跳转列表文件"#g' $file_name
-          perl -i -pe 's#\Q"Unable to open file for writing"#"无法打开文件进行写入"#g' $file_name
-          perl -i -pe 's#\Q"Unable to save jumplist"#"无法保存跳转列表"#g' $file_name
-          perl -i -pe 's#\Q"Unable to create registry key\n"#"无法创建注册表项\\n"#g' $file_name
-          perl -i -pe 's#\Q"CA record must have a name"#"CA 记录必须有名称"#g' $file_name
+          # perl -i -pe 's#\Q"Recent sessions"#"最近会话"#g' $file_name
+          # perl -i -pe 's#\Q"Default Settings"#"默认设置"#g' $file_name
+          # perl -i -pe 's#\Q"Error: "#"错误："#g' $file_name
+          # perl -i -pe 's#\Q"Error code: "#"错误代码："#g' $file_name
+          # perl -i -pe 's#\Q"Error"#"错误"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to ExpandEnvironmentStrings for session path"#"无法展开会话路径的环境字符串"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to read configuration file, falling back to defaults"#"无法读取配置文件，回退到默认值"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to create directory for storing sessions"#"无法创建用于存储会话的目录"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to open file for writing"#"无法打开文件进行写入"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to save settings"#"无法保存设置"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to load file for reading"#"无法加载文件进行读取"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to read session from file"#"无法从文件中读取会话"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to delete settings."#"无法删除设置。"#g' $file_name
+          # perl -i -pe 's#\Q"Host key is cached but in registry. "#"主机密钥被缓存但在注册表中。"#g' $file_name
+          # perl -i -pe 's#\Q"Do you want to move it to file? \n\n"#"要将其移动到文件中吗？ \\n\\n"#g' $file_name
+          # perl -i -pe 's#\Q"Yes \t-> Move (delete key in registry)\n"#"是 \\t-> 移动（删除注册表中的键）\\n"#g' $file_name
+          # perl -i -pe 's#\Q"No \t-> Copy (keep key in registry)\n"#"否 \\t-> 复制（在注册表中保留密钥）\\n"#g' $file_name
+          # perl -i -pe 's#\Q"Cancel \t-> nothing will be done\n"#"取消 \\t-> 什么都不会做\\n"#g' $file_name
+          # perl -i -pe 's#\Q"Security risk"#"安全风险"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to create file (key won'\''t be deleted from registry)"#"无法创建文件（密钥不会从注册表中删除）"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to save key to file (key won'\''t be deleted from registry)"#"无法将密钥保存到文件（密钥不会从注册表中删除）"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to delete registry value"#"无法删除注册表值"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to create file"#"无法创建文件"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to save key to file"#"无法将密钥保存到文件"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to delete '\''%s'\'': %s"#"无法删除“%s”: %s"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to create jumplist file"#"无法创建跳转列表文件"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to load jumplist file"#"无法加载跳转列表文件"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to open file for writing"#"无法打开文件进行写入"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to save jumplist"#"无法保存跳转列表"#g' $file_name
+          # perl -i -pe 's#\Q"Unable to create registry key\n"#"无法创建注册表项\\n"#g' $file_name
+          # perl -i -pe 's#\Q"CA record must have a name"#"CA 记录必须有名称"#g' $file_name
 
           # windows/version.rc2
           file_name="windows/version.rc2"
