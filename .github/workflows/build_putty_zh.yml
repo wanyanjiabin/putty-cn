@@ -2757,7 +2757,7 @@ jobs:
           # stubs/null-seat.c
           file_name="stubs/null-seat.c"
           echo [57%]开始汉化 stubs/null-seat.c
-          perl -i -pe 's#\Q"this seat can't handle interactive prompts"#"这个座位不能处理互动提示"#g' $file_name
+          perl -i -pe 's#\Q"this seat can'\''t handle interactive prompts"#"这个座位不能处理互动提示"#g' $file_name
 
 
 
@@ -2857,10 +2857,10 @@ jobs:
           perl -i -pe 's#\Q" warning threshold."#""#g' $file_name
           perl -i -pe 's#\Q"REASONABLY LONG LINE OF TEXT FOR BASIC SANITY"#"基本理智的合理长行文本"#g' $file_name
           perl -i -pe 's#\Q"LONGISH LINE OF TEXT SO THE LICENCE"#"较长的文本行，因此许可证框不会过高和过薄"#g' $file_name
-          perl -i -pe 's#\Q" BOX ISN'T EXCESSIVELY TALL AND THIN"#""#g' $file_name
+          perl -i -pe 's#\Q" BOX ISN'\''T EXCESSIVELY TALL AND THIN"#""#g' $file_name
           perl -i -pe 's#\Q"View Licence"#"查看许可证"#g' $file_name
           perl -i -pe 's#\Q"LINE OF TEXT GIVING WIDTH OF EVENT LOG IS "#"事件日志的文本行很长，因为 SSH 日志条目很宽"#g' $file_name
-          perl -i -pe 's#\Q"QUITE LONG 'COS SSH LOG ENTRIES ARE WIDE"#""#g' $file_name
+          perl -i -pe 's#\Q"QUITE LONG '\''COS SSH LOG ENTRIES ARE WIDE"#""#g' $file_name
           perl -i -pe 's#\Q"The session log file \"%.*s\" already exists. "#"会话日志文件 \\"%.*s\\" 已经存在。 "#g' $file_name
           perl -i -pe 's#\Q"You can overwrite it with a new session log, "#"您可以用新的会话日志覆盖它, "#g' $file_name
           perl -i -pe 's#\Q"append your session log to the end of it, "#"将您的会话日志附加到它的末尾, "#g' $file_name
