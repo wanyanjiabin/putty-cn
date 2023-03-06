@@ -28,6 +28,7 @@ jobs:
       - name: Show Bulid Version
         run: |
           echo "即将编译的Putty版本为: $BUILD_VERSION"
+          echo "即将编译的Putty语言为: 中文"
 
       - name: Space cleanup and Initialization environment
         env:
