@@ -2576,7 +2576,6 @@ jobs:
           perl -i -pe 's#\Q" matches "#" 匹配 "#g' $file_name
           perl -i -pe 's#\Q"configured key file"#"配置的密钥文件"#g' $file_name
           perl -i -pe 's#\Q"SSH login name"#"SSH 登录名"#g' $file_name
-          # perl -i -pe 's#\Q"login as: "#"登录为: "#g' $file_name
           perl -i -pe 's#\Q"username prompt"#"用户名提示"#g' $file_name
           perl -i -pe 's#\Q"Trying gssapi-keyex..."#"尝试 gssapi-keyex..."#g' $file_name
           perl -i -pe 's#\Q"Trying Pageant key \#"#"尝试 Pageant 密钥 \#"#g' $file_name
@@ -2613,7 +2612,6 @@ jobs:
           perl -i -pe 's#\Q"Received malformed "#"从 auth helper 插件收到格式错误的 PLUGIN_INIT_FAILURE"#g' $file_name
           perl -i -pe 's#\Q"PLUGIN_INIT_FAILURE from auth helper plugin"#""#g' $file_name
           perl -i -pe 's#\Q"Authentication plugin failed to initialise:\r\n"#"身份验证插件初始化失败:\\r\\n"#g' $file_name
-          perl -i -pe 's#\Q"login as: "#"登录为: "#g' $file_name
           perl -i -pe 's#\Q"Authenticating with public key \"%s\"\r\n"#"使用公钥进行身份验证 \\"%s\\"\\r\\n"#g' $file_name
           perl -i -pe 's#\Q"Passphrase for key \"%s\": "#"密钥“%s”的密码: "#g' $file_name
           perl -i -pe 's#\Q"Received malformed "#"从 auth helper 插件收到格式错误的 PLUGIN_PROTOCOL_REJECT"#g' $file_name
