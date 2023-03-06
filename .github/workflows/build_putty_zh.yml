@@ -1472,9 +1472,9 @@ jobs:
           perl -i -pe 's#\Q"Certificate expired at "#"证书过期于"#g' $file_name
           perl -i -pe 's#\Q"Certificate'\''s valid principals list is "#"证书的有效主体列表格式不正确"#g' $file_name
           perl -i -pe 's#\Q"incorrectly formatted"#""#g' $file_name
-          perl -i -pe 's#\Q"Certificate'\''s %s list ["#"证书的 %s 列表 ["#g' $file_name
-          perl -i -pe 's#\Q"] does not contain expected %s \""#"] 不包含预期 %s \\""#g' $file_name
-          perl -i -pe 's#\Q"Certificate's critical options list is "#"证书的关键选项列表格式不正确"#g' $file_name
+          perl -i -pe 's#\Q"Certificate'\''s %s list \["#"证书的 %s 列表 \["#g' $file_name
+          perl -i -pe 's#\Q"\] does not contain expected %s \""#"\] 不包含预期 %s \\""#g' $file_name
+          perl -i -pe 's#\Q"Certificate'\''s critical options list is "#"证书的关键选项列表格式不正确"#g' $file_name
           perl -i -pe 's#\Q"incorrectly formatted"#""#g' $file_name
           perl -i -pe 's#\Q"Certificate specifies an unsupported critical "#"证书指定了一个不受支持的关键选项 \\""#g' $file_name
           perl -i -pe 's#\Q"option \""#""#g' $file_name
