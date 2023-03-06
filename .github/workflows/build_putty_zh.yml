@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUILD_VERSION: 78
-      BUILD_NO: ${{BUILD_VERSION - 58}}
+      BUILD_NO: 20
 
     steps:
       - name: Show system
