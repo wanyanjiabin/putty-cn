@@ -17,10 +17,12 @@ jobs:
     env:
       BUILD_VERSION: 78
       BUILD_NO: 20
+      BUILD_NO2: ($BUILD_VERSION-58)
 
     steps:
       - name: Show system
         run: |
+          echo "-->>$BUILD_NO2<<--"
           echo -e "Total CPU cores\t: $(nproc)"
           cat /proc/cpuinfo | grep 'model name'
           ulimit -a
