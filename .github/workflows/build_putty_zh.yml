@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Show system
         run: |
-          echo "-->>$BUILD_NO2<<--"
+          echo "${{env.BUILD_NO2}}"
           echo -e "Total CPU cores\t: $(nproc)"
           cat /proc/cpuinfo | grep 'model name'
           ulimit -a
