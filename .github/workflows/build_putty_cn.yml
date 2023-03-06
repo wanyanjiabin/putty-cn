@@ -5,7 +5,7 @@
 # LastUpdate: 2023/03/05 20:21:20
 #=================================================
 
-name: Build_Putty
+name: Build_Putty_Zh
 
 # Add a button to trigger the workflow
 on:
