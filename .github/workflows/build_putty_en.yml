@@ -78,7 +78,7 @@ jobs:
       - name: Upload Application
         uses: actions/upload-artifact@master
         with:
-          name: putty-${{env.BUILD_VERSION}}
+          name: putty-${{env.BUILD_VERSION}}-en
           path: ./putty-src/putty-${{env.BUILD_VERSION}}/output/
 
       - name: Upload Allfiles
