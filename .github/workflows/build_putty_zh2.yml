@@ -62,7 +62,7 @@ jobs:
           # sed -i '1d' ./putty-src-new.sh
           cp -rf ./putty-src-new.sh ./putty-src/putty-${{env.BUILD_VERSION}}
           cd ./putty-src/putty-${{env.BUILD_VERSION}}
-          chmod +x putty-src-new.sh
+          chmod +x ./putty-src-new.sh
           source ./putty-src-new.sh
 
       - name: Building Application
