@@ -215,26 +215,26 @@ jobs:
           perl -i -pe 's#\Q"  -E fptype            specify fingerprint output type:\n"#"  -E fptype            指定指纹输出类型:\n"#g' $file_name
           perl -i -pe 's#\Q"  --certificate file   incorporate a certificate into the key\n"#"  --certificate file   将证书合并到密钥中\n"#g' $file_name
           perl -i -pe 's#\Q"  --remove-certificate remove any certificate from the key\n"#"  --remove-certificate 从密钥中删除任何证书\n"#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: certificates can only be added to "#"puttygen: 证书只能添加到现有的 SSH-2 私钥文件\n"#g' $file_name
-          # perl -i -pe 's#\Q"existing SSH-2 private key files\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: certificates can only be removed from "#"puttygen: 证书只能从现有的 SSH-2 密钥文件中删除\n"#g' $file_name
-          # perl -i -pe 's#\Q"existing SSH-2 key files\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: cannot both add and remove a "#"puttygen: 不能同时添加和删除证书\n"#g' $file_name
-          # perl -i -pe 's#\Q"certificate\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: unable to load certificate file `%s'\'': "#"puttygen：无法加载证书文件“%s”："#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: certificate file `%s'\'' has unsupported "#"puttygen: 证书文件“%s”具有不受支持的算法名称“%s”\n"#g' $file_name
-          # perl -i -pe 's#\Q"algorithm name `%s'\''\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: certificate in `%s'\'' does not match "#"puttygen:“%s”中的证书与“%s”中的公钥不匹配\n"#g' $file_name
-          # perl -i -pe 's#\Q"public key in `%s'\''\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: unable to combine certificate in `%s'\'' "#"puttygen: 无法将“%s”中的证书与私钥组合\n"#g' $file_name
-          # perl -i -pe 's#\Q"with private key\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: input file `%s'\'' has unsupported "#"puttygen: 输入文件“%s”具有不受支持的算法名称“%\.\*s”\n"#g' $file_name
-          # perl -i -pe 's#\Q"algorithm name `%\.\*s'\''\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"bad key component type"#"错误的关键组件类型"#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: SSH-1 keys cannot contain "#"puttygen: SSH-1 密钥不能包含证书\n"#g' $file_name
-          # perl -i -pe 's#\Q"certificates\n"#""#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: cannot extract certificate info "#"puttygen：无法提取证书信息"#g' $file_name
-          # perl -i -pe 's#\Q"puttygen: key is not a certificate\n"#"puttygen: 密钥不是证书\n"#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificates can only be added to "#"puttygen: 证书只能添加到现有的 SSH-2 私钥文件\n"#g' $file_name
+          perl -i -pe 's#\Q"existing SSH-2 private key files\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificates can only be removed from "#"puttygen: 证书只能从现有的 SSH-2 密钥文件中删除\n"#g' $file_name
+          perl -i -pe 's#\Q"existing SSH-2 key files\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: cannot both add and remove a "#"puttygen: 不能同时添加和删除证书\n"#g' $file_name
+          perl -i -pe 's#\Q"certificate\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: unable to load certificate file `%s'\'': "#"puttygen：无法加载证书文件“%s”："#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificate file `%s'\'' has unsupported "#"puttygen: 证书文件“%s”具有不受支持的算法名称“%s”\n"#g' $file_name
+          perl -i -pe 's#\Q"algorithm name `%s'\''\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: certificate in `%s'\'' does not match "#"puttygen:“%s”中的证书与“%s”中的公钥不匹配\n"#g' $file_name
+          perl -i -pe 's#\Q"public key in `%s'\''\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: unable to combine certificate in `%s'\'' "#"puttygen: 无法将“%s”中的证书与私钥组合\n"#g' $file_name
+          perl -i -pe 's#\Q"with private key\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: input file `%s'\'' has unsupported "#"puttygen: 输入文件“%s”具有不受支持的算法名称“%\.\*s”\n"#g' $file_name
+          perl -i -pe 's#\Q"algorithm name `%\.\*s'\''\n"#""#g' $file_name
+          perl -i -pe 's#\Q"bad key component type"#"错误的关键组件类型"#g' $file_name
+          perl -i -pe 's#\Q"puttygen: SSH-1 keys cannot contain "#"puttygen: SSH-1 密钥不能包含证书\n"#g' $file_name
+          perl -i -pe 's#\Q"certificates\n"#""#g' $file_name
+          perl -i -pe 's#\Q"puttygen: cannot extract certificate info "#"puttygen：无法提取证书信息"#g' $file_name
+          perl -i -pe 's#\Q"puttygen: key is not a certificate\n"#"puttygen: 密钥不是证书\n"#g' $file_name
 
 
 
@@ -653,30 +653,30 @@ jobs:
           perl -i -pe 's#\Q"Connection/SSH/More bugs"#"连接/SSH/更多查错"#g' $file_name
           perl -i -pe 's#\Q"Connection/SUPDUP"#"连接/SUPDUP"#g' $file_name
           perl -i -pe 's#\Q"Connection/Serial"#"连接/串口"#g' $file_name
-          # perl -i -pe 's#\Q"Command to send to proxy (for some types)"#"发送给代理的命令(对于某些类型)"#g' $file_name
-          # perl -i -pe 's#\Q"HTTP CONNECT"#"HTTP 连接"#g' $file_name
-          # perl -i -pe 's#\Q"SSH to proxy and use port forwarding"#"SSH 代理并使用端口转发"#g' $file_name
-          # perl -i -pe 's#\Q"SSH to proxy and execute a command"#"SSH 代理并执行命令"#g' $file_name
-          # perl -i -pe 's#\Q"SSH to proxy and invoke a subsystem"#"SSH 代理并调用子系统"#g' $file_name
-          # perl -i -pe 's#\Q"Local (run a subprogram to connect)"#"本地(运行子程序连接)"#g' $file_name
-          # perl -i -pe 's#\Q"'\''Telnet'\'' (send an ad-hoc command)"#"Telnet(发送临时命令)"#g' $file_name
-          # perl -i -pe 's#\Q"Configure trusted certification authorities"#"配置受信任的证书颁发机构"#g' $file_name
-          # perl -i -pe 's#\Q"Configure host CAs"#"配置主机 CAs"#g' $file_name
-          # perl -i -pe 's#\Q"Diffie-Hellman group 1 (1024-bit)"#"Diffie-Hellman group 1 (1024位)"#g' $file_name
-          # perl -i -pe 's#\Q"Diffie-Hellman group 14 (2048-bit)"#"Diffie-Hellman group 14 (2048位)"#g' $file_name
-          # perl -i -pe 's#\Q"Diffie-Hellman group 15 (3072-bit)"#"Diffie-Hellman group 15 (3072位)"#g' $file_name
-          # perl -i -pe 's#\Q"Diffie-Hellman group 16 (4096-bit)"#"Diffie-Hellman group 16 (4096位)"#g' $file_name
-          # perl -i -pe 's#\Q"Diffie-Hellman group 17 (6144-bit)"#"Diffie-Hellman group 17 (6144位)"#g' $file_name
-          # perl -i -pe 's#\Q"Diffie-Hellman group 18 (8192-bit)"#"Diffie-Hellman group 18 (8192位)"#g' $file_name
-          # perl -i -pe 's#\Q"Other authentication-related options"#"其他与身份验证相关的选项"#g' $file_name
-          # perl -i -pe 's#\Q"Connection/SSH/Auth/Credentials"#"连接/SSH/认证/凭据"#g' $file_name
-          # perl -i -pe 's#\Q"Credentials to authenticate with"#"用于身份验证的凭据"#g' $file_name
-          # perl -i -pe 's#\Q"Public-key authentication"#"公钥认证"#g' $file_name
-          # perl -i -pe 's#\Q"Certificate to use with the private key:"#"与私钥一起使用的证书："#g' $file_name
-          # perl -i -pe 's#\Q"Select certificate file"#"选择证书文件"#g' $file_name
-          # perl -i -pe 's#\Q"Plugin to provide authentication responses"#"提供身份验证响应的插件"#g' $file_name
-          # perl -i -pe 's#\Q"Plugin command to run"#"要运行的插件命令"#g' $file_name
-          # perl -i -pe 's#\Q"Chokes on PuTTY'\''s full KEXINIT"#"PuTTY 的完整 KEXINIT 阻塞"#g' $file_name
+          perl -i -pe 's#\Q"Command to send to proxy (for some types)"#"发送给代理的命令(对于某些类型)"#g' $file_name
+          perl -i -pe 's#\Q"HTTP CONNECT"#"HTTP 连接"#g' $file_name
+          perl -i -pe 's#\Q"SSH to proxy and use port forwarding"#"SSH 代理并使用端口转发"#g' $file_name
+          perl -i -pe 's#\Q"SSH to proxy and execute a command"#"SSH 代理并执行命令"#g' $file_name
+          perl -i -pe 's#\Q"SSH to proxy and invoke a subsystem"#"SSH 代理并调用子系统"#g' $file_name
+          perl -i -pe 's#\Q"Local (run a subprogram to connect)"#"本地(运行子程序连接)"#g' $file_name
+          perl -i -pe 's#\Q"'\''Telnet'\'' (send an ad-hoc command)"#"Telnet(发送临时命令)"#g' $file_name
+          perl -i -pe 's#\Q"Configure trusted certification authorities"#"配置受信任的证书颁发机构"#g' $file_name
+          perl -i -pe 's#\Q"Configure host CAs"#"配置主机 CAs"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 1 (1024-bit)"#"Diffie-Hellman group 1 (1024位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 14 (2048-bit)"#"Diffie-Hellman group 14 (2048位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 15 (3072-bit)"#"Diffie-Hellman group 15 (3072位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 16 (4096-bit)"#"Diffie-Hellman group 16 (4096位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 17 (6144-bit)"#"Diffie-Hellman group 17 (6144位)"#g' $file_name
+          perl -i -pe 's#\Q"Diffie-Hellman group 18 (8192-bit)"#"Diffie-Hellman group 18 (8192位)"#g' $file_name
+          perl -i -pe 's#\Q"Other authentication-related options"#"其他与身份验证相关的选项"#g' $file_name
+          perl -i -pe 's#\Q"Connection/SSH/Auth/Credentials"#"连接/SSH/认证/凭据"#g' $file_name
+          perl -i -pe 's#\Q"Credentials to authenticate with"#"用于身份验证的凭据"#g' $file_name
+          perl -i -pe 's#\Q"Public-key authentication"#"公钥认证"#g' $file_name
+          perl -i -pe 's#\Q"Certificate to use with the private key:"#"与私钥一起使用的证书："#g' $file_name
+          perl -i -pe 's#\Q"Select certificate file"#"选择证书文件"#g' $file_name
+          perl -i -pe 's#\Q"Plugin to provide authentication responses"#"提供身份验证响应的插件"#g' $file_name
+          perl -i -pe 's#\Q"Plugin command to run"#"要运行的插件命令"#g' $file_name
+          perl -i -pe 's#\Q"Chokes on PuTTY'\''s full KEXINIT"#"PuTTY 的完整 KEXINIT 阻塞"#g' $file_name
 
 
 
@@ -891,7 +891,7 @@ jobs:
           perl -i -pe 's#\Q"requested key: %s"#"请求的密钥：%s"#g' $file_name
           perl -i -pe 's#\Q"signature flags = 0x%08"#"签名标志 = 0x%08"#g' $file_name
           perl -i -pe 's#\Q"no signature flags"#"没有签名标志"#g' $file_name
-          # perl -i -pe 's#\Q"Public and private trees out of sync!"#"公有树和私有树不同步！"#g' $file_name
+          perl -i -pe 's#\Q"Public and private trees out of sync!"#"公有树和私有树不同步！"#g' $file_name
 
 
 
@@ -1011,7 +1011,7 @@ jobs:
           perl -i -pe 's#\Q"\n      try typing just \"pscp\" for help\n"#"\\n     尝试输入 \\"pscp\\" 寻求帮助\\n"#g' $file_name
           perl -i -pe 's#\Q"option \"%s\" requires an argument"#"选项 \\"%s\\" 需要一个参数"#g' $file_name
           perl -i -pe 's#\Q"unknown option \"%s\""#"未知选项 \\"%s\\""#g' $file_name
-          # perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\n"#g' $file_name
+          perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\n"#g' $file_name
 
 
 
@@ -1357,8 +1357,8 @@ jobs:
           perl -i -pe 's#\Q"key algorithms do not match in OpenSSH public key file"#"OpenSSH 公钥文件中的密钥算法不匹配"#g' $file_name
           perl -i -pe 's#\Q"Bad key type in ssh2_write_pubkey"#"ssh2_write_pubkey 中的错误密钥类型"#g' $file_name
           perl -i -pe 's#\Q"PuTTY key format too new"#"PuTTY 密钥格式太新"#g' $file_name
-          # perl -i -pe 's#\Q"not a public key or a PuTTY SSH-2 private key"#"不是公钥或 PuTTY SSH-2 私钥"#g' $file_name
-          # perl -i -pe 's#\Q"%s (with certificate: %s)"#"%s（带有证书：%s）"#g' $file_name
+          perl -i -pe 's#\Q"not a public key or a PuTTY SSH-2 private key"#"不是公钥或 PuTTY SSH-2 私钥"#g' $file_name
+          perl -i -pe 's#\Q"%s (with certificate: %s)"#"%s（带有证书：%s）"#g' $file_name
 
 
 
@@ -2487,29 +2487,29 @@ jobs:
           # ssh/ca-config.c
           file_name="ssh/ca-config.c"
           echo [56%]开始汉化 ssh/ca-config.c
-          # perl -i -pe 's#\Q"Cannot decode key: %s"#"无法解码密钥: %s"#g' $file_name
-          # perl -i -pe 's#\Q"Invalid key (no key type)"#"无效密钥 (无密钥类型)"#g' $file_name
-          # perl -i -pe 's#\Q"Unrecognised key type '\''%.*s'\''"#"无法识别的密钥类型 '\''%.*s'\''"#g' $file_name
-          # perl -i -pe 's#\Q"CA key may not be a certificate (type is '\''%.*s'\'')"#"CA密钥可能不是证书 (类型为 '\''%.*s'\'')"#g' $file_name
-          # perl -i -pe 's#\Q"Invalid '\''%.*s'\'' key data"#"无效的 '\''%.*s'\'' 键数据"#g' $file_name
-          # perl -i -pe 's#\Q"Unable to load host CA record '\''%s'\''"#"无法加载主机CA记录'%s'"#g' $file_name
-          # perl -i -pe 's#\Q"No validity expression configured "#"没有为此密钥配置有效性表达式"#g' $file_name
-          # perl -i -pe 's#\Q"for this key"#""#g' $file_name
-          # perl -i -pe 's#\Q"Error in expression: %s"#"表达式错误: %s"#g' $file_name
-          # perl -i -pe 's#\Q"No valid CA public key entered"#"没有输入有效的 CA 公钥"#g' $file_name
-          # perl -i -pe 's#\Q"Unable to load public key from '\''%s'\'': %s"#"无法从“%s”加载公钥：%s"#g' $file_name
-          # perl -i -pe 's#\Q"Load, save or delete a host CA record"#"加载、保存或删除主机 CA 记录"#g' $file_name
-          # perl -i -pe 's#\Q"Name for this CA (shown in log messages)"#"此 CA 的名称（显示在日志消息中）"#g' $file_name
-          # perl -i -pe 's#\Q"Load"#"加载"#g' $file_name
-          # perl -i -pe 's#\Q"Save"#"保存"#g' $file_name
-          # perl -i -pe 's#\Q"Delete"#"删除"#g' $file_name
-          # perl -i -pe 's#\Q"Public key for this CA record"#"此 CA 记录的公钥"#g' $file_name
-          # perl -i -pe 's#\Q"Public key of certification authority"#"证书颁发机构的公钥"#g' $file_name
-          # perl -i -pe 's#\Q"Read from file"#"从文件中读取"#g' $file_name
-          # perl -i -pe 's#\Q"Select public key file of certification authority"#"选择证书颁发机构的公钥文件"#g' $file_name
-          # perl -i -pe 's#\Q"What this CA is trusted to do"#"这个 CA 被信任做什么"#g' $file_name
-          # perl -i -pe 's#\Q"Valid hosts this key is trusted to certify"#"此密钥可信任以证明的有效主机"#g' $file_name
-          # perl -i -pe 's#\Q"Signature types (RSA keys only):"#"签名类型（仅限 RSA 密钥）:"#g' $file_name
+          perl -i -pe 's#\Q"Cannot decode key: %s"#"无法解码密钥: %s"#g' $file_name
+          perl -i -pe 's#\Q"Invalid key (no key type)"#"无效密钥 (无密钥类型)"#g' $file_name
+          perl -i -pe 's#\Q"Unrecognised key type '\''%.*s'\''"#"无法识别的密钥类型 '\''%.*s'\''"#g' $file_name
+          perl -i -pe 's#\Q"CA key may not be a certificate (type is '\''%.*s'\'')"#"CA密钥可能不是证书 (类型为 '\''%.*s'\'')"#g' $file_name
+          perl -i -pe 's#\Q"Invalid '\''%.*s'\'' key data"#"无效的 '\''%.*s'\'' 键数据"#g' $file_name
+          perl -i -pe 's#\Q"Unable to load host CA record '\''%s'\''"#"无法加载主机CA记录'%s'"#g' $file_name
+          perl -i -pe 's#\Q"No validity expression configured "#"没有为此密钥配置有效性表达式"#g' $file_name
+          perl -i -pe 's#\Q"for this key"#""#g' $file_name
+          perl -i -pe 's#\Q"Error in expression: %s"#"表达式错误: %s"#g' $file_name
+          perl -i -pe 's#\Q"No valid CA public key entered"#"没有输入有效的 CA 公钥"#g' $file_name
+          perl -i -pe 's#\Q"Unable to load public key from '\''%s'\'': %s"#"无法从“%s”加载公钥：%s"#g' $file_name
+          perl -i -pe 's#\Q"Load, save or delete a host CA record"#"加载、保存或删除主机 CA 记录"#g' $file_name
+          perl -i -pe 's#\Q"Name for this CA (shown in log messages)"#"此 CA 的名称（显示在日志消息中）"#g' $file_name
+          perl -i -pe 's#\Q"Load"#"加载"#g' $file_name
+          perl -i -pe 's#\Q"Save"#"保存"#g' $file_name
+          perl -i -pe 's#\Q"Delete"#"删除"#g' $file_name
+          perl -i -pe 's#\Q"Public key for this CA record"#"此 CA 记录的公钥"#g' $file_name
+          perl -i -pe 's#\Q"Public key of certification authority"#"证书颁发机构的公钥"#g' $file_name
+          perl -i -pe 's#\Q"Read from file"#"从文件中读取"#g' $file_name
+          perl -i -pe 's#\Q"Select public key file of certification authority"#"选择证书颁发机构的公钥文件"#g' $file_name
+          perl -i -pe 's#\Q"What this CA is trusted to do"#"这个 CA 被信任做什么"#g' $file_name
+          perl -i -pe 's#\Q"Valid hosts this key is trusted to certify"#"此密钥可信任以证明的有效主机"#g' $file_name
+          perl -i -pe 's#\Q"Signature types (RSA keys only):"#"签名类型（仅限 RSA 密钥）:"#g' $file_name
 
 
 
