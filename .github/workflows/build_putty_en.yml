@@ -2,7 +2,7 @@
 # Description: Build PUTTY using GitHub Actions
 # Lisence: MIT
 # Author: wanyanjiabin
-# LastUpdate: 2023/03/05 20:21:20
+# LastUpdate: 2023/03/07 02:59:38
 #=================================================
 
 name: Build_Putty_En
@@ -15,9 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BUILD_VERSION: "0.78"
-      BUILD_VERSION_S: "078"
-      BUILD_NO: "20"
+      BUILD_VERSION: 78
+      BUILD_NO: $BUILD_VERSION-58
 
     steps:
       - name: Show system
@@ -27,7 +26,7 @@ jobs:
           ulimit -a
       - name: Show Bulid Version
         run: |
-          echo "即将编译的Putty版本为: $BUILD_VERSION"
+          echo "即将编译的Putty版本为: 0.$BUILD_VERSION"
           echo "即将编译的Putty语言为: 英文"
 
       - name: Space cleanup and Initialization environment
@@ -36,7 +35,7 @@ jobs:
         run: |
           echo '处理编译环境'
           set +e
-          sudo -E apt-get -y install wget cmake mingw-w64 git unzip
+          sudo -E apt-get -y install wget cmake mingw-w64 git unzip dos2unix
 
       - name: Checkout
         uses: actions/checkout@master
@@ -44,27 +43,27 @@ jobs:
       - name: Download Files
         run: |
           echo '开始下载文件'
-          wget "https://the.earth.li/~sgtatham/putty/$BUILD_VERSION/putty-$BUILD_VERSION.tar.gz"
-          # wget "http://jakub.kotrla.net/putty/portable_putty_${{env.BUILD_VERSION_S}}_0.${{env.BUILD_NO}}.0_all_in_one.zip"
+          wget "https://the.earth.li/~sgtatham/putty/0.$BUILD_VERSION/putty-0.$BUILD_VERSION.tar.gz"
+          # wget "http://jakub.kotrla.net/putty/portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip"
 
       - name: Unzip Files
         run: |
           echo '开始解压文件'
           mkdir putty-src
-          tar -zxvf ./putty-$BUILD_VERSION.tar.gz -C putty-src/
-          # unzip ./portable_putty_${{env.BUILD_VERSION_S}}_0.${{env.BUILD_NO}}.0_all_in_one.zip -d portable_putty
-          # cp -rf ./portable_putty/$BUILD_VERSION/pageant.c ./putty-src/putty-$BUILD_VERSION/windows/
-          # cp -rf ./portable_putty/$BUILD_VERSION/storage.c ./putty-src/putty-$BUILD_VERSION/windows/
+          tar -zxvf ./putty-0.$BUILD_VERSION.tar.gz -C putty-src/
+          # unzip ./portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip -d portable_putty
+          # cp -rf ./portable_putty/0.$BUILD_VERSION/pageant.c ./putty-src/putty-0.$BUILD_VERSION/windows/
+          # cp -rf ./portable_putty/0.$BUILD_VERSION/storage.c ./putty-src/putty-0.$BUILD_VERSION/windows/
 
       - name: Building Application
-        working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
+        working-directory: ./putty-src/putty-0.${{env.BUILD_VERSION}}
         run: |
           echo '开始编译'
           mkdir build
           cmake -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw.cmake -B "build" -D CMAKE_C_FLAGS=-fexec-charset=GBK . && cd ./build && cmake --build .
 
       - name: Collating Files
-        working-directory: ./putty-src/putty-${{env.BUILD_VERSION}}
+        working-directory: ./putty-src/putty-0.${{env.BUILD_VERSION}}
         run: |
           echo '开始整理文件'
           mkdir output
@@ -78,14 +77,14 @@ jobs:
       - name: Upload Application
         uses: actions/upload-artifact@master
         with:
-          name: putty-${{env.BUILD_VERSION}}-en
-          path: ./putty-src/putty-${{env.BUILD_VERSION}}/output/
+          name: putty-0.${{env.BUILD_VERSION}}-en
+          path: ./putty-src/putty-0.${{env.BUILD_VERSION}}/output/
 
       - name: Upload Allfiles
         uses: actions/upload-artifact@master
         with:
           name: All_Files
-          path: ./putty-src/putty-${{env.BUILD_VERSION}}
+          path: ./putty-src/putty-0.${{env.BUILD_VERSION}}
 
 
 
