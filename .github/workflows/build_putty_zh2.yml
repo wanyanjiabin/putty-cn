@@ -36,7 +36,7 @@ jobs:
         run: |
           echo '处理编译环境'
           set +e
-          # sudo -E apt-get -y install wget cmake mingw-w64 git unzip
+          sudo -E apt-get -y install wget cmake mingw-w64 git unzip dos2unix
 
       - name: Checkout
         uses: actions/checkout@master
