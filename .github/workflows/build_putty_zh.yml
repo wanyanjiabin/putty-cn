@@ -1803,7 +1803,7 @@ jobs:
           perl -i -pe 's#\Q"If you want to abandon the connection "#"如果您想完全放弃连接，请 %s 取消。 %s 是唯一保证安全的选择。"#g' $file_name
           perl -i -pe 's#\Q"completely, %s to cancel. %s is the ONLY guaranteed safe choice."#""#g' $file_name
           perl -i -pe 's#\Q"Update cached key?"#"更新缓存的键?"#g' $file_name
-          perl -i -pe 's#\Q"Full text of host's public key"#"主机公钥的全文"#g' $file_name
+          perl -i -pe 's#\Q"Full text of host'\''s public key"#"主机公钥的全文"#g' $file_name
           perl -i -pe 's#\Q"SHA256 fingerprint"#"SHA256 指纹"#g' $file_name
           perl -i -pe 's#\Q"MD5 fingerprint"#"MD5 指纹"#g' $file_name
 
