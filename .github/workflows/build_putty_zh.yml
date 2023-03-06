@@ -26,7 +26,7 @@ jobs:
           ulimit -a
       - name: Show Bulid Version
         run: |
-          echo "即将编译的Putty版本为: 0.$BUILD_VERSION"
+          echo "即将编译的Putty版本为: 0.${{env.BUILD_VERSION}}"
           echo "即将编译的Putty语言为: 中文"
 
       - name: Space cleanup and Initialization environment
@@ -43,36 +43,36 @@ jobs:
       - name: Download Files
         run: |
           echo '开始下载文件'
-          wget "https://the.earth.li/~sgtatham/putty/0.$BUILD_VERSION/putty-0.$BUILD_VERSION.tar.gz"
+          wget "https://the.earth.li/~sgtatham/putty/0.${{env.BUILD_VERSION}}/putty-0.${{env.BUILD_VERSION}}.tar.gz"
           wget "http://jakub.kotrla.net/putty/portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip"
 
       - name: Unzip Files
         run: |
           echo '开始解压文件'
           mkdir putty-src
-          tar -zxvf ./putty-0.$BUILD_VERSION.tar.gz -C putty-src/
+          tar -zxvf ./putty-0.${{env.BUILD_VERSION}}.tar.gz -C putty-src/
           unzip ./portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip -d portable_putty
-          cp -rf ./portable_putty/0.$BUILD_VERSION/pageant.c ./putty-src/putty-0.$BUILD_VERSION/windows/
-          cp -rf ./portable_putty/0.$BUILD_VERSION/storage.c ./putty-src/putty-0.$BUILD_VERSION/windows/
+          cp -rf ./portable_putty/0.${{env.BUILD_VERSION}}/pageant.c ./putty-src/putty-0.${{env.BUILD_VERSION}}/windows/
+          cp -rf ./portable_putty/0.${{env.BUILD_VERSION}}/storage.c ./putty-src/putty-0.${{env.BUILD_VERSION}}/windows/
 
       - name: Translate documents
         run: |
           echo '开始翻译文件'
           dos2unix ./putty-src-new.sh
-          cp -rf ./putty-src-new.sh ./putty-src/putty-0.$BUILD_VERSION
-          cd ./putty-src/putty-0.$BUILD_VERSION
+          cp -rf ./putty-src-new.sh ./putty-src/putty-0.${{env.BUILD_VERSION}}
+          cd ./putty-src/putty-0.${{env.BUILD_VERSION}}
           chmod +x ./putty-src-new.sh
           source ./putty-src-new.sh
 
       - name: Building Application
-        working-directory: ./putty-src/putty-0.$BUILD_VERSION
+        working-directory: ./putty-src/putty-0.${{env.BUILD_VERSION}}
         run: |
           echo '开始编译'
           mkdir build
           cmake -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw.cmake -B "build" -D CMAKE_C_FLAGS=-fexec-charset=GBK . && cd ./build && cmake --build .
 
       - name: Collating Files
-        working-directory: ./putty-src/putty-0.$BUILD_VERSION
+        working-directory: ./putty-src/putty-0.${{env.BUILD_VERSION}}
         run: |
           echo '开始整理文件'
           mkdir output
@@ -86,14 +86,14 @@ jobs:
       - name: Upload Application
         uses: actions/upload-artifact@master
         with:
-          name: putty-0.$BUILD_VERSION-zh
-          path: ./putty-src/putty-0.$BUILD_VERSION/output/
+          name: putty-0.${{env.BUILD_VERSION}}-zh
+          path: ./putty-src/putty-0.${{env.BUILD_VERSION}}/output/
 
       - name: Upload Allfiles
         uses: actions/upload-artifact@master
         with:
           name: All_Files
-          path: ./putty-src/putty-0.$BUILD_VERSION
+          path: ./putty-src/putty-0.${{env.BUILD_VERSION}}
 
 
 
