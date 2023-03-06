@@ -36,9 +36,10 @@ echo "\n"
 sleep 1
 
 BUILD_VERSION: 77
-BUILD_NO: $BUILD_VERSION-58
+_build_no = $BUILD_VERSION-58
+BUILD_NO: $_build_no
 
-echo "即将编译的版本为0.$BUILD_VERSION"
+echo "即将编译的版本为0.${BUILD_VERSION}"
 sleep 3
 
 clear
@@ -47,8 +48,8 @@ echo "\e[33m ======================= 下载源文件 ======================= \e[
 echo "\n"
 sleep 1
 
-wget "https://the.earth.li/~sgtatham/putty/0.$BUILD_VERSION/putty-0.$BUILD_VERSION.tar.gz"
-wget "http://jakub.kotrla.net/putty/portable_putty_0$BUILD_VERSION_0.$BUILD_NO.0_all_in_one.zip"
+wget "https://the.earth.li/~sgtatham/putty/0.${BUILD_VERSION}/putty-0.${BUILD_VERSION}.tar.gz"
+wget "http://jakub.kotrla.net/putty/portable_putty_0${BUILD_VERSION}_0.${BUILD_NO}.0_all_in_one.zip"
 
 clear
 #解压源代码
@@ -57,10 +58,10 @@ echo "\n"
 sleep 1
 
 mkdir putty-src
-tar -zxvf ./putty-0.$BUILD_VERSION.tar.gz -C putty-src/
-unzip ./portable_putty_0$BUILD_VERSION_0.$BUILD_NO.0_all_in_one.zip -d portable_putty
-cp -rf ./portable_putty/0.$BUILD_VERSION/pageant.c ./putty-src/putty-0.$BUILD_VERSION/windows/
-cp -rf ./portable_putty/0.$BUILD_VERSION/storage.c ./putty-src/putty-0.$BUILD_VERSION/windows/
+tar -zxvf ./putty-0.${BUILD_VERSION}.tar.gz -C putty-src/
+unzip ./portable_putty_0${BUILD_VERSION}_0.${BUILD_NO}.0_all_in_one.zip -d portable_putty
+cp -rf ./portable_putty/0.${BUILD_VERSION}/pageant.c ./putty-src/putty-0.${BUILD_VERSION}/windows/
+cp -rf ./portable_putty/0.${BUILD_VERSION}/storage.c ./putty-src/putty-0.${BUILD_VERSION}/windows/
 
 
 clear
@@ -71,8 +72,8 @@ sleep 1
 
 
 dos2unix ./putty-src-new.sh
-cp -rf ./putty-src-new.sh ./putty-src/putty-0.$BUILD_VERSION/
-cd ./putty-src/putty-0.$BUILD_VERSION/
+cp -rf ./putty-src-new.sh ./putty-src/putty-0.${BUILD_VERSION}/
+cd ./putty-src/putty-0.${BUILD_VERSION}/
 chmod +x ./putty-src-new.sh
 source ./putty-src-new.sh
 
