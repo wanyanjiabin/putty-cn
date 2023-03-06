@@ -2,7 +2,7 @@
 
 #******************************************
 # 0.78
-# 最后编辑 2023/03/05 20:21:44
+# 最后编辑 2023/03/07 01:22:23
 # 最后编辑 wanyanjiabin
 #******************************************
 
@@ -156,30 +156,31 @@ perl -i -pe 's#\Q"puttygen: cannot extract key components "#"puttygen: 无法从
 perl -i -pe 's#\Q"from public key of unknown type '\''%.*s'\''\n"#""#g' $file_name
 perl -i -pe 's#\Q"generation mode `%s'\''\n"#""#g' $file_name
 perl -i -pe 's#\Q"puttygen: unrecognised prime-"#"puttygen：无法识别的素数生成模式 `%s'\''"#g' $file_name
-perl -i -pe 's#\Q"           cert-info           print certificate information\n"#"           cert-info           打印证书信息\n"#g' $file_name
-perl -i -pe 's#\Q"  -E fptype            specify fingerprint output type:\n"#"  -E fptype            指定指纹输出类型:\n"#g' $file_name
-perl -i -pe 's#\Q"  --certificate file   incorporate a certificate into the key\n"#"  --certificate file   将证书合并到密钥中\n"#g' $file_name
-perl -i -pe 's#\Q"  --remove-certificate remove any certificate from the key\n"#"  --remove-certificate 从密钥中删除任何证书\n"#g' $file_name
-perl -i -pe 's#\Q"puttygen: certificates can only be added to "#"puttygen: 证书只能添加到现有的 SSH-2 私钥文件\n"#g' $file_name
+perl -i -pe 's#\Q"           cert-info           print certificate information\n"#"           cert-info           打印证书信息\\n"#g' $file_name
+perl -i -pe 's#\Q"  -E fptype            specify fingerprint output type:\n"#"  -E fptype            指定指纹输出类型:\\n"#g' $file_name
+perl -i -pe 's#\Q"  --certificate file   incorporate a certificate into the key\n"#"  --certificate file   将证书合并到密钥中\\n"#g' $file_name
+perl -i -pe 's#\Q"  --remove-certificate remove any certificate from the key\n"#"  --remove-certificate 从密钥中删除任何证书\\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: certificates can only be added to "#"puttygen: 证书只能添加到现有的 SSH-2 私钥文件\\n"#g' $file_name
 perl -i -pe 's#\Q"existing SSH-2 private key files\n"#""#g' $file_name
-perl -i -pe 's#\Q"puttygen: certificates can only be removed from "#"puttygen: 证书只能从现有的 SSH-2 密钥文件中删除\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: certificates can only be removed from "#"puttygen: 证书只能从现有的 SSH-2 密钥文件中删除\\n"#g' $file_name
 perl -i -pe 's#\Q"existing SSH-2 key files\n"#""#g' $file_name
-perl -i -pe 's#\Q"puttygen: cannot both add and remove a "#"puttygen: 不能同时添加和删除证书\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: cannot both add and remove a "#"puttygen: 不能同时添加和删除证书\\n"#g' $file_name
 perl -i -pe 's#\Q"certificate\n"#""#g' $file_name
 perl -i -pe 's#\Q"puttygen: unable to load certificate file `%s'\'': "#"puttygen：无法加载证书文件“%s”："#g' $file_name
-perl -i -pe 's#\Q"puttygen: certificate file `%s'\'' has unsupported "#"puttygen: 证书文件“%s”具有不受支持的算法名称“%s”\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: certificate file `%s'\'' has unsupported "#"puttygen: 证书文件“%s”具有不受支持的算法名称“%s”\\n"#g' $file_name
 perl -i -pe 's#\Q"algorithm name `%s'\''\n"#""#g' $file_name
-perl -i -pe 's#\Q"puttygen: certificate in `%s'\'' does not match "#"puttygen:“%s”中的证书与“%s”中的公钥不匹配\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: certificate in `%s'\'' does not match "#"puttygen:“%s”中的证书与“%s”中的公钥不匹配\\n"#g' $file_name
 perl -i -pe 's#\Q"public key in `%s'\''\n"#""#g' $file_name
-perl -i -pe 's#\Q"puttygen: unable to combine certificate in `%s'\'' "#"puttygen: 无法将“%s”中的证书与私钥组合\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: unable to combine certificate in `%s'\'' "#"puttygen: 无法将“%s”中的证书与私钥组合\\n"#g' $file_name
 perl -i -pe 's#\Q"with private key\n"#""#g' $file_name
-perl -i -pe 's#\Q"puttygen: input file `%s'\'' has unsupported "#"puttygen: 输入文件“%s”具有不受支持的算法名称“%\.\*s”\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: input file `%s'\'' has unsupported "#"puttygen: 输入文件“%s”具有不受支持的算法名称“%\.\*s”\\n"#g' $file_name
 perl -i -pe 's#\Q"algorithm name `%\.\*s'\''\n"#""#g' $file_name
 perl -i -pe 's#\Q"bad key component type"#"错误的关键组件类型"#g' $file_name
-perl -i -pe 's#\Q"puttygen: SSH-1 keys cannot contain "#"puttygen: SSH-1 密钥不能包含证书\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: SSH-1 keys cannot contain "#"puttygen: SSH-1 密钥不能包含证书\\n"#g' $file_name
 perl -i -pe 's#\Q"certificates\n"#""#g' $file_name
 perl -i -pe 's#\Q"puttygen: cannot extract certificate info "#"puttygen：无法提取证书信息"#g' $file_name
-perl -i -pe 's#\Q"puttygen: key is not a certificate\n"#"puttygen: 密钥不是证书\n"#g' $file_name
+perl -i -pe 's#\Q"puttygen: key is not a certificate\n"#"puttygen: 密钥不是证书\\n"#g' $file_name
+perl -i -pe 's#\Q"                             (default 8192)\n"#"                             (默认 8192)\\n"#g' $file_name
 
 
 
@@ -625,7 +626,6 @@ perl -i -pe 's#\Q"Chokes on PuTTY'\''s full KEXINIT"#"PuTTY 的完整 KEXINIT �
 
 
 
-
 # console.c
 file_name="console.c"
 echo [04%]开始汉化 console.c
@@ -840,6 +840,8 @@ perl -i -pe 's#\Q"no signature flags"#"没有签名标志"#g' $file_name
 perl -i -pe 's#\Q"Public and private trees out of sync!"#"公有树和私有树不同步！"#g' $file_name
 
 
+
+
 # pscp.c
 file_name="pscp.c"
 echo [10%]开始汉化 pscp.c
@@ -955,7 +957,7 @@ perl -i -pe 's#\Q"            control what happens when a log file already exist
 perl -i -pe 's#\Q"\n      try typing just \"pscp\" for help\n"#"\\n     尝试输入 \\"pscp\\" 寻求帮助\\n"#g' $file_name
 perl -i -pe 's#\Q"option \"%s\" requires an argument"#"选项 \\"%s\\" 需要一个参数"#g' $file_name
 perl -i -pe 's#\Q"unknown option \"%s\""#"未知选项 \\"%s\\""#g' $file_name
-#perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\n"#g' $file_name
+perl -i -pe 's#\Q"  -pwfile file   login with password read from specified file\n"#"  -pwfile file   使用从指定文件读取的密码登录\\n"#g' $file_name
 
 
 
@@ -1303,6 +1305,13 @@ perl -i -pe 's#\Q"Bad key type in ssh2_write_pubkey"#"ssh2_write_pubkey 中的�
 perl -i -pe 's#\Q"PuTTY key format too new"#"PuTTY 密钥格式太新"#g' $file_name
 perl -i -pe 's#\Q"not a public key or a PuTTY SSH-2 private key"#"不是公钥或 PuTTY SSH-2 私钥"#g' $file_name
 perl -i -pe 's#\Q"%s (with certificate: %s)"#"%s（带有证书：%s）"#g' $file_name
+perl -i -pe 's#\Q"no header line found in key file"#"在密钥文件中找不到标题行"#g' $file_name
+perl -i -pe 's#\Q"unrecognised header in SSH-2 public key file"#"SSH-2 公钥文件中无法识别的标头"#g' $file_name
+perl -i -pe 's#\Q"not enough data in SSH-2 public key file"#"SSH-2 公钥文件中的数据不足"#g' $file_name
+perl -i -pe 's#\Q"ssh_fptype_from_cert ruled out the other values"#"ssh_fptype_from_cert 排除其他值"#g' $file_name
+perl -i -pe 's#\Q"OPENSSH_AUTO should never reach key_type_to_str"#"OPENSSH_AUTO 永远不应该达到 key_type_to_str"#g' $file_name
+perl -i -pe 's#\Q"bad key type in key_type_to_str"#"key_type_to_str 中的错误密钥类型"#g' $file_name
+
 
 
 # x11disp.c
@@ -1325,6 +1334,7 @@ perl -i -pe 's#\Q"read tests completed\n"#"读取测试完成\\n"#g' $file_name
 perl -i -pe 's#\Q"write tests beginning\n"#"开始写测试\\n"#g' $file_name
 perl -i -pe 's#\Q"write tests completed\n"#"写测试完成\\n"#g' $file_name
 perl -i -pe 's#\Q"total: %d errors\n"#"总计：%d 个错误\\n"#g' $file_name
+perl -i -pe 's#\Q"read tests beginning\n"#"阅读测试开始\\n"#g' $file_name
 
 
 
@@ -1338,12 +1348,110 @@ perl -i -pe 's#\Q"pty: write: %s\n"#"pty: 写: %s\\n"#g' $file_name
 perl -i -pe 's#\Q"signal pipe: read: %s\n"#"信号管道：读取: %s\\n"#g' $file_name
 
 
-
 # contrib/cygtermd/malloc.c
 file_name="contrib/cygtermd/malloc.c"
 echo [19%]开始汉化 contrib/cygtermd/malloc.c
 perl -i -pe 's#\Q"out of memory"#"内存溢出"#g' $file_name
 
+
+# crypto/sha1-select.c
+file_name="crypto/sha1-select.c"
+echo [19%]开始汉化 crypto/sha1-select.c
+perl -i -pe 's#\Q"sha1_select ran off the end of its list"#"sha1_select 超出了列表的末尾"#g' $file_name
+perl -i -pe 's#\Q"dummy selector vtable"#"虚拟选择器 vtable"#g' $file_name
+
+# crypto/sha1-ni.c
+file_name="crypto/sha1-ni.c"
+echo [19%]开始汉化 crypto/sha1-ni.c
+perl -i -pe 's#\Q"SHA-NI accelerated"#"SHA-NI 加速"#g' $file_name
+
+# crypto/sha1-neon.c
+file_name="crypto/sha1-neon.c"
+echo [19%]开始汉化 crypto/sha1-neon.c
+perl -i -pe 's#\Q"NEON accelerated"#"NEON 加速"#g' $file_name
+
+# crypto/sha1.h
+file_name="crypto/sha1.h"
+echo [19%]开始汉化 crypto/sha1.h
+perl -i -pe 's#\Q"Should have exactly hit a block boundary"#"应该恰好碰到块边界"#g' $file_name
+
+# crypto/rsa.c
+file_name="crypto/rsa.c"
+echo [19%]开始汉化 crypto/rsa.c
+perl -i -pe 's#\Q"bad hash algorithm for RSA PKCS\#1"#"RSA PKCS\#1 的错误哈希算法"#g' $file_name
+perl -i -pe 's#\Q"-bit RSA key is too short to generate %s signatures"#"-bit RSA 密钥太短，无法生成 %s 签名"#g' $file_name
+
+# crypto/openssh-certs.c
+file_name="crypto/openssh-certs.c"
+echo [19%]开始汉化 crypto/openssh-certs.c
+perl -i -pe 's#\Q"Certificate type"#"证书类别"#g' $file_name
+perl -i -pe 's#\Q"host key"#"主机密钥"#g' $file_name
+perl -i -pe 's#\Q"Valid host names"#"有效的主机名"#g' $file_name
+perl -i -pe 's#\Q"user authentication key"#"用户认证密钥"#g' $file_name
+perl -i -pe 's#\Q"Valid user names"#"有效的用户名"#g' $file_name
+perl -i -pe 's#\Q"unknown type %"#"未知类型 %"#g' $file_name
+perl -i -pe 's#\Q"Valid principals"#"有效委托人"#g' $file_name
+perl -i -pe 's#\Q"Validity period"#"有效期"#g' $file_name
+perl -i -pe 's#\Q"Permitted client IP addresses"#"允许的客户端 IP 地址"#g' $file_name
+perl -i -pe 's#\Q"Forced remote command"#"强制远程命令"#g' $file_name
+perl -i -pe 's#\Q"X11 forwarding permitted"#"允许 X11 转发"#g' $file_name
+perl -i -pe 's#\Q"Agent forwarding permitted"#"允许代理转发"#g' $file_name
+perl -i -pe 's#\Q"Port forwarding permitted"#"允许端口转发"#g' $file_name
+perl -i -pe 's#\Q"PTY allocation permitted"#"允许 PTY 分配"#g' $file_name
+perl -i -pe 's#\Q"Running user ~\/\.ssh\.rc permitted"#"允许运行用户 ~\/\.ssh\.rc"#g' $file_name
+perl -i -pe 's#\Q"Certificate ID string"#"证书 ID 字符串"#g' $file_name
+perl -i -pe 's#\Q"Certificate serial number"#"证书序列号"#g' $file_name
+perl -i -pe 's#\Q"Fingerprint of signing CA key"#"签名 CA 密钥的指纹"#g' $file_name
+perl -i -pe 's#\Q"Fingerprint including certificate"#"指纹包括证书"#g' $file_name
+perl -i -pe 's#\Q"Certificate'\''s signing key is invalid"#"证书的签名密钥无效"#g' $file_name
+perl -i -pe 's#\Q"Certificate is signed with a certified key "#"证书是用经过认证的密钥签名的"#g' $file_name
+perl -i -pe 's#\Q"(forbidden by OpenSSH certificate specification)"#"（OpenSSH 证书规范禁止）"#g' $file_name
+perl -i -pe 's#\Q"Certificate'\''s signing key does not match "#"证书的签名密钥与签名类型不匹配"#g' $file_name
+perl -i -pe 's#\Q"signature type"#""#g' $file_name
+perl -i -pe 's#\Q"Certificate signature uses '\''%s'\'' signature type "#"证书签名使用 '\''%s'\'' 签名类型"#g' $file_name
+perl -i -pe 's#\Q"(forbidden by user configuration)"#"(被用户配置禁止)"#g' $file_name
+perl -i -pe 's#\Q"Certificate'\''s signature is invalid"#"证书签名无效"#g' $file_name
+perl -i -pe 's#\Q"Certificate type is "#"证书类型是"#g' $file_name
+perl -i -pe 's#\Q"unknown value %"#"未知值 %"#g' $file_name
+perl -i -pe 's#\Q"Certificate is not valid until "#"证书有效期至"#g' $file_name
+perl -i -pe 's#\Q"Certificate expired at "#"证书过期于"#g' $file_name
+perl -i -pe 's#\Q"Certificate'\''s valid principals list is "#"证书的有效主体列表格式不正确"#g' $file_name
+perl -i -pe 's#\Q"incorrectly formatted"#""#g' $file_name
+perl -i -pe 's#\Q"Certificate'\''s %s list \["#"证书的 %s 列表 \["#g' $file_name
+perl -i -pe 's#\Q"\] does not contain expected %s \""#"\] 不包含预期 %s \\""#g' $file_name
+perl -i -pe 's#\Q"Certificate'\''s critical options list is "#"证书的关键选项列表格式不正确"#g' $file_name
+perl -i -pe 's#\Q"incorrectly formatted"#""#g' $file_name
+perl -i -pe 's#\Q"Certificate specifies an unsupported critical "#"证书指定了一个不受支持的关键选项 \\""#g' $file_name
+perl -i -pe 's#\Q"option \""#""#g' $file_name
+
+
+# crypto/md5.c
+file_name="crypto/md5.c"
+echo [19%]开始汉化 crypto/md5.c
+perl -i -pe 's#\Q"Should have exactly hit a block boundary"#"应该恰好碰到块边界"#g' $file_name
+
+
+# crypto/diffie-hellman.c
+file_name="crypto/diffie-hellman.c"
+echo [19%]开始汉化 crypto/diffie-hellman.c
+perl -i -pe 's#\Q"f value received is too small"#"收到的 f 值太小"#g' $file_name
+perl -i -pe 's#\Q"f value received is too large"#"收到的 f 值太大"#g' $file_name
+
+# crypto/aesgcm-select.c
+file_name="crypto/aesgcm-select.c"
+echo [19%]开始汉化 crypto/aesgcm-select.c
+perl -i -pe 's#\Q"aesgcm_select ran off the end of its list"#"aesgcm_select 超出其列表的末尾"#g' $file_name
+
+# crypto/sha256-select.c
+file_name="crypto/sha256-select.c"
+echo [19%]开始汉化 crypto/sha256-select.c
+perl -i -pe 's#\Q"sha512_select ran off the end of its list"#"sha512_select 超出了列表的末尾"#g' $file_name
+perl -i -pe 's#\Q"dummy selector vtable"#"虚拟选择器 vtable"#g' $file_name
+
+# crypto/sha512.h
+file_name="crypto/sha512.h"
+echo [19%]开始汉化 crypto/sha512.h
+perl -i -pe 's#\Q"Should have exactly hit a block boundary"#"应该恰好碰到块边界"#g' $file_name
 
 
 # proxy/http.c
@@ -1377,6 +1485,7 @@ perl -i -pe 's#\Q"which we do not have"#""#g' $file_name
 perl -i -pe 's#\Q"HTTP proxy authentication"#"HTTP 代理认证"#g' $file_name
 perl -i -pe 's#\Q"Proxy username: "#"代理用户名："#g' $file_name
 perl -i -pe 's#\Q"Proxy password: "#"代理密码："#g' $file_name
+perl -i -pe 's#\Q"HTTP 407 Proxy Authentication Required "#"需要 HTTP 407 代理身份验证 "#g' $file_name
 
 
 
@@ -1387,7 +1496,13 @@ perl -i -pe 's#\Q"Local proxy authentication"#"本地代理认证"#g' $file_name
 perl -i -pe 's#\Q"Proxy username: "#"代理用户名: "#g' $file_name
 perl -i -pe 's#\Q"Proxy password: "#"代理密码: "#g' $file_name
 perl -i -pe 's#\Q"Starting local proxy command: "#"启动本地代理命令: "#g' $file_name
+perl -i -pe 's#\Q"connection via local command"#"通过本地命令连接"#g' $file_name
 
+
+# proxy/interactor.c
+file_name="proxy/interactor.c"
+echo [21%]开始汉化 proxy/interactor.c
+perl -i -pe 's#\Q"Shouldn'\''t call announce when someone else is using our seat"#"当其他人使用我们的座位时不应该打电话通知"#g' $file_name
 
 
 # proxy/nocproxy.c
@@ -1498,6 +1613,7 @@ perl -i -pe 's#\Q"saved session '\''%s'\'' is not launchable"#"保存的会话�
 perl -i -pe 's#\Q"saved session '\''%s'\'' is not an SSH session"#"保存的会话“%s”不是 SSH 会话"#g' $file_name
 perl -i -pe 's#\Q"Backend provides NC_HOST without SESSION_START!"#"后端提供没有 SESSION_START 的 NC_HOST！"#g' $file_name
 perl -i -pe 's#\Q"unable to open SSH proxy connection: %s"#"无法打开 SSH 代理连接: %s"#g' $file_name
+perl -i -pe 's#\Q"bad SSH proxy type"#"错误的 SSH 代理类型"#g' $file_name
 
 
 
@@ -1583,7 +1699,58 @@ perl -i -pe 's#\Q"Host key not in manually configured list"#"主机密钥不在�
 perl -i -pe 's#\Q"Remote side sent disconnect message:\n\"%.*s\""#"远端发送断开消息：\\n\\"%.*s\\""#g' $file_name
 perl -i -pe 's#\Q"Remote debug message: %.*s"#"远程调试消息：%.*s"#g' $file_name
 perl -i -pe 's#\Q"User aborted at %s"#"用户在 %s 中止"#g' $file_name
-
+perl -i -pe 's#\Q"%s Security Alert"#"%s 安全警报"#g' $file_name
+perl -i -pe 's#\Q"WARNING - POTENTIAL SECURITY BREACH!"#"警告 -潜在的安全漏洞！"#g' $file_name
+perl -i -pe 's#\Q"This server presented a certified host key:"#"该服务器提供了经过认证的主机密钥:"#g' $file_name
+perl -i -pe 's#\Q"%s (port %d)"#"%s (端口 %d)"#g' $file_name
+perl -i -pe 's#\Q"which was signed by a different "#"由来自 %s %s 的不同证书颁发机构签署，配置为信任此服务器。"#g' $file_name
+perl -i -pe 's#\Q"certification authority from the %s %s is configured to "#""#g' $file_name
+perl -i -pe 's#\Q"trust for this server."#""#g' $file_name
+perl -i -pe 's#\Q"ALSO, that key does not match the key "#"此外，该密钥与 %s 之前为此服务器缓存的密钥不匹配。"#g' $file_name
+perl -i -pe 's#\Q"%s had previously cached for this server."#""#g' $file_name
+perl -i -pe 's#\Q"This means that either another "#"这意味着另一个证书颁发机构正在这个领域中运行"#g' $file_name
+perl -i -pe 's#\Q"certification authority is operating in this realm AND "#""#g' $file_name
+perl -i -pe 's#\Q"the server administrator has changed the host key, or "#"并且服务器管理员已经更改了主机密钥，"#g' $file_name
+perl -i -pe 's#\Q"you have actually connected to another computer "#"或者您实际上已经连接到另一台冒充服务器的计算机。"#g' $file_name
+perl -i -pe 's#\Q"pretending to be the server."#""#g' $file_name
+perl -i -pe 's#\Q"certification authority is operating in this realm, or "#""#g' $file_name
+perl -i -pe 's#\Q"which does not match the certified key %s "#"它与先前为此服务器缓存的认证密钥 %s 不匹配。"#g' $file_name
+perl -i -pe 's#\Q"had previously cached for this server."#""#g' $file_name
+perl -i -pe 's#\Q"This means that either the server "#"这意味着服务器管理员更改了主机密钥，"#g' $file_name
+perl -i -pe 's#\Q"administrator has changed the host key, or you have actually "#"或者您实际上已经连接到另一台冒充服务器的计算机。"#g' $file_name
+perl -i -pe 's#\Q"connected to another computer pretending to be the server."#""#g' $file_name
+perl -i -pe 's#\Q"The new %s key fingerprint is:"#"新的 %s 密钥指纹是："#g' $file_name
+perl -i -pe 's#\Q"The host key is not cached for this server:"#"没有为此服务器缓存主机密钥："#g' $file_name
+perl -i -pe 's#\Q"You have no guarantee that the server is the "#"您无法保证服务器就是您认为的那台计算机。"#g' $file_name
+perl -i -pe 's#\Q"computer you think it is."#""#g' $file_name
+perl -i -pe 's#\Q"The server'\''s %s key fingerprint is:"#"服务器的 %s 密钥指纹是:"#g' $file_name
+perl -i -pe 's#\Q"The host key does not match the one %s has "#"主机密钥与 %s 为该服务器缓存的密钥不匹配:"#g' $file_name
+perl -i -pe 's#\Q"cached for this server:"#""#g' $file_name
+perl -i -pe 's#\Q"This means that either the server administrator "#"这意味着服务器管理员更改了主机密钥，"#g' $file_name
+perl -i -pe 's#\Q"has changed the host key, or you have actually connected to "#"或者您实际上已经连接到另一台冒充服务器的计算机。"#g' $file_name
+perl -i -pe 's#\Q"another computer pretending to be the server."#""#g' $file_name
+perl -i -pe 's#\Q"The new %s key fingerprint is:"#"新的 %s 密钥指纹是:"#g' $file_name
+perl -i -pe 's#\Q"Connection abandoned."#"已放弃连接."#g' $file_name
+perl -i -pe 's#\Q"If you trust this host, %s to add the key to "#"如果您信任此主机，%s 将密钥添加到 %s 的缓存并继续连接。"#g' $file_name
+perl -i -pe 's#\Q"%s'\''s cache and carry on connecting."#""#g' $file_name
+perl -i -pe 's#\Q"If you want to carry on connecting just once, "#"如果您只想继续连接一次，而不将密钥添加到缓存，%s。"#g' $file_name
+perl -i -pe 's#\Q"without adding the key to the cache, %s."#""#g' $file_name
+perl -i -pe 's#\Q"If you do not trust this host, %s to abandon the "#"如果您不信任此主机，%s 将放弃连接。"#g' $file_name
+perl -i -pe 's#\Q"connection."#""#g' $file_name
+perl -i -pe 's#\Q"Store key in cache?"#"将密钥存储在缓存中?"#g' $file_name
+perl -i -pe 's#\Q"If you were expecting this change and trust the "#"如果您预料到此更改并信任新密钥，%s 将更新 %s 的缓存并继续连接。"#g' $file_name
+perl -i -pe 's#\Q"new key, %s to update %s'\''s cache and carry on connecting."#""#g' $file_name
+perl -i -pe 's#\Q"(Storing this certified key in the cache "#"(将此经过认证的密钥存储在缓存中不会导致其证书颁发机构为任何其他密钥或主机所信任。)"#g' $file_name
+perl -i -pe 's#\Q"will NOT cause its certification authority to be trusted "#""#g' $file_name
+perl -i -pe 's#\Q"for any other key or host.)"#""#g' $file_name
+perl -i -pe 's#\Q"If you want to carry on connecting but without "#"如果您想继续连接但不更新缓存，%s。"#g' $file_name
+perl -i -pe 's#\Q"updating the cache, %s."#""#g' $file_name
+perl -i -pe 's#\Q"If you want to abandon the connection "#"如果您想完全放弃连接，请 %s 取消。 %s 是唯一保证安全的选择。"#g' $file_name
+perl -i -pe 's#\Q"completely, %s to cancel. %s is the ONLY guaranteed safe choice."#""#g' $file_name
+perl -i -pe 's#\Q"Update cached key?"#"更新缓存的键?"#g' $file_name
+perl -i -pe 's#\Q"Full text of host'\''s public key"#"主机公钥的全文"#g' $file_name
+perl -i -pe 's#\Q"SHA256 fingerprint"#"SHA256 指纹"#g' $file_name
+perl -i -pe 's#\Q"MD5 fingerprint"#"MD5 指纹"#g' $file_name
 
 
 # ssh/connection1.c
@@ -1724,10 +1891,10 @@ perl -i -pe 's#\Q"expecting ECDH reply, type %d (%s)"#"期待 ECDH 回复，类�
 perl -i -pe 's#\Q"Received invalid elliptic curve "#"收到无效的椭圆曲线"#g' $file_name
 perl -i -pe 's#\Q"point in ECDH reply"#"指向 ECDH 回复"#g' $file_name
 perl -i -pe 's#\Q"Unable to parse ECDH reply packet"#"无法解析 ECDH 回复数据包"#g' $file_name
-perl -i -pe 's#\Q"Doing GSSAPI (with Kerberos V5) Diffie-Hellman "#"执行 GSSAPI（使用 Kerberos V5）Diffie-Hellman 组交换，最少 %d 位"#g' $file_name
-perl -i -pe 's#\Q"group exchange, with minimum %d bits"#""#g' $file_name
-perl -i -pe 's#\Q"Using GSSAPI (with Kerberos V5) Diffie-Hellman with"#"使用带有标准组 \\"%s\\" 的 GSSAPI（与 Kerberos V5）Diffie-Hellman"#g' $file_name
-perl -i -pe 's#\Q" standard group \"%s\""#""#g' $file_name
+perl -i -pe 's#\Q"Doing GSSAPI (with Kerberos V5) Diffie-Hellman "#"执行 GSSAPI（使用 Kerberos V5）Diffie-Hellman 组交换，最少 %d 位 hash %s"#g' $file_name
+perl -i -pe 's#\Q"group exchange, with minimum %d bits, and hash %s"#""#g' $file_name
+perl -i -pe 's#\Q"Using GSSAPI (with Kerberos V5) Diffie-Hellman with"#"使用带有标准组 \\"%s\\" 的 GSSAPI（与 Kerberos V5）Diffie-Hellman hash %s"#g' $file_name
+perl -i -pe 's#\Q" standard group \"%s\" and hash %s"#""#g' $file_name
 perl -i -pe 's#\Q"Doing GSSAPI (with Kerberos V5) Diffie-Hellman key "#"使用散列 %s 进行 GSSAPI（使用 Kerberos V5）Diffie-Hellman 密钥交换"#g' $file_name
 perl -i -pe 's#\Q"exchange with hash %s"#""#g' $file_name
 perl -i -pe 's#\Q"GSSAPI key exchange failed to initialise"#"GSSAPI 密钥交换初始化失败"#g' $file_name
@@ -1772,6 +1939,16 @@ perl -i -pe 's#\Q"Host key was different in repeat key exchange"#"重复密钥�
 perl -i -pe 's#\Q"GSSAPI key exchange failed to initialise "#"GSSAPI 密钥交换未能初始化上下文：%s"#g' $file_name
 perl -i -pe 's#\Q"context: %s"#""#g' $file_name
 perl -i -pe 's#\Q"host key verification"#"主机密钥验证"#g' $file_name
+perl -i -pe 's#\Q"point in GSSAPI ECDH reply"#"指向 GSSAPI ECDH 回复"#g' $file_name
+perl -i -pe 's#\Q"Host key is a certificate. "#"主机密钥是一个证书。"#g' $file_name
+perl -i -pe 's#\Q"Hash including certificate:"#"包含证书的哈希:"#g' $file_name
+perl -i -pe 's#\Q"Certificate ID string is \"%s\""#"证书 ID 字符串是 \\"%s\\""#g' $file_name
+perl -i -pe 's#\Q"Fingerprint of certification authority:"#"认证机构指纹:"#g' $file_name
+perl -i -pe 's#\Q"Certification authority is not trusted"#"证书颁发机构不受信任"#g' $file_name
+perl -i -pe 's#\Q"Accepted certificate"#"接受证书"#g' $file_name
+perl -i -pe 's#\Q"Rejected host key certificate: %s"#"拒绝的主机密钥证书: %s"#g' $file_name
+perl -i -pe 's#\Q"Accepting certified host key anyway based "#"无论如何接受基于缓存的认证主机密钥"#g' $file_name
+perl -i -pe 's#\Q"on cache"#""#g' $file_name
 
 
 
@@ -2344,7 +2521,6 @@ perl -i -pe 's#\Q"Pageant key \#"#"Pageant 密钥 \#"#g' $file_name
 perl -i -pe 's#\Q" matches "#" 匹配 "#g' $file_name
 perl -i -pe 's#\Q"configured key file"#"配置的密钥文件"#g' $file_name
 perl -i -pe 's#\Q"SSH login name"#"SSH 登录名"#g' $file_name
-# perl -i -pe 's#\Q"login as: "#"登录为: "#g' $file_name
 perl -i -pe 's#\Q"username prompt"#"用户名提示"#g' $file_name
 perl -i -pe 's#\Q"Trying gssapi-keyex..."#"尝试 gssapi-keyex..."#g' $file_name
 perl -i -pe 's#\Q"Trying Pageant key \#"#"尝试 Pageant 密钥 \#"#g' $file_name
@@ -2360,7 +2536,56 @@ perl -i -pe 's#\Q"Enter new password: "#"输入新密码: "#g' $file_name
 perl -i -pe 's#\Q"Confirm new password: "#"确认新密码: "#g' $file_name
 perl -i -pe 's#\Q"password-change prompt"#"密码更改提示"#g' $file_name
 perl -i -pe 's#\Q"%s@%s'\''s password: "#"%s@%s的密码: "#g' $file_name
-
+perl -i -pe 's#\Q"Unexpected end of file from auth helper plugin"#"来自 auth 帮助程序插件的意外文件结尾"#g' $file_name
+perl -i -pe 's#\Q"Received malformed packet from auth helper plugin "#"从 auth helper 插件收到格式错误的数据包"#g' $file_name
+perl -i -pe 's#\Q"(too short to have a type code)"#"(太短而没有类型代码)"#g' $file_name
+perl -i -pe 's#\Q"Received unknown message type %u "#"从 auth helper 插件收到未知消息类型 %u"#g' $file_name
+perl -i -pe 's#\Q"from auth helper plugin"#""#g' $file_name
+perl -i -pe 's#\Q"Received unexpected %s message from auth helper "#"从身份验证助手插件收到意外的 %s 消息"#g' $file_name
+perl -i -pe 's#\Q"plugin"#""#g' $file_name
+perl -i -pe 's#\Q"Reading certificate file \"%s\""#"正在读取证书文件 \\"%s\\""#g' $file_name
+perl -i -pe 's#\Q"unrecognised certificate type '\''%s'\''"#"无法识别的证书类型“%s”"#g' $file_name
+perl -i -pe 's#\Q"key type '\''%s'\'' is not a certificate"#"密钥类型“%s”不是证书"#g' $file_name
+perl -i -pe 's#\Q"Unable to use this certificate file (%s)"#"无法使用此证书文件（%s）"#g' $file_name
+perl -i -pe 's#\Q"Unable to use certificate file \"%s\" (%s)\r\n"#"无法使用证书文件 \\"%s\\" (%s)\\r\\n"#g' $file_name
+perl -i -pe 's#\Q"Started authentication plugin: %s"#"启动认证插件: %s"#g' $file_name
+perl -i -pe 's#\Q"Received malformed "#"从 auth helper 插件收到格式错误的 PLUGIN_INIT_RESPONSE"#g' $file_name
+perl -i -pe 's#\Q"PLUGIN_INIT_RESPONSE from auth helper plugin"#""#g' $file_name
+perl -i -pe 's#\Q"Auth helper plugin announced "#"Auth 助手插件宣布不支持的版本号 %"#g' $file_name
+perl -i -pe 's#\Q"unsupported version number %"#""#g' $file_name
+perl -i -pe 's#\Q"Authentication plugin set username '\''%s'\''"#"身份验证插件设置用户名“%s”"#g' $file_name
+perl -i -pe 's#\Q"Received malformed "#"从 auth helper 插件收到格式错误的 PLUGIN_INIT_FAILURE"#g' $file_name
+perl -i -pe 's#\Q"PLUGIN_INIT_FAILURE from auth helper plugin"#""#g' $file_name
+perl -i -pe 's#\Q"Authentication plugin failed to initialise:\r\n"#"身份验证插件初始化失败:\\r\\n"#g' $file_name
+perl -i -pe 's#\Q"Authenticating with public key \"%s\"\r\n"#"使用公钥进行身份验证 \\"%s\\"\\r\\n"#g' $file_name
+perl -i -pe 's#\Q"Passphrase for key \"%s\": "#"密钥“%s”的密码: "#g' $file_name
+perl -i -pe 's#\Q"Received malformed "#"从 auth helper 插件收到格式错误的 PLUGIN_PROTOCOL_REJECT"#g' $file_name
+perl -i -pe 's#\Q"PLUGIN_PROTOCOL_REJECT from auth "#""#g' $file_name
+perl -i -pe 's#\Q"helper plugin"#""#g' $file_name
+perl -i -pe 's#\Q"Authentication plugin failed to set "#"身份验证插件无法设置键盘交互式身份验证:\\r\\n"#g' $file_name
+perl -i -pe 's#\Q"up keyboard-interactive "#""#g' $file_name
+perl -i -pe 's#\Q"authentication:\r\n"#""#g' $file_name
+perl -i -pe 's#\Q"Authentication plugin declined to "#"身份验证插件拒绝帮助键盘交互: "#g' $file_name
+perl -i -pe 's#\Q"help with keyboard-interactive: "#""#g' $file_name
+perl -i -pe 's#\Q"help with keyboard-interactive"#""#g' $file_name
+perl -i -pe 's#\Q"Authentication plugin agreed to help "#"身份验证插件同意帮助键盘交互"#g' $file_name
+perl -i -pe 's#\Q"with keyboard-interactive"#""#g' $file_name
+perl -i -pe 's#\Q"expected PLUGIN_PROTOCOL_ACCEPT or "#"预期的 PLUGIN_PROTOCOL_ACCEPT 或"#g' $file_name
+perl -i -pe 's#\Q"expected PLUGIN_KI_SERVER_RESPONSE "#"预期的 PLUGIN_KI_SERVER_RESPONSE "#g' $file_name
+perl -i -pe 's#\Q"or PLUGIN_PROTOCOL_USER_REQUEST"#"或 PLUGIN_PROTOCOL_USER_REQUEST"#g' $file_name
+perl -i -pe 's#\Q"End of keyboard-interactive prompts from plugin"#"来自插件的键盘交互提示结束"#g' $file_name
+perl -i -pe 's#\Q"Keyboard-interactive authentication prompts from plugin:"#"来自插件的键盘交互式身份验证提示:"#g' $file_name
+perl -i -pe 's#\Q"Keyboard-interactive authentication prompts from server:"#"来自服务器的键盘交互式身份验证提示:"#g' $file_name
+perl -i -pe 's#\Q"Communication with authentication plugin"#"与身份验证插件通信"#g' $file_name
+perl -i -pe 's#\Q"certificate key file is invalid"#"证书密钥文件无效"#g' $file_name
+perl -i -pe 's#\Q"unable to identify algorithm of base key"#"无法识别基本密钥的算法"#g' $file_name
+perl -i -pe 's#\Q"base public key is invalid"#"基础公钥无效"#g' $file_name
+perl -i -pe 's#\Q"base public key does not match certificate"#"基本公钥与证书不匹配"#g' $file_name
+perl -i -pe 's#\Q"Sending public key with certificate from \"%s\""#"从 \\"%s\\" 发送带证书的公钥"#g' $file_name
+perl -i -pe 's#\Q"Not substituting certificate \"%s\" for public "#"没有用证书 \\"%s\\" 代替公钥：%s"#g' $file_name
+perl -i -pe 's#\Q"key: %s"#""#g' $file_name
+perl -i -pe 's#\Q"Unable to use certificate \"%s\" with public "#"无法将证书“%s”与公钥“%s”一起使用：%s\\r\\n"#g' $file_name
+perl -i -pe 's#\Q"key \"%s\": %s\r\n"#""#g' $file_name
 
 
 # ssh/userauth2-server.c
@@ -2406,6 +2631,8 @@ perl -i -pe 's#\Q"We believe remote version has SSH-2 ignore bug"#"我们认为�
 perl -i -pe 's#\Q"We believe remote version has outdated SSH-2 GEX"#"我们认为远程版本已经过时 SSH-2 GEX"#g' $file_name
 perl -i -pe 's#\Q"We believe remote version has winadj bug"#"我们认为远程版本有 winadj 错误"#g' $file_name
 perl -i -pe 's#\Q"channel request bug"#"频道请求错误"#g' $file_name
+perl -i -pe 's#\Q"We believe remote version requires us to "#"我们相信远程版本需要我们过滤我们的 KEXINIT"#g' $file_name
+perl -i -pe 's#\Q"filter our KEXINIT"#""#g' $file_name
 
 
 
@@ -2455,10 +2682,162 @@ perl -i -pe 's#\Q"Valid hosts this key is trusted to certify"#"此密钥可信�
 perl -i -pe 's#\Q"Signature types (RSA keys only):"#"签名类型（仅限 RSA 密钥）:"#g' $file_name
 
 
+# stubs/no-term.c
+file_name="stubs/no-term.c"
+echo [57%]开始汉化 stubs/no-term.c
+perl -i -pe 's#\Q"No terminal to send interactive prompts to"#"没有可向其发送交互式提示的终端"#g' $file_name
+
+# stubs/no-rand.c
+file_name="stubs/no-rand.c"
+echo [57%]开始汉化 stubs/no-rand.c
+perl -i -pe 's#\Q"Random numbers are not available in this application"#"此应用程序不提供随机数"#g' $file_name
+
+# stubs/no-ca-config.c
+file_name="stubs/no-ca-config.c"
+echo [57%]开始汉化 stubs/no-ca-config.c
+perl -i -pe 's#\Q"should never call setup_ca_config_box in this application"#"不应在此应用程序中调用 setup_ca_config_box"#g' $file_name
+
+# stubs/null-seat.c
+file_name="stubs/null-seat.c"
+echo [57%]开始汉化 stubs/null-seat.c
+perl -i -pe 's#\Q"this seat can'\''t handle interactive prompts"#"这个座位不能处理互动提示"#g' $file_name
+
+
+
 # utils/bufchain.c
 file_name="utils/bufchain.c"
 echo [57%]开始汉化 utils/bufchain.c
 perl -i -pe 's#\Q"bufchain callback used while uninitialised"#"未初始化时使用的 bufchain 回调"#g' $file_name
+
+
+# terminal/bidi_gettype.c
+file_name="terminal/bidi_gettype.c"
+echo [57%]开始汉化 terminal/bidi_gettype.c
+perl -i -pe 's#\Q"out of memory!\n"#"内存不足!\\n"#g' $file_name
+
+# terminal/bidi.c
+file_name="terminal/bidi.c"
+echo [57%]开始汉化 terminal/bidi.c
+perl -i -pe 's#\Q"how did this get past the outer switch?"#"这是如何通过外部开关的？"#g' $file_name
+
+# terminal/terminal.c
+file_name="terminal/terminal.c"
+echo [57%]开始汉化 terminal/terminal.c
+perl -i -pe 's#\Q"bad small keypad key enum value"#"坏的小键盘键枚举值"#g' $file_name
+perl -i -pe 's#\Q"Asynchronous userpass input requires a callback"#"异步用户密码输入需要回调"#g' $file_name
+perl -i -pe 's#\Q"Terminal not prepared for interactive prompts"#"终端未准备好交互提示"#g' $file_name
+
+
+# unix/config-gtk.c
+file_name="unix/config-gtk.c"
+echo [58%]开始汉化 unix/config-gtk.c
+perl -i -pe 's#\Q"Control the scrollback in the window"#"控制窗口中的回滚"#g' $file_name
+perl -i -pe 's#\Q"Options controlling font usage"#"控制字体使用的选项"#g' $file_name
+perl -i -pe 's#\Q"Fonts for displaying non-bold text"#"用于显示非粗体文本的字体"#g' $file_name
+perl -i -pe 's#\Q"Font used for ordinary text"#"用于普通文本的字体"#g' $file_name
+perl -i -pe 's#\Q"Font used for wide (CJK) text"#"用于宽 (CJK) 文本的字体"#g' $file_name
+perl -i -pe 's#\Q"Fonts for displaying bolded text"#"用于显示粗体文本的字体"#g' $file_name
+perl -i -pe 's#\Q"Font used for bolded text"#"用于粗体文本的字体"#g' $file_name
+perl -i -pe 's#\Q"Font used for bold wide text"#"用于粗体宽文本的字体"#g' $file_name
+perl -i -pe 's#\Q"Use shadow bold instead of bold fonts"#"使用阴影粗体而不是粗体"#g' $file_name
+perl -i -pe 's#\Q"(Note that bold fonts or shadow bolding are only"#"(请注意，只有在您没有通过更改文本颜色来请求加粗时，才会使用加粗字体或阴影加粗。)"#g' $file_name
+perl -i -pe 's#\Q" used if you have not requested bolding to be done by"#""#g' $file_name
+perl -i -pe 's#\Q" changing the text colour.)"#""#g' $file_name
+perl -i -pe 's#\Q"Horizontal offset for shadow bold:"#"阴影粗体的水平偏移:"#g' $file_name
+perl -i -pe 's#\Q"Character set translation on received data"#"接收数据的字符集转换"#g' $file_name
+perl -i -pe 's#\Q"Override with UTF-8 if locale says so"#"如果区域设置如此，则使用 UTF-8 覆盖"#g' $file_name
+perl -i -pe 's#\Q"Choose the Meta key:"#"选择元密钥:"#g' $file_name
+perl -i -pe 's#\Q"Option key acts as Meta"#"选项键充当元"#g' $file_name
+perl -i -pe 's#\Q"Command key acts as Meta"#"命令键充当元"#g' $file_name
+perl -i -pe 's#\Q"X Window System settings"#"X 窗口系统设置"#g' $file_name
+perl -i -pe 's#\Q"Window class name:"#"窗口类名称："#g' $file_name
+
+# unix/askpass.c
+file_name="unix/askpass.c"
+echo [58%]开始汉化 unix/askpass.c
+perl -i -pe 's#\Q"passphrase input cancelled"#"密码短语输入已取消"#g' $file_name
+perl -i -pe 's#\Q"unable to grab keyboard after 5 seconds"#"5 秒后无法抓取键盘"#g' $file_name
+perl -i -pe 's#\Q"unable to allocate colours"#"无法分配颜色"#g' $file_name
+perl -i -pe 's#\Q"unable to initialise GTK"#"无法初始化 GTK"#g' $file_name
+perl -i -pe 's#\Q"FATAL ERROR: "#"致命错误: "#g' $file_name
+perl -i -pe 's#\Q"Enter passphrase"#"输入密码"#g' $file_name
+
+
+# unix/dialog.c
+file_name="unix/dialog.c"
+echo [58%]开始汉化 unix/dialog.c
+perl -i -pe 's#\Q"bad control type in editbox_get"#"editbox_get 中的控件类型错误"#g' $file_name
+perl -i -pe 's#\Q"we should have a GtkEntry one way or another"#"我们应该以某种方式拥有 GtkEntry"#g' $file_name
+perl -i -pe 's#\Q"bad control type in listbox_clear"#"listbox_clear 中的错误控件类型"#g' $file_name
+perl -i -pe 's#\Q"bad control type in listbox_del"#"listbox_del 中的控件类型错误"#g' $file_name
+perl -i -pe 's#\Q"bad control type in listbox_addwithid"#"listbox_addwithid 中的错误控件类型"#g' $file_name
+perl -i -pe 's#\Q"bad control type in listbox_getid"#"listbox_getid 中的控件类型错误"#g' $file_name
+perl -i -pe 's#\Q"bad control type in listbox_index"#"listbox_index 中的错误控件类型"#g' $file_name
+perl -i -pe 's#\Q"bad control type in listbox_issel"#"listbox_issel 中的错误控件类型"#g' $file_name
+perl -i -pe 's#\Q"bad control type in listbox_select"#"listbox_select 中的错误控件类型"#g' $file_name
+perl -i -pe 's#\Q"bad control type in label_change"#"label_change 中的控件类型错误"#g' $file_name
+perl -i -pe 's#\Q"bad control type in set_focus"#"set_focus 中的控件类型错误"#g' $file_name
+perl -i -pe 's#\Q"Some sort of text about a config-box error message"#"关于配置框错误消息的某种文本"#g' $file_name
+perl -i -pe 's#\Q"Select a colour"#"选择颜色"#g' $file_name
+perl -i -pe 's#\Q"Select a font"#"选择字体"#g' $file_name
+perl -i -pe 's#\Q"Browse..."#"浏览..."#g' $file_name
+perl -i -pe 's#\Q"Change..."#"修改..."#g' $file_name
+perl -i -pe 's#\Q"bad listbox type in win_key_press"#"win_key_press 中的错误列表框类型"#g' $file_name
+perl -i -pe 's#\Q"More info..."#"更多信息..."#g' $file_name
+perl -i -pe 's#\Q"Host key information"#"主机密钥信息"#g' $file_name
+perl -i -pe 's#\Q"default dialog width determination string"#"默认对话框宽度确定字符串"#g' $file_name
+perl -i -pe 's#\Q"The first %s supported by the server is "#"服务器支持的第一个 %s 是 %s，它低于配置的警告阈值。\\n 继续连接吗？"#g' $file_name
+perl -i -pe 's#\Q"%s, which is below the configured warning threshold.\n"#""#g' $file_name
+perl -i -pe 's#\Q"Continue with connection?"#""#g' $file_name
+perl -i -pe 's#\Q"PuTTY Security Alert"#"PuTTY 安全警报"#g' $file_name
+perl -i -pe 's#\Q"Reasonably long line of text as a width template"#"相当长的文本行作为宽度模板"#g' $file_name
+perl -i -pe 's#\Q"The first host key type we have stored for this server\n"#"我们为此服务器存储的第一个主机密钥类型是 %s，它低于配置的警告阈值。\\n"#g' $file_name
+perl -i -pe 's#\Q"is %s, which is below the configured warning threshold.\n"#""#g' $file_name
+perl -i -pe 's#\Q"The server also provides the following types of host key\n"#"服务器还提供以下类型的主机密钥高于阈值，我们没有存储它们：\\n"#g' $file_name
+perl -i -pe 's#\Q"above the threshold, which we do not have stored:\n"#""#g' $file_name
+perl -i -pe 's#\Q"Continue with connection?"#"继续连接？"#g' $file_name
+perl -i -pe 's#\Q"is ecdsa-nistp521, which is below the configured"#"是ecdsa-nistp521，低于配置的警告阈值."#g' $file_name
+perl -i -pe 's#\Q" warning threshold."#""#g' $file_name
+perl -i -pe 's#\Q"REASONABLY LONG LINE OF TEXT FOR BASIC SANITY"#"基本理智的合理长行文本"#g' $file_name
+perl -i -pe 's#\Q"LONGISH LINE OF TEXT SO THE LICENCE"#"较长的文本行，因此许可证框不会过高和过薄"#g' $file_name
+perl -i -pe 's#\Q" BOX ISN'\''T EXCESSIVELY TALL AND THIN"#""#g' $file_name
+perl -i -pe 's#\Q"View Licence"#"查看许可证"#g' $file_name
+perl -i -pe 's#\Q"LINE OF TEXT GIVING WIDTH OF EVENT LOG IS "#"事件日志的文本行很长，因为 SSH 日志条目很宽"#g' $file_name
+perl -i -pe 's#\Q"QUITE LONG '\''COS SSH LOG ENTRIES ARE WIDE"#""#g' $file_name
+perl -i -pe 's#\Q"The session log file \"%.*s\" already exists. "#"会话日志文件 \\"%.*s\\" 已经存在。 "#g' $file_name
+perl -i -pe 's#\Q"You can overwrite it with a new session log, "#"您可以用新的会话日志覆盖它, "#g' $file_name
+perl -i -pe 's#\Q"append your session log to the end of it, "#"将您的会话日志附加到它的末尾, "#g' $file_name
+perl -i -pe 's#\Q"or disable session logging for this session."#"或为此会话禁用会话日志记录."#g' $file_name
+perl -i -pe 's#\Q"LINE OF TEXT SUITABLE FOR THE ASKAPPEND WIDTH"#"适合 ASKAPPEND 宽度的文本行"#g' $file_name
+perl -i -pe 's#\Q"PuTTY trusted host certification authorities"#"PuTTY 可信主机认证机构"#g' $file_name
+
+
+# unix/console.c
+file_name="unix/console.c"
+echo [58%]开始汉化 unix/console.c
+perl -i -pe 's#\Q"Cannot confirm a host key in batch mode"#"无法在批处理模式下确认主机密钥"#g' $file_name
+perl -i -pe 's#\Q"%s (y/n, Return cancels connection, i for more info) "#"%s（y\/n，返回取消连接，i 获取更多信息）"#g' $file_name
+perl -i -pe 's#\Q"Cannot confirm a weak crypto primitive "#"无法在批处理模式下确认弱加密原语"#g' $file_name
+perl -i -pe 's#\Q"in batch mode"#""#g' $file_name
+perl -i -pe 's#\Q"Cannot confirm a weak cached host key "#"无法在批处理模式下确认弱缓存主机密钥"#g' $file_name
+perl -i -pe 's#\Q"The session log file \"%.*s\" already exists.\n"#"会话日志文件 \\"%.*s\\" 已经存在。\\n"#g' $file_name
+perl -i -pe 's#\Q"You can overwrite it with a new session log,\n"#"您可以用新的会话日志覆盖它,\\n"#g' $file_name
+perl -i -pe 's#\Q"append your session log to the end of it,\n"#"将您的会话日志附加到它的末尾,\\n"#g' $file_name
+perl -i -pe 's#\Q"or disable session logging for this session.\n"#"或为此会话禁用会话日志记录。\\n"#g' $file_name
+perl -i -pe 's#\Q"Enter \"y\" to wipe the file, \"n\" to append to it,\n"#"输入 \\"y\\" 擦除文件，输入 \\"n\\" 附加到它，\\n"#g' $file_name
+perl -i -pe 's#\Q"or just press Return to disable logging.\n"#"或者直接按 Return 来禁用日志记录。\\n"#g' $file_name
+perl -i -pe 's#\Q"Wipe the log file? (y/n, Return cancels logging) "#"擦除日志文件？ （y\/n，返回取消记录） "#g' $file_name
+perl -i -pe 's#\Q"Logging will not be enabled.\n"#"将不会启用日志记录。\\n"#g' $file_name
+perl -i -pe 's#\Q"You are loading an SSH-2 private key which has an\n"#"您正在加载具有旧版本文件格式的 SSH-2 私钥。\\n "#g' $file_name
+perl -i -pe 's#\Q"old version of the file format. This means your key\n"#"这意味着您的密钥文件不是完全防篡改的。\\n"#g' $file_name
+perl -i -pe 's#\Q"file is not fully tamperproof. Future versions of\n"#"PuTTY 的未来版本可能会停止支持这种私钥格式，\\n"#g' $file_name
+perl -i -pe 's#\Q"PuTTY may stop supporting this private key format,\n"#"因此我们建议您将您的密钥转换为新格式。\\n"#g' $file_name
+perl -i -pe 's#\Q"so we recommend you convert your key to the new\n"#""#g' $file_name
+perl -i -pe 's#\Q"format.\n"#""#g' $file_name
+perl -i -pe 's#\Q"Once the key is loaded into PuTTYgen, you can perform\n"#"将密钥加载到 PuTTYgen 后，您只需再次保存即可执行此转换。\\n"#g' $file_name
+perl -i -pe 's#\Q"this conversion simply by saving it again.\n"#""#g' $file_name
+perl -i -pe 's#\Q"Cannot answer interactive prompts "#"无法以批处理模式回答交互式提示"#g' $file_name
+perl -i -pe 's#\Q"Error reading from terminal"#"从终端读取错误"#g' $file_name
 
 
 
@@ -2493,6 +2872,26 @@ perl -i -pe 's#\Q"%sSource commit: %s"#"%s源代码提交: %s"#g' $file_name
 perl -i -pe 's#\Q"%sBuild option: MINEFIELD"#"%s构建选项: MINEFIELD"#g' $file_name
 perl -i -pe 's#\Q"%sEmbedded HTML Help file: %s"#"%s嵌入式 HTML 帮助文件: %s"#g' $file_name
 perl -i -pe 's#\Q"%sCompiled against GTK version %s"#"%s针对 GTK 编译版本 %s"#g' $file_name
+
+
+
+# utils/cert-expr.c
+file_name="utils/cert-expr.c"
+echo [60%]开始汉化 utils/cert-expr.c
+perl -i -pe 's#\Q"unrecognised boolean operator"#"无法识别的布尔运算符"#g' $file_name
+perl -i -pe 's#\Q"unexpected character in expression"#"表达式中的意外字符"#g' $file_name
+perl -i -pe 's#\Q"unhandled node type in exprnode_free"#"exprnode_free 中未处理的节点类型"#g' $file_name
+perl -i -pe 's#\Q"expected '\'')'\'' after parenthesised subexpression"#"带括号的子表达式后应为 '\'')'\''"#g' $file_name
+perl -i -pe 's#\Q"port number too large"#"端口号太大"#g' $file_name
+perl -i -pe 's#\Q"port number range is backwards"#"端口号范围向后"#g' $file_name
+perl -i -pe 's#\Q"unable to parse port number specification"#"无法解析端口号规范"#g' $file_name
+perl -i -pe 's#\Q"expected a predicate or a parenthesised subexpression"#"预期谓词或带括号的子表达式"#g' $file_name
+perl -i -pe 's#\Q"expected parentheses to disambiguate && and || "#"预期的括号来消除 && 和 || 的歧义在表达的两边"#g' $file_name
+perl -i -pe 's#\Q"on either side of expression"#""#g' $file_name
+perl -i -pe 's#\Q"unexpected text at end of expression"#"表达式末尾的意外文本"#g' $file_name
+perl -i -pe 's#\Q"unhandled node type in eval"#"eval 中未处理的节点类型"#g' $file_name
+perl -i -pe 's#\Q"out of memory\n"#"内存不足\\n"#g' $file_name
+perl -i -pe 's#\Q"unhandled node type in exprnode_dump"#"exprnode_dump 中未处理的节点类型"#g' $file_name
 
 
 
@@ -2601,6 +3000,7 @@ perl -i -pe 's#\Q"Connection/SSH/X11"#"连接/SSH/X11"#g' $file_name
 
 
 
+
 # windows/conpty.c
 file_name="windows/conpty.c"
 echo [64%]开始汉化 windows/conpty.c
@@ -2654,6 +3054,7 @@ perl -i -pe 's#\Q"Cannot answer interactive prompts "#"无法回答交互式提�
 perl -i -pe 's#\Q"Cannot get standard input handle\n"#"无法获得标准输入句柄\\n"#g' $file_name
 perl -i -pe 's#\Q"Cannot get standard output handle\n"#"无法获得标准输出句柄\\n"#g' $file_name
 perl -i -pe 's#\Q"Error reading from console"#"从控制台读取错误"#g' $file_name
+perl -i -pe 's#\Q"%s (y/n, Return cancels connection, i for more info) "#"%s（是\/否，返回取消连接，我获取更多信息）"#g' $file_name
 
 
 
@@ -3144,6 +3545,11 @@ perl -i -pe 's#\Q"This means that either the server administrator has changed th
 perl -i -pe 's#\Q"host key, or you have actually connected to another computer"#"主机密钥，或者您实际上已连接到另一台计算机"#g' $file_name
 perl -i -pe 's#\Q"pretending to be the server."#"冒充的。"#g' $file_name
 perl -i -pe 's#\Q"PuTTY: information about the server'\''s host key"#"PuTTY: 关于服务器主机密钥的信息"#g' $file_name
+perl -i -pe 's#\Q"&Cancel"#"&取消"#g' $file_name
+perl -i -pe 's#\Q"&Accept"#"&接受"#g' $file_name
+perl -i -pe 's#\Q"Connect &Once"#"只连接一次"#g' $file_name
+perl -i -pe 's#\Q"More &info..."#"更多信息..."#g' $file_name
+perl -i -pe 's#\Q"&Help"#"&帮助"#g' $file_name
 
 
 
@@ -3271,6 +3677,17 @@ perl -i -pe 's#\Q"unrecognised PPK parameter '\''%s'\''\n"#"无法识别的 PPK 
 perl -i -pe 's#\Q"unrecognised option '\''%s'\''\n"#"无法识别的选项“%s”\\n"#g' $file_name
 perl -i -pe 's#\Q"unsupported ECDSA bit length %d"#"不支持的 ECDSA 位长度 %d"#g' $file_name
 perl -i -pe 's#\Q"unsupported EDDSA bit length %d"#"不支持的 EDDSA 位长度 %d"#g' $file_name
+perl -i -pe 's#\Q"This public key contains an OpenSSH certificate."#"此公钥包含 OpenSSH 证书。"#g' $file_name
+perl -i -pe 's#\Q"Couldn'\''t load certificate (%s)"#"无法加载证书（%s）"#g' $file_name
+perl -i -pe 's#\Q"Couldn'\''t load certificate (unsupported "#"无法加载证书（不支持的算法名称“%s”）"#g' $file_name
+perl -i -pe 's#\Q"algorithm name '\''%s'\'')"#""#g' $file_name
+perl -i -pe 's#\Q"Certificate is for a different public key"#"证书用于不同的公钥"#g' $file_name
+perl -i -pe 's#\Q"Couldn'\''t combine certificate with key"#"无法将证书与密钥组合"#g' $file_name
+perl -i -pe 's#\Q"Add &certificate to key"#"将证书添加到密钥"#g' $file_name
+perl -i -pe 's#\Q"Remove certificate from key"#"从密钥中删除证书"#g' $file_name
+perl -i -pe 's#\Q"Certificate info..."#"证书信息..."#g' $file_name
+perl -i -pe 's#\Q"Load certificate:"#"加载证书:"#g' $file_name
+
 
 
 
@@ -3298,7 +3715,7 @@ perl -i -pe 's#\Q"Time to use for passphrase hash:"#"用于密码哈希的时间
 perl -i -pe 's#\Q"ms"#"毫秒"#g' $file_name
 perl -i -pe 's#\Q"passes"#"遍"#g' $file_name
 perl -i -pe 's#\Q"Parallelism for passphrase hash:"#"密码哈希的并行性:"#g' $file_name
-
+perl -i -pe 's#\Q"PuTTYgen: certificate information"#"PuTTYgen: 证书信息"#g' $file_name
 
 
 
@@ -3379,8 +3796,8 @@ perl -i -pe 's#\Q"Unable to create jumplist file"#"无法创建跳转列表文�
 perl -i -pe 's#\Q"Unable to load jumplist file"#"无法加载跳转列表文件"#g' $file_name
 perl -i -pe 's#\Q"Unable to open file for writing"#"无法打开文件进行写入"#g' $file_name
 perl -i -pe 's#\Q"Unable to save jumplist"#"无法保存跳转列表"#g' $file_name
-
-
+perl -i -pe 's#\Q"Unable to create registry key\n"#"无法创建注册表项\\n"#g' $file_name
+perl -i -pe 's#\Q"CA record must have a name"#"CA 记录必须有名称"#g' $file_name
 
 # windows/version.rc2
 file_name="windows/version.rc2"
@@ -3435,7 +3852,7 @@ perl -i -pe 's#\Q"Unable to play sound file\n%s\nUsing default sound instead"#"�
 perl -i -pe 's#\Q"%s Sound Error"#"%s 声音错误"#g' $file_name
 perl -i -pe 's#\Q"Primary font H=%d, AW=%d, MW=%d\n"#"主要字体 H=%d, AW=%d, MW=%d\\n"#g' $file_name
 perl -i -pe 's#\Q"Unable to create terminal window: %s"#"无法创建终端窗口: %s"#g' $file_name
-
+perl -i -pe 's#\Q"Unable to open terminal:\n%s"#"无法打开终端:\\n%s"#g' $file_name
 
 
 # windows/utils/security.c
@@ -3505,6 +3922,7 @@ perl -i -pe 's#\Qdefine RADIOHEIGHT 8#define RADIOHEIGHT 9#g' $file_name
 perl -i -pe 's#\Q"&Up"#"上(&U)"#g' $file_name
 perl -i -pe 's#\Q"&Down"#"下(&D)"#g' $file_name
 perl -i -pe 's#\Q"Bro&wse..."#"浏览(&W)"#g' $file_name
+perl -i -pe 's#\Q"Browse..."#"浏览..."#g' $file_name
 perl -i -pe 's#\Q"Change..."#"修改..."#g' $file_name
 perl -i -pe 's#\Q"All Files (*.*)\0*\0\0\0"#"所有文件 (*.*)\\0*\\0\\0\\0"#g' $file_name
 perl -i -pe 's#\Q"Font: %s, %sdefault height"#"字体: %s, %s默认高度"#g' $file_name
