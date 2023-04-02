@@ -44,16 +44,16 @@ jobs:
         run: |
           echo '开始下载文件'
           wget "https://the.earth.li/~sgtatham/putty/0.${{env.BUILD_VERSION}}/putty-0.${{env.BUILD_VERSION}}.tar.gz"
-          wget "http://jakub.kotrla.net/putty/portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip"
+          # wget "http://jakub.kotrla.net/putty/portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip"
 
       - name: Unzip Files
         run: |
           echo '开始解压文件'
           mkdir putty-src
           tar -zxvf ./putty-0.${{env.BUILD_VERSION}}.tar.gz -C putty-src/
-          unzip ./portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip -d portable_putty
-          cp -rf ./portable_putty/0.${{env.BUILD_VERSION}}/pageant.c ./putty-src/putty-0.${{env.BUILD_VERSION}}/windows/
-          cp -rf ./portable_putty/0.${{env.BUILD_VERSION}}/storage.c ./putty-src/putty-0.${{env.BUILD_VERSION}}/windows/
+          # unzip ./portable_putty_0${{env.BUILD_VERSION}}_0.${{env.BUILD_NO}}.0_all_in_one.zip -d portable_putty
+          # cp -rf ./portable_putty/0.${{env.BUILD_VERSION}}/pageant.c ./putty-src/putty-0.${{env.BUILD_VERSION}}/windows/
+          # cp -rf ./portable_putty/0.${{env.BUILD_VERSION}}/storage.c ./putty-src/putty-0.${{env.BUILD_VERSION}}/windows/
 
       - name: Translate documents
         run: |
